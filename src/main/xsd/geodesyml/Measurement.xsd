@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.1" targetNamespace="urn:xml-gov-au:icsm:egeodesy:0.1" elementFormDefault="qualified" version="0.1.2" xml:lang="en">
+	<annotation>
+		<documentation>eGeodesy schema implementation based on GML - draft. Copyright (c) 2013 Commonwealth of Australia, on behalf of the Intergovernmental Committee on Surveying and Mapping. All rights reserved.</documentation>
+	</annotation>
+	<!--  -->
+	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+	<include schemaLocation="GeodesyML.xsd"/>
+	<!--  -->
+	<complexType name="AbstractMeasurementPropertyType">
+		<sequence minOccurs="0">
+			<element ref="geo:AbstractMeasurement"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+	</complexType>
+	<!--  -->
+	<element name="AbstractMeasurement" abstract="true" substitutionGroup="gml:AbstractFeature"/>
+	<!--  -->
+	<element name="Measurement" type="geo:MeasurementType" substitutionGroup="geo:AbstractMeasurement"/>
+	<!--  -->
+	<complexType name="MeasurementType">
+		<complexContent>
+			<extension base="gml:AbstractFeatureType">
+				<sequence>
+					<element name="type" type="gml:CodeType">
+						<annotation>
+							<documentation>Type of measurement.</documentation>
+						</annotation>
+					</element>
+					<element name="MeasurementLine" type="geo:MeasurementLineType" maxOccurs="unbounded"/>
+					<element name="lineQuality" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<documentation>Covariances between measurementLines.</documentation>
+						</annotation>
+						<complexType>
+							<sequence>
+								<element name="atLine" type="gml:ReferenceType"/>
+								<element name="toLine" type="gml:ReferenceType"/>
+								<element name="value" type="geo:ValueType"/>
+							</sequence>
+						</complexType>
+					</element>
+					<element name="aprioriScalar" type="geo:ValueType" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="measuredDate" type="geo:TimeType" minOccurs="0"/>
+					<element name="fromProject" type="geo:ProjectPropertyType" minOccurs="0"/>
+					<element name="remarks" type="string" minOccurs="0"/>
+					<element name="associatedDocument" type="geo:DocumentPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="extension" type="anyType" minOccurs="0"/>
+				</sequence>
+				<attributeGroup ref="geo:SpatialReferenceGroup"/>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!--  -->
+	<complexType name="MeasurementLineType">
+		<complexContent>
+			<extension base="gml:AbstractGMLType">
+				<sequence>
+					<element name="atSetup" type="geo:SetupPropertyType" minOccurs="0"/>
+					<element name="toSetup" type="geo:SetupPropertyType" minOccurs="0"/>
+					<element name="atNode" type="geo:NodePropertyType"/>
+					<element name="atHeight" type="gml:MeasureType" minOccurs="0"/>
+					<element name="toNode" type="geo:NodePropertyType" minOccurs="0"/>
+					<element name="toHeight" type="gml:MeasureType" minOccurs="0"/>
+					<element name="value">
+						<complexType>
+							<simpleContent>
+								<extension base="gml:doubleList">
+									<attribute name="uomLabels" type="gml:NCNameList"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+					<element name="quality" type="geo:ValueType" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="remarks" type="string" minOccurs="0"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+</schema>

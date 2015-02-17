@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns:jaxb="httP//java.sun.com/xml/ns/jaxb" xmlns:annox="http://annox.dev.java.net" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.1" targetNamespace="urn:xml-gov-au:icsm:egeodesy:0.1" elementFormDefault="qualified" version="0.1.2" xml:lang="en" jaxb:extensionBindingPrefixes="annox">
+	<annotation>
+		<documentation>eGeodesy schema implementation based on GML - draft. Copyright (c) 2013 Commonwealth of Australia, on behalf of the Intergovernmental Committee on Surveying and Mapping. All rights reserved.</documentation>
+	</annotation>
+	<!--  -->
+	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+	<import namespace="http://www.isotc211.org/2005/gmd" schemaLocation="http://schemas.opengis.net/iso/19139/20070417/gmd/gmd.xsd"/>
+	<!--  -->
+	<include schemaLocation="Station.xsd"/>
+	<include schemaLocation="Adjustment.xsd"/>
+	<include schemaLocation="Datum.xsd"/>
+	<include schemaLocation="Document.xsd"/>
+	<include schemaLocation="FieldMeasurement.xsd"/>
+	<include schemaLocation="MarkManagement.xsd"/>
+	<include schemaLocation="Measurement.xsd"/>
+	<include schemaLocation="Project.xsd"/>
+	<!--  -->
+	<complexType name="GeodesyMLPropertyType">
+		<sequence minOccurs="0">
+			<element ref="geo:GeodesyML"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+	</complexType>
+	<!--  -->
+	<element name="GeodesyML" type="geo:GeodesyMLType" substitutionGroup="gml:AbstractFeature"/>
+	<!--  -->
+	<complexType name="GeodesyMLType">
+		<complexContent>
+			<extension base="gml:AbstractFeatureType">
+				<sequence>
+					<element name="epoch" type="gml:TimePositionType" minOccurs="0"/>
+					<choice maxOccurs="unbounded">
+						<element ref="geo:Node"/>
+						<element ref="geo:Position"/>
+						<element ref="geo:Monument"/>
+						<element ref="geo:AbstractMeasurement"/>
+						<element ref="geo:Instrument"/>
+                        <element ref="geo:AbstractEstimation"/>
+						<element ref="geo:Project"/>
+						<element ref="geo:Document"/>
+						<element ref="geo:Setup"/>
+						<element ref="geo:VelocityMap"/>
+						<element ref="gml:AbstractCRS"/>
+						<element ref="gmd:CI_ResponsibleParty"/>
+					</choice>
+				</sequence>
+				<attributeGroup ref="geo:SpatialReferenceGroup"/>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!--  -->
+	<simpleType name="ConfidenceTypeEnumeration">
+		<restriction base="string">
+			<enumeration value="1 sigma"/>
+			<enumeration value="2 sigma"/>
+			<enumeration value="3 sigma"/>
+			<enumeration value="39.4%"/>
+			<enumeration value="86.5%"/>
+			<enumeration value="95%"/>
+			<enumeration value="98.9%"/>
+			<enumeration value="unknown"/>
+		</restriction>
+	</simpleType>
+	<!--  -->
+	<element name="otherValue" type="geo:ValueType">
+		<annotation>
+			<documentation>Generic property value holder</documentation>
+		</annotation>
+	</element>
+	<!--  -->
+	<complexType name="ValueType">
+		<simpleContent>
+			<extension base="geo:ValueTypes">
+				<attribute name="codeSpace" type="anyURI" use="required"/>
+				<attribute name="uomLabels" type="gml:NCNameList"/>
+				<attribute name="confidence" type="geo:ConfidenceTypeEnumeration"/>
+			</extension>
+		</simpleContent>
+	</complexType>
+	<!--  -->
+	<simpleType name="ValueTypes">
+		<union memberTypes="gml:doubleList string"/>
+	</simpleType>
+	<!--  -->
+	<complexType name="TimeType">
+		<choice>
+			<element name="timePosition" type="gml:TimePositionType"/>
+			<element name="timePeriod">
+				<complexType>
+					<sequence>
+						<element name="beginPosition" type="gml:TimePositionType"/>
+						<element name="endPosition" type="gml:TimePositionType"/>
+					</sequence>
+				</complexType>
+			</element>
+		</choice>
+	</complexType>
+	<!--  -->
+	<attributeGroup name="SpatialReferenceGroup">
+		<attribute name="srsName" type="anyURI"/>
+		<attribute name="srsDimension" type="positiveInteger"/>
+		<attribute name="referenceFrame" type="anyURI"/>
+	</attributeGroup>
+</schema>

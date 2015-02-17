@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.1" targetNamespace="urn:xml-gov-au:icsm:egeodesy:0.1" elementFormDefault="qualified" version="0.1.2" xml:lang="en">
+	<annotation>
+		<documentation>eGeodesy schema implementation based on GML - draft. Copyright (c) 2013 Commonwealth of Australia, on behalf of the Intergovernmental Committee on Surveying and Mapping. All rights reserved.</documentation>
+	</annotation>
+	<!--  -->
+	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+	<import namespace="http://www.isotc211.org/2005/gmd" schemaLocation="http://schemas.opengis.net/iso/19139/20070417/gmd/gmd.xsd"/>
+	<include schemaLocation="GeodesyML.xsd"/>
+	<!--  -->
+	<complexType name="SetupPropertyType">
+		<sequence minOccurs="0">
+			<element ref="geo:Setup"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+	</complexType>
+	<!--  -->
+	<element name="Setup" type="geo:SetupType" substitutionGroup="gml:AbstractFeature"/>
+	<!--  -->
+	<complexType name="SetupType">
+		<complexContent>
+			<extension base="gml:AbstractFeatureType">
+				<sequence>
+					<element name="atNode" type="geo:NodePropertyType"/>
+					<element name="fromProject" type="geo:ProjectPropertyType" minOccurs="0"/>
+					<element name="setupDate" type="geo:TimeType" minOccurs="0"/>
+					<element name="setupHeight" type="geo:ValueType" minOccurs="0"/>
+					<element name="observedBy" type="gmd:CI_ResponsibleParty_PropertyType" minOccurs="0"/>
+					<element name="usesInstrument" type="geo:InstrumentPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="remarks" type="string" minOccurs="0"/>
+					<element name="associatedDocument" type="geo:DocumentPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="extension" type="anyType" minOccurs="0"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!--  -->
+	<complexType name="InstrumentPropertyType">
+		<sequence minOccurs="0">
+			<element ref="geo:Instrument"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+	</complexType>
+	<!--  -->
+	<element name="Instrument" type="geo:InstrumentType" substitutionGroup="gml:AbstractFeature"/>
+	<!--  -->
+	<complexType name="InstrumentType">
+		<complexContent>
+			<extension base="gml:AbstractFeatureType">
+				<sequence>
+					<element name="remarks" type="string" minOccurs="0"/>
+					<element name="associatedDocument" type="geo:DocumentPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="extension" type="anyType" minOccurs="0"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+</schema>

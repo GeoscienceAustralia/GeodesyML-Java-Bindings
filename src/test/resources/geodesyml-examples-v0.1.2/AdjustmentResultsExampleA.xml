@@ -1,0 +1,988 @@
+<?xml version="1.0" encoding="utf-8"?>
+<geo:GeodesyML xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.1" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xlink="http://www.w3.org/1999/xlink" gml:id="id1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.1 ../../schemas/0.1.2/GeodesyML.xsd">
+	<gml:identifier codeSpace="urn:qld-gov-au:egeodesy">COMC94</gml:identifier>
+	<geo:Adjustment gml:id="id2" srsName="urn:ogc:def:crs:EPSG::4939" srsDimension="3" dimension="3">
+		<gml:identifier codeSpace="urn:qld-gov-au:egeodesy">COMC94</gml:identifier>
+		<geo:status codeSpace="urn:xml-gov-au:icsm:egeodesy:geodesyml_adjustment-status">Executed</geo:status>
+		<geo:adjustmentPosition constraint="Free">
+			<geo:usesPosition>
+				<geo:Position gml:id="id3" srsName="urn:ogc:def:crs:EPSG::4939" srsDimension="3">
+					<gml:identifier codeSpace="urn:qld-gov-au:egeodesy">33771</gml:identifier>
+					<geo:atNode>
+						<geo:Node gml:id="id4">
+							<gml:description><![CDATA[NM B 115]]></gml:description>
+							<gml:identifier codeSpace="urn:qld-gov-au:egeodesy">33771</gml:identifier>
+							<geo:status codeSpace="urn:xml-gov-au:icsm:egeodesy:geodesyml_node-status">Authorative</geo:status>
+							<geo:remarks><![CDATA[Start NEWGAN File -   COMC94.DAT   
+Dimension  3                                                                                       threed = 1     COMC94.DAT    1
+Title  COMET CONTROL K18/308            GDA94     COMC94.DAT    2
+Options  X  0.0001                              1    2              2   19       -1 VARI     COMC94.DAT    3
+Options  Ellipsoids - Primary = 19  Secondary = 19    Observation records have Variance     COMC94.DAT    3
+SD limit    999999.00     COMC94.DAT    4
+Station  COMC94.DAT  6]]></geo:remarks>
+						</geo:Node>
+					</geo:atNode>
+					<geo:status codeSpace="urn:xml-gov-au:icsm:egeodesy:geodesyml_position-status">Authorative</geo:status>
+					<gml:pos uomLabels="deg deg m">-23.6273479747 148.5805743222 222.89</gml:pos>
+				</geo:Position>
+			</geo:usesPosition>
+		</geo:adjustmentPosition>
+		<geo:adjustmentPosition constraint="Free">
+			<geo:usesPosition>
+				<geo:Position gml:id="id5" srsName="urn:ogc:def:crs:EPSG::4939" srsDimension="3">
+					<gml:identifier codeSpace="urn:qld-gov-au:egeodesy">67596</gml:identifier>
+					<geo:atNode>
+						<geo:Node gml:id="id6">
+							<gml:description><![CDATA[COMET]]></gml:description>
+							<gml:identifier codeSpace="urn:qld-gov-au:egeodesy">67596</gml:identifier>
+							<geo:status codeSpace="urn:xml-gov-au:icsm:egeodesy:geodesyml_node-status">Authorative</geo:status>
+							<geo:remarks><![CDATA[Station  COMC94.DAT  7]]></geo:remarks>
+						</geo:Node>
+					</geo:atNode>
+					<geo:status codeSpace="urn:xml-gov-au:icsm:egeodesy:geodesyml_position-status">Authorative</geo:status>
+					<gml:pos uomLabels="deg deg m">-23.6046396406 148.5506687817 168.29</gml:pos>
+				</geo:Position>
+			</geo:usesPosition>
+		</geo:adjustmentPosition>
+		<geo:adjustmentPosition constraint="Free">
+			<geo:usesPosition>
+				<geo:Position gml:id="id7" srsName="urn:ogc:def:crs:EPSG::4939" srsDimension="3">
+					<gml:identifier codeSpace="urn:qld-gov-au:egeodesy">72292</gml:identifier>
+					<geo:atNode>
+						<geo:Node gml:id="id8">
+							<gml:identifier codeSpace="urn:qld-gov-au:egeodesy">72292</gml:identifier>
+							<geo:status codeSpace="urn:xml-gov-au:icsm:egeodesy:geodesyml_node-status">Authorative</geo:status>
+							<geo:remarks><![CDATA[Station  COMC94.DAT  8]]></geo:remarks>
+						</geo:Node>
+					</geo:atNode>
+					<geo:status codeSpace="urn:xml-gov-au:icsm:egeodesy:geodesyml_position-status">Authorative</geo:status>
+					<gml:pos uomLabels="deg deg m">-23.6054499125 148.5463408175 167.882</gml:pos>
+				</geo:Position>
+			</geo:usesPosition>
+		</geo:adjustmentPosition>
+		<geo:adjustmentPosition constraint="Free">
+			<geo:usesPosition>
+				<geo:Position gml:id="id9" srsName="urn:ogc:def:crs:EPSG::4939" srsDimension="3">
+					<gml:identifier codeSpace="urn:qld-gov-au:egeodesy">75308</gml:identifier>
+					<geo:atNode>
+						<geo:Node gml:id="id10">
+							<gml:identifier codeSpace="urn:qld-gov-au:egeodesy">75308</gml:identifier>
+							<geo:status codeSpace="urn:xml-gov-au:icsm:egeodesy:geodesyml_node-status">Authorative</geo:status>
+							<geo:remarks><![CDATA[Station  COMC94.DAT  9]]></geo:remarks>
+						</geo:Node>
+					</geo:atNode>
+					<geo:status codeSpace="urn:xml-gov-au:icsm:egeodesy:geodesyml_position-status">Authorative</geo:status>
+					<gml:pos uomLabels="deg deg m">-23.6015084542 148.5517285867 168.348</gml:pos>
+				</geo:Position>
+			</geo:usesPosition>
+		</geo:adjustmentPosition>
+		<geo:adjustmentPosition constraint="Free">
+			<geo:usesPosition>
+				<geo:Position gml:id="id11" srsName="urn:ogc:def:crs:EPSG::4939" srsDimension="3">
+					<gml:identifier codeSpace="urn:qld-gov-au:egeodesy">77136</gml:identifier>
+					<geo:atNode>
+						<geo:Node gml:id="id12">
+							<gml:identifier codeSpace="urn:qld-gov-au:egeodesy">77136</gml:identifier>
+							<geo:status codeSpace="urn:xml-gov-au:icsm:egeodesy:geodesyml_node-status">Authorative</geo:status>
+							<geo:remarks><![CDATA[Station  COMC94.DAT  10]]></geo:remarks>
+						</geo:Node>
+					</geo:atNode>
+					<geo:status codeSpace="urn:xml-gov-au:icsm:egeodesy:geodesyml_position-status">Authorative</geo:status>
+					<gml:pos uomLabels="deg deg m">-23.6039781364 148.5469904875 168.134</gml:pos>
+				</geo:Position>
+			</geo:usesPosition>
+		</geo:adjustmentPosition>
+		<geo:adjustmentPosition constraint="Free">
+			<geo:usesPosition>
+				<geo:Position gml:id="id13" srsName="urn:ogc:def:crs:EPSG::4939" srsDimension="3">
+					<gml:identifier codeSpace="urn:qld-gov-au:egeodesy">77148</gml:identifier>
+					<geo:atNode>
+						<geo:Node gml:id="id14">
+							<gml:identifier codeSpace="urn:qld-gov-au:egeodesy">77148</gml:identifier>
+							<geo:status codeSpace="urn:xml-gov-au:icsm:egeodesy:geodesyml_node-status">Authorative</geo:status>
+							<geo:remarks><![CDATA[Station  COMC94.DAT  11]]></geo:remarks>
+						</geo:Node>
+					</geo:atNode>
+					<geo:status codeSpace="urn:xml-gov-au:icsm:egeodesy:geodesyml_position-status">Authorative</geo:status>
+					<gml:pos uomLabels="deg deg m">-23.6024272450 148.5494557292 166.890</gml:pos>
+				</geo:Position>
+			</geo:usesPosition>
+		</geo:adjustmentPosition>
+		<geo:adjustmentMeasurement include="true">
+			<geo:usesMeasurement>
+				<geo:Measurement gml:id="id15">
+					<geo:type codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_type">Geodetic Latitude</geo:type>
+					<geo:MeasurementLine gml:id="id16">
+						<geo:atNode xlink:href="#id6"/>
+						<geo:value uomLabels="deg">-23.3616702700</geo:value>
+						<geo:quality codeSpace="urn:xml-gov-au:icsm:egeodesy:sp1v17_std-deviation" uomLabels="dms">1e-006</geo:quality>
+					</geo:MeasurementLine>
+					<geo:remarks><![CDATA[Start NEWGAN File -   COMC94.DAT   
+Comment  *===============================================================================     COMC94.DAT    21
+Comment  *                           CONSTRAINED STATIONS                               *     COMC94.DAT    22
+Comment  *===============================================================================     COMC94.DAT    23
+Comment  *===============================================================================     COMC94.DAT    24
+Comment  *   HELD STATIONS FOR LATITUDE AND LONGITUDE ONLY     COMC94.DAT    25
+Comment  *===============================================================================     COMC94.DAT    26]]></geo:remarks>
+					<geo:associatedDocument>
+						<geo:Document gml:id="id17">
+							<gml:identifier codeSpace="urn:qld-gov-au:egeodesy">COMC94</gml:identifier>
+							<geo:type codeSpace="urn:xml-gov-au:icsm:egeodesy:geodesyml_document-type">Unknown</geo:type>
+							<geo:body>
+								<geo:fileReference xlink:href="COMC94.DAT"/>
+							</geo:body>
+						</geo:Document>
+					</geo:associatedDocument>
+				</geo:Measurement>
+			</geo:usesMeasurement>
+		</geo:adjustmentMeasurement>
+		<geo:adjustmentMeasurement include="true">
+			<geo:usesMeasurement>
+				<geo:Measurement gml:id="id18">
+					<geo:type codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_type">Geodetic Longitude</geo:type>
+					<geo:MeasurementLine gml:id="id19">
+						<geo:atNode xlink:href="#id6"/>
+						<geo:value uomLabels="deg">148.3302407400</geo:value>
+						<geo:quality codeSpace="urn:xml-gov-au:icsm:egeodesy:sp1v17_std-deviation" uomLabels="dms">1e-006</geo:quality>
+					</geo:MeasurementLine>
+				</geo:Measurement>
+			</geo:usesMeasurement>
+		</geo:adjustmentMeasurement>
+		<geo:adjustmentMeasurement include="true">
+			<geo:usesMeasurement>
+				<geo:Measurement gml:id="id20">
+					<geo:type codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_type">Orthometric Height</geo:type>
+					<geo:MeasurementLine gml:id="id21">
+						<geo:atNode xlink:href="#id6"/>
+						<geo:value uomLabels="m">168.29</geo:value>
+						<geo:quality codeSpace="urn:xml-gov-au:icsm:egeodesy:sp1v17_std-deviation" uomLabels="m">99.99</geo:quality>
+					</geo:MeasurementLine>
+				</geo:Measurement>
+			</geo:usesMeasurement>
+		</geo:adjustmentMeasurement>
+		<geo:adjustmentMeasurement include="true">
+			<geo:usesMeasurement>
+				<geo:Measurement gml:id="id22">
+					<geo:type codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_type">Geodetic Latitude</geo:type>
+					<geo:MeasurementLine gml:id="id23">
+						<geo:atNode xlink:href="#id4"/>
+						<geo:value uomLabels="deg">-23.3738459900</geo:value>
+						<geo:quality codeSpace="urn:xml-gov-au:icsm:egeodesy:sp1v17_std-deviation" uomLabels="dms">1e-006</geo:quality>
+					</geo:MeasurementLine>
+				</geo:Measurement>
+			</geo:usesMeasurement>
+		</geo:adjustmentMeasurement>
+		<geo:adjustmentMeasurement include="true">
+			<geo:usesMeasurement>
+				<geo:Measurement gml:id="id24">
+					<geo:type codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_type">Geodetic Longitude</geo:type>
+					<geo:MeasurementLine gml:id="id25">
+						<geo:atNode xlink:href="#id4"/>
+						<geo:value uomLabels="deg">148.3450068500</geo:value>
+						<geo:quality codeSpace="urn:xml-gov-au:icsm:egeodesy:sp1v17_std-deviation" uomLabels="dms">1e-006</geo:quality>
+					</geo:MeasurementLine>
+				</geo:Measurement>
+			</geo:usesMeasurement>
+		</geo:adjustmentMeasurement>
+		<geo:adjustmentMeasurement include="true">
+			<geo:usesMeasurement>
+				<geo:Measurement gml:id="id26">
+					<geo:type codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_type">Orthometric Height</geo:type>
+					<geo:MeasurementLine gml:id="id27">
+						<geo:atNode xlink:href="#id4"/>
+						<geo:value uomLabels="m">222.89</geo:value>
+						<geo:quality codeSpace="urn:xml-gov-au:icsm:egeodesy:sp1v17_std-deviation" uomLabels="m">99.99</geo:quality>
+					</geo:MeasurementLine>
+				</geo:Measurement>
+			</geo:usesMeasurement>
+		</geo:adjustmentMeasurement>
+		<geo:adjustmentMeasurement include="true">
+			<geo:usesMeasurement>
+				<geo:Measurement gml:id="id28">
+					<geo:type codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_type">Geodetic Latitude</geo:type>
+					<geo:MeasurementLine gml:id="id29">
+						<geo:atNode xlink:href="#id6"/>
+						<geo:value uomLabels="deg">-23.3616702706</geo:value>
+						<geo:quality codeSpace="urn:xml-gov-au:icsm:egeodesy:sp1v17_std-deviation" uomLabels="dms">99.999</geo:quality>
+					</geo:MeasurementLine>
+					<geo:remarks><![CDATA[Comment  *===============================================================================     COMC94.DAT    30
+Comment  *   STATIONS HELD FOR HEIGHT ONLY     COMC94.DAT    31
+Comment  *===============================================================================     COMC94.DAT    32]]></geo:remarks>
+					<geo:associatedDocument xlink:href="#id17"/>
+				</geo:Measurement>
+			</geo:usesMeasurement>
+		</geo:adjustmentMeasurement>
+		<geo:adjustmentMeasurement include="true">
+			<geo:usesMeasurement>
+				<geo:Measurement gml:id="id30">
+					<geo:type codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_type">Geodetic Longitude</geo:type>
+					<geo:MeasurementLine gml:id="id31">
+						<geo:atNode xlink:href="#id6"/>
+						<geo:value uomLabels="deg">148.3302407614</geo:value>
+						<geo:quality codeSpace="urn:xml-gov-au:icsm:egeodesy:sp1v17_std-deviation" uomLabels="dms">99.999</geo:quality>
+					</geo:MeasurementLine>
+				</geo:Measurement>
+			</geo:usesMeasurement>
+		</geo:adjustmentMeasurement>
+		<geo:adjustmentMeasurement include="true">
+			<geo:usesMeasurement>
+				<geo:Measurement gml:id="id32">
+					<geo:type codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_type">Orthometric Height</geo:type>
+					<geo:MeasurementLine gml:id="id33">
+						<geo:atNode xlink:href="#id6"/>
+						<geo:value uomLabels="m">168.29</geo:value>
+						<geo:quality codeSpace="urn:xml-gov-au:icsm:egeodesy:sp1v17_std-deviation" uomLabels="m">1e-005</geo:quality>
+					</geo:MeasurementLine>
+				</geo:Measurement>
+			</geo:usesMeasurement>
+		</geo:adjustmentMeasurement>
+		<geo:adjustmentMeasurement include="true">
+			<geo:usesMeasurement>
+				<geo:Measurement gml:id="id34">
+					<geo:type codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_type">Orthometric Height</geo:type>
+					<geo:MeasurementLine gml:id="id35">
+						<geo:atNode xlink:href="#id6"/>
+						<geo:value uomLabels="m">168.29</geo:value>
+						<geo:quality codeSpace="urn:xml-gov-au:icsm:egeodesy:sp1v17_std-deviation" uomLabels="m">0.1</geo:quality>
+					</geo:MeasurementLine>
+					<geo:remarks><![CDATA[Comment  *===============================================================================     COMC94.DAT    35
+Set default precision - direction   51    1.0                   0.2  0.2     COMC94.DAT    36
+Set default precision - distance   52    0.5    1.0            0.2  0.2     COMC94.DAT    37
+Comment  * ELEVATIONS     COMC94.DAT    56
+Orthometric Height  COMC94.DAT  57]]></geo:remarks>
+					<geo:associatedDocument xlink:href="#id17"/>
+				</geo:Measurement>
+			</geo:usesMeasurement>
+		</geo:adjustmentMeasurement>
+		<geo:adjustmentMeasurement include="true">
+			<geo:usesMeasurement>
+				<geo:Measurement gml:id="id36">
+					<geo:type codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_type">Orthometric Height</geo:type>
+					<geo:MeasurementLine gml:id="id37">
+						<geo:atNode xlink:href="#id4"/>
+						<geo:value uomLabels="m">222.89</geo:value>
+						<geo:quality codeSpace="urn:xml-gov-au:icsm:egeodesy:sp1v17_std-deviation" uomLabels="m">0.1</geo:quality>
+					</geo:MeasurementLine>
+					<geo:remarks><![CDATA[Orthometric Height  COMC94.DAT  58]]></geo:remarks>
+					<geo:associatedDocument xlink:href="#id17"/>
+				</geo:Measurement>
+			</geo:usesMeasurement>
+		</geo:adjustmentMeasurement>
+		<geo:adjustmentMeasurement include="true">
+			<geo:usesMeasurement>
+				<geo:Measurement gml:id="id38">
+					<geo:type codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_type">Orthometric Height</geo:type>
+					<geo:MeasurementLine gml:id="id39">
+						<geo:atNode xlink:href="#id10"/>
+						<geo:value uomLabels="m">168.348</geo:value>
+						<geo:quality codeSpace="urn:xml-gov-au:icsm:egeodesy:sp1v17_std-deviation" uomLabels="m">0.1</geo:quality>
+					</geo:MeasurementLine>
+					<geo:remarks><![CDATA[Orthometric Height  COMC94.DAT  59]]></geo:remarks>
+					<geo:associatedDocument xlink:href="#id17"/>
+				</geo:Measurement>
+			</geo:usesMeasurement>
+		</geo:adjustmentMeasurement>
+		<geo:adjustmentMeasurement include="true">
+			<geo:usesMeasurement>
+				<geo:Measurement gml:id="id40">
+					<geo:type codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_type">Orthometric Height</geo:type>
+					<geo:MeasurementLine gml:id="id41">
+						<geo:atNode xlink:href="#id12"/>
+						<geo:value uomLabels="m">168.134</geo:value>
+						<geo:quality codeSpace="urn:xml-gov-au:icsm:egeodesy:sp1v17_std-deviation" uomLabels="m">0.1</geo:quality>
+					</geo:MeasurementLine>
+					<geo:remarks><![CDATA[Orthometric Height  COMC94.DAT  60]]></geo:remarks>
+					<geo:associatedDocument xlink:href="#id17"/>
+				</geo:Measurement>
+			</geo:usesMeasurement>
+		</geo:adjustmentMeasurement>
+		<geo:adjustmentMeasurement include="true">
+			<geo:usesMeasurement>
+				<geo:Measurement gml:id="id42">
+					<geo:type codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_type">Orthometric Height</geo:type>
+					<geo:MeasurementLine gml:id="id43">
+						<geo:atNode xlink:href="#id14"/>
+						<geo:value uomLabels="m">166.890</geo:value>
+						<geo:quality codeSpace="urn:xml-gov-au:icsm:egeodesy:sp1v17_std-deviation" uomLabels="m">0.1</geo:quality>
+					</geo:MeasurementLine>
+					<geo:remarks><![CDATA[Orthometric Height  COMC94.DAT  61]]></geo:remarks>
+					<geo:associatedDocument xlink:href="#id17"/>
+				</geo:Measurement>
+			</geo:usesMeasurement>
+		</geo:adjustmentMeasurement>
+		<geo:adjustmentMeasurement include="true">
+			<geo:usesMeasurement>
+				<geo:Measurement gml:id="id44">
+					<geo:type codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_type">Orthometric Height</geo:type>
+					<geo:MeasurementLine gml:id="id45">
+						<geo:atNode xlink:href="#id6"/>
+						<geo:value uomLabels="m">168.418</geo:value>
+						<geo:quality codeSpace="urn:xml-gov-au:icsm:egeodesy:sp1v17_std-deviation" uomLabels="m">0.1</geo:quality>
+					</geo:MeasurementLine>
+					<geo:remarks><![CDATA[Orthometric Height  COMC94.DAT  62]]></geo:remarks>
+					<geo:associatedDocument xlink:href="#id17"/>
+				</geo:Measurement>
+			</geo:usesMeasurement>
+		</geo:adjustmentMeasurement>
+		<geo:adjustmentMeasurement include="true">
+			<geo:usesMeasurement>
+				<geo:Measurement gml:id="id46">
+					<geo:type codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_type">Orthometric Height</geo:type>
+					<geo:MeasurementLine gml:id="id47">
+						<geo:atNode xlink:href="#id8"/>
+						<geo:value uomLabels="m">167.882</geo:value>
+						<geo:quality codeSpace="urn:xml-gov-au:icsm:egeodesy:sp1v17_std-deviation" uomLabels="m">0.1</geo:quality>
+					</geo:MeasurementLine>
+					<geo:remarks><![CDATA[Orthometric Height  COMC94.DAT  63]]></geo:remarks>
+					<geo:associatedDocument xlink:href="#id17"/>
+				</geo:Measurement>
+			</geo:usesMeasurement>
+		</geo:adjustmentMeasurement>
+		<geo:adjustmentMeasurement include="true">
+			<geo:usesMeasurement>
+				<geo:Measurement gml:id="id48">
+					<geo:type codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_type">MSL Arc Distance</geo:type>
+					<geo:MeasurementLine gml:id="id49">
+						<geo:atNode xlink:href="#id12"/>
+						<geo:toNode xlink:href="#id14"/>
+						<geo:value uomLabels="m">304.651</geo:value>
+						<geo:quality codeSpace="urn:xml-gov-au:icsm:egeodesy:sp1v17_std-deviation" uomLabels="m">0.0060116</geo:quality>
+					</geo:MeasurementLine>
+					<geo:remarks><![CDATA[MSL Arc   COMC94.DAT   39]]></geo:remarks>
+					<geo:associatedDocument xlink:href="#id17"/>
+				</geo:Measurement>
+			</geo:usesMeasurement>
+		</geo:adjustmentMeasurement>
+		<geo:adjustmentMeasurement include="true">
+			<geo:usesMeasurement>
+				<geo:Measurement gml:id="id50">
+					<geo:type codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_type">MSL Arc Distance</geo:type>
+					<geo:MeasurementLine gml:id="id51">
+						<geo:atNode xlink:href="#id14"/>
+						<geo:toNode xlink:href="#id10"/>
+						<geo:value uomLabels="m">253.315</geo:value>
+						<geo:quality codeSpace="urn:xml-gov-au:icsm:egeodesy:sp1v17_std-deviation" uomLabels="m">0.00596635</geo:quality>
+					</geo:MeasurementLine>
+					<geo:remarks><![CDATA[MSL Arc   COMC94.DAT   44]]></geo:remarks>
+					<geo:associatedDocument xlink:href="#id17"/>
+				</geo:Measurement>
+			</geo:usesMeasurement>
+		</geo:adjustmentMeasurement>
+		<geo:adjustmentMeasurement include="true">
+			<geo:usesMeasurement>
+				<geo:Measurement gml:id="id52">
+					<geo:type codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_type">MSL Arc Distance</geo:type>
+					<geo:MeasurementLine gml:id="id53">
+						<geo:atNode xlink:href="#id6"/>
+						<geo:toNode xlink:href="#id8"/>
+						<geo:value uomLabels="m">450.747</geo:value>
+						<geo:quality codeSpace="urn:xml-gov-au:icsm:egeodesy:sp1v17_std-deviation" uomLabels="m">0.0061409</geo:quality>
+					</geo:MeasurementLine>
+					<geo:remarks><![CDATA[MSL Arc   COMC94.DAT   47]]></geo:remarks>
+					<geo:associatedDocument xlink:href="#id17"/>
+				</geo:Measurement>
+			</geo:usesMeasurement>
+		</geo:adjustmentMeasurement>
+		<geo:adjustmentMeasurement include="true">
+			<geo:usesMeasurement>
+				<geo:Measurement gml:id="id54">
+					<geo:type codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_type">MSL Arc Distance</geo:type>
+					<geo:MeasurementLine gml:id="id55">
+						<geo:atNode xlink:href="#id6"/>
+						<geo:toNode xlink:href="#id10"/>
+						<geo:value uomLabels="m">363.064</geo:value>
+						<geo:quality codeSpace="urn:xml-gov-au:icsm:egeodesy:sp1v17_std-deviation" uomLabels="m">0.00606321</geo:quality>
+					</geo:MeasurementLine>
+					<geo:remarks><![CDATA[MSL Arc   COMC94.DAT   48]]></geo:remarks>
+					<geo:associatedDocument xlink:href="#id17"/>
+				</geo:Measurement>
+			</geo:usesMeasurement>
+		</geo:adjustmentMeasurement>
+		<geo:adjustmentMeasurement include="true">
+			<geo:usesMeasurement>
+				<geo:Measurement gml:id="id56">
+					<geo:type codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_type">MSL Arc Distance</geo:type>
+					<geo:MeasurementLine gml:id="id57">
+						<geo:atNode xlink:href="#id8"/>
+						<geo:toNode xlink:href="#id12"/>
+						<geo:value uomLabels="m">175.979</geo:value>
+						<geo:quality codeSpace="urn:xml-gov-au:icsm:egeodesy:sp1v17_std-deviation" uomLabels="m">0.00589837</geo:quality>
+					</geo:MeasurementLine>
+					<geo:remarks><![CDATA[MSL Arc   COMC94.DAT   53]]></geo:remarks>
+					<geo:associatedDocument xlink:href="#id17"/>
+				</geo:Measurement>
+			</geo:usesMeasurement>
+		</geo:adjustmentMeasurement>
+		<geo:adjustmentMeasurement include="true">
+			<geo:usesMeasurement>
+				<geo:Measurement gml:id="id58">
+					<geo:type codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_type">Direction</geo:type>
+					<geo:MeasurementLine gml:id="id59">
+						<geo:atNode xlink:href="#id12"/>
+						<geo:toNode xlink:href="#id14"/>
+						<geo:value uomLabels="dms">0.000000</geo:value>
+						<geo:quality codeSpace="urn:xml-gov-au:icsm:egeodesy:sp1v17_std-deviation" uomLabels="sec">2.160371</geo:quality>
+					</geo:MeasurementLine>
+					<geo:MeasurementLine gml:id="id60">
+						<geo:atNode xlink:href="#id12"/>
+						<geo:toNode xlink:href="#id8"/>
+						<geo:value uomLabels="dms">146.271583</geo:value>
+						<geo:quality codeSpace="urn:xml-gov-au:icsm:egeodesy:sp1v17_std-deviation" uomLabels="sec">3.462734</geo:quality>
+					</geo:MeasurementLine>
+					<geo:remarks><![CDATA[Direction  COMC94.DAT  40]]></geo:remarks>
+					<geo:associatedDocument xlink:href="#id17"/>
+				</geo:Measurement>
+			</geo:usesMeasurement>
+		</geo:adjustmentMeasurement>
+		<geo:adjustmentMeasurement include="true">
+			<geo:usesMeasurement>
+				<geo:Measurement gml:id="id61">
+					<geo:type codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_type">Direction</geo:type>
+					<geo:MeasurementLine gml:id="id62">
+						<geo:atNode xlink:href="#id10"/>
+						<geo:toNode xlink:href="#id6"/>
+						<geo:value uomLabels="dms">0.000000</geo:value>
+						<geo:quality codeSpace="urn:xml-gov-au:icsm:egeodesy:sp1v17_std-deviation" uomLabels="sec">1.892645</geo:quality>
+					</geo:MeasurementLine>
+					<geo:MeasurementLine gml:id="id63">
+						<geo:atNode xlink:href="#id10"/>
+						<geo:toNode xlink:href="#id14"/>
+						<geo:value uomLabels="dms">48.583229</geo:value>
+						<geo:quality codeSpace="urn:xml-gov-au:icsm:egeodesy:sp1v17_std-deviation" uomLabels="sec">2.510813</geo:quality>
+					</geo:MeasurementLine>
+					<geo:remarks><![CDATA[Direction  COMC94.DAT  42]]></geo:remarks>
+					<geo:associatedDocument xlink:href="#id17"/>
+				</geo:Measurement>
+			</geo:usesMeasurement>
+		</geo:adjustmentMeasurement>
+		<geo:adjustmentMeasurement include="true">
+			<geo:usesMeasurement>
+				<geo:Measurement gml:id="id64">
+					<geo:type codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_type">Direction</geo:type>
+					<geo:MeasurementLine gml:id="id65">
+						<geo:atNode xlink:href="#id14"/>
+						<geo:toNode xlink:href="#id10"/>
+						<geo:value uomLabels="dms">0.000000</geo:value>
+						<geo:quality codeSpace="urn:xml-gov-au:icsm:egeodesy:sp1v17_std-deviation" uomLabels="sec">2.510813</geo:quality>
+					</geo:MeasurementLine>
+					<geo:MeasurementLine gml:id="id66">
+						<geo:atNode xlink:href="#id14"/>
+						<geo:toNode xlink:href="#id12"/>
+						<geo:value uomLabels="dms">169.215200</geo:value>
+						<geo:quality codeSpace="urn:xml-gov-au:icsm:egeodesy:sp1v17_std-deviation" uomLabels="sec">2.160371</geo:quality>
+					</geo:MeasurementLine>
+					<geo:remarks><![CDATA[Direction  COMC94.DAT  45]]></geo:remarks>
+					<geo:associatedDocument xlink:href="#id17"/>
+				</geo:Measurement>
+			</geo:usesMeasurement>
+		</geo:adjustmentMeasurement>
+		<geo:adjustmentMeasurement include="true">
+			<geo:usesMeasurement>
+				<geo:Measurement gml:id="id67">
+					<geo:type codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_type">Direction</geo:type>
+					<geo:MeasurementLine gml:id="id68">
+						<geo:atNode xlink:href="#id6"/>
+						<geo:toNode xlink:href="#id8"/>
+						<geo:value uomLabels="dms">128.544192</geo:value>
+						<geo:quality codeSpace="urn:xml-gov-au:icsm:egeodesy:sp1v17_std-deviation" uomLabels="sec">1.635613</geo:quality>
+					</geo:MeasurementLine>
+					<geo:MeasurementLine gml:id="id69">
+						<geo:atNode xlink:href="#id6"/>
+						<geo:toNode xlink:href="#id4"/>
+						<geo:value uomLabels="dms">359.552500</geo:value>
+						<geo:quality codeSpace="urn:xml-gov-au:icsm:egeodesy:sp1v17_std-deviation" uomLabels="sec">1.010823</geo:quality>
+					</geo:MeasurementLine>
+					<geo:remarks><![CDATA[Direction  COMC94.DAT  49]]></geo:remarks>
+					<geo:associatedDocument xlink:href="#id17"/>
+				</geo:Measurement>
+			</geo:usesMeasurement>
+		</geo:adjustmentMeasurement>
+		<geo:adjustmentMeasurement include="true">
+			<geo:usesMeasurement>
+				<geo:Measurement gml:id="id70">
+					<geo:type codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_type">Direction</geo:type>
+					<geo:MeasurementLine gml:id="id71">
+						<geo:atNode xlink:href="#id6"/>
+						<geo:toNode xlink:href="#id8"/>
+						<geo:value uomLabels="dms">0.000000</geo:value>
+						<geo:quality codeSpace="urn:xml-gov-au:icsm:egeodesy:sp1v17_std-deviation" uomLabels="sec">1.635613</geo:quality>
+					</geo:MeasurementLine>
+					<geo:MeasurementLine gml:id="id72">
+						<geo:atNode xlink:href="#id6"/>
+						<geo:toNode xlink:href="#id10"/>
+						<geo:value uomLabels="dms">118.510742</geo:value>
+						<geo:quality codeSpace="urn:xml-gov-au:icsm:egeodesy:sp1v17_std-deviation" uomLabels="sec">1.892645</geo:quality>
+					</geo:MeasurementLine>
+					<geo:remarks><![CDATA[Direction  COMC94.DAT  51]]></geo:remarks>
+					<geo:associatedDocument xlink:href="#id17"/>
+				</geo:Measurement>
+			</geo:usesMeasurement>
+		</geo:adjustmentMeasurement>
+		<geo:adjustmentMeasurement include="true">
+			<geo:usesMeasurement>
+				<geo:Measurement gml:id="id73">
+					<geo:type codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_type">Direction</geo:type>
+					<geo:MeasurementLine gml:id="id74">
+						<geo:atNode xlink:href="#id8"/>
+						<geo:toNode xlink:href="#id12"/>
+						<geo:value uomLabels="dms">0.000000</geo:value>
+						<geo:quality codeSpace="urn:xml-gov-au:icsm:egeodesy:sp1v17_std-deviation" uomLabels="sec">3.462734</geo:quality>
+					</geo:MeasurementLine>
+					<geo:MeasurementLine gml:id="id75">
+						<geo:atNode xlink:href="#id8"/>
+						<geo:toNode xlink:href="#id6"/>
+						<geo:value uomLabels="dms">56.211050</geo:value>
+						<geo:quality codeSpace="urn:xml-gov-au:icsm:egeodesy:sp1v17_std-deviation" uomLabels="sec">1.635613</geo:quality>
+					</geo:MeasurementLine>
+					<geo:remarks><![CDATA[Direction  COMC94.DAT  54]]></geo:remarks>
+					<geo:associatedDocument xlink:href="#id17"/>
+				</geo:Measurement>
+			</geo:usesMeasurement>
+		</geo:adjustmentMeasurement>
+		<geo:adjustmentMeasurement include="true">
+			<geo:usesMeasurement>
+				<geo:Measurement gml:id="id76">
+					<geo:type codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_type">Geodetic Azimuth</geo:type>
+					<geo:MeasurementLine gml:id="id77">
+						<geo:atNode xlink:href="#id12"/>
+						<geo:toNode xlink:href="#id14"/>
+						<geo:value uomLabels="dms">55.404701</geo:value>
+						<geo:quality codeSpace="urn:xml-gov-au:icsm:egeodesy:sp1v17_std-deviation" uomLabels="sec">1.732</geo:quality>
+					</geo:MeasurementLine>
+					<geo:remarks><![CDATA[Geodetic Azimuth  COMC94.DAT  38]]></geo:remarks>
+					<geo:associatedDocument xlink:href="#id17"/>
+				</geo:Measurement>
+			</geo:usesMeasurement>
+		</geo:adjustmentMeasurement>
+		<geo:runDate>2013-12-05T06:43:34</geo:runDate>
+		<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_software-name">DynaNet</geo:adjustmentValue>
+		<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_software-version">3.1.0</geo:adjustmentValue>
+		<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_number-of-unknown">18</geo:adjustmentValue>
+		<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_number-of-measurements">28</geo:adjustmentValue>
+		<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_degrees-of-freedom">10</geo:adjustmentValue>
+		<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_sum-square-residuals">5.57</geo:adjustmentValue>
+		<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_sigma-zero">0.557</geo:adjustmentValue>
+		<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_global-reliability">79.856</geo:adjustmentValue>
+		<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_chi-square-test">0.325 &lt; 0.557 &lt; 2.048</geo:adjustmentValue>
+		<geo:adjustedPosition>
+			<geo:Position gml:id="id78" srsName="urn:ogc:def:crs:EPSG::4939" srsDimension="3">
+				<gml:identifier codeSpace="COMC94">33771</gml:identifier>
+				<geo:atNode xlink:href="#id4"/>
+				<geo:status codeSpace="urn:xml-gov-au:icsm:egeodesy:geodesyml_position-status">Pending</geo:status>
+				<gml:pos uomLabels="deg deg m">-23.6273499722 148.5805745833 271.8806</gml:pos>
+				<geo:quality codeSpace="urn:xml-gov-au:icsm:egeodesy:sp1v17_std-deviation" uomLabels="m">0.0000 0.0000 0.1000</geo:quality>
+				<geo:quality codeSpace="urn:xml-gov-au:icsm:egeodesy:sp1v20_horizontal-positional-uncertainty" uomLabels="m">0.0001</geo:quality>
+				<geo:quality codeSpace="urn:xml-gov-au:icsm:egeodesy:sp1v20_ellipse" uomLabels="m m deg">0.0000 0.0000 179.5952</geo:quality>
+				<geo:quality codeSpace="urn:xml-gov-au:icsm:egeodesy:sp1v20_vertical-positional-uncertainty" uomLabels="m">0.1960</geo:quality>
+				<geo:quality codeSpace="urn:xml-gov-au:icsm:egeodesy:sp1v20_upper-vcv">6.112069977e-03 -3.733667858e-03 3.133185094e-03 2.280779257e-03 -1.913962710e-03 1.606142618e-03</geo:quality>
+				<geo:source xlink:href="#id2"/>
+			</geo:Position>
+		</geo:adjustedPosition>
+		<geo:adjustedPosition>
+			<geo:Position gml:id="id79" srsName="urn:ogc:def:crs:EPSG::4939" srsDimension="3">
+				<gml:identifier codeSpace="COMC94">67596</gml:identifier>
+				<geo:atNode xlink:href="#id6"/>
+				<geo:status codeSpace="urn:xml-gov-au:icsm:egeodesy:geodesyml_position-status">Pending</geo:status>
+				<gml:pos uomLabels="deg deg m">-23.6046396389 148.5506687222 217.2917</gml:pos>
+				<geo:quality codeSpace="urn:xml-gov-au:icsm:egeodesy:sp1v17_std-deviation" uomLabels="m">0.0000 0.0000 0.0000</geo:quality>
+				<geo:quality codeSpace="urn:xml-gov-au:icsm:egeodesy:sp1v20_horizontal-positional-uncertainty" uomLabels="m">0.0001</geo:quality>
+				<geo:quality codeSpace="urn:xml-gov-au:icsm:egeodesy:sp1v20_ellipse" uomLabels="m m deg">0.0000 0.0000 0.0012</geo:quality>
+				<geo:quality codeSpace="urn:xml-gov-au:icsm:egeodesy:sp1v20_vertical-positional-uncertainty" uomLabels="m">0.0000</geo:quality>
+				<geo:quality codeSpace="urn:xml-gov-au:icsm:egeodesy:sp1v20_upper-vcv">3.903673300e-10 2.528407621e-10 -2.649847832e-10 6.491447844e-10 1.620514703e-10 8.107970019e-10</geo:quality>
+				<geo:source xlink:href="#id2"/>
+			</geo:Position>
+		</geo:adjustedPosition>
+		<geo:adjustedPosition>
+			<geo:Position gml:id="id80" srsName="urn:ogc:def:crs:EPSG::4939" srsDimension="3">
+				<gml:identifier codeSpace="COMC94">72292</gml:identifier>
+				<geo:atNode xlink:href="#id8"/>
+				<geo:status codeSpace="urn:xml-gov-au:icsm:egeodesy:geodesyml_position-status">Pending</geo:status>
+				<gml:pos uomLabels="deg deg m">-23.6054518833 148.5463411000 216.8756</gml:pos>
+				<geo:quality codeSpace="urn:xml-gov-au:icsm:egeodesy:sp1v17_std-deviation" uomLabels="m">0.0049 0.0037 0.1000</geo:quality>
+				<geo:quality codeSpace="urn:xml-gov-au:icsm:egeodesy:sp1v20_horizontal-positional-uncertainty" uomLabels="m">0.0109</geo:quality>
+				<geo:quality codeSpace="urn:xml-gov-au:icsm:egeodesy:sp1v20_ellipse" uomLabels="m m deg">0.0051 0.0034 67.0730</geo:quality>
+				<geo:quality codeSpace="urn:xml-gov-au:icsm:egeodesy:sp1v20_vertical-positional-uncertainty" uomLabels="m">0.1960</geo:quality>
+				<geo:quality codeSpace="urn:xml-gov-au:icsm:egeodesy:sp1v20_upper-vcv">6.120010263e-03 -3.726390152e-03 3.122922954e-03 2.302223941e-03 -1.915779243e-03 1.615047607e-03</geo:quality>
+				<geo:source xlink:href="#id2"/>
+			</geo:Position>
+		</geo:adjustedPosition>
+		<geo:adjustedPosition>
+			<geo:Position gml:id="id81" srsName="urn:ogc:def:crs:EPSG::4939" srsDimension="3">
+				<gml:identifier codeSpace="COMC94">75308</gml:identifier>
+				<geo:atNode xlink:href="#id10"/>
+				<geo:status codeSpace="urn:xml-gov-au:icsm:egeodesy:geodesyml_position-status">Pending</geo:status>
+				<gml:pos uomLabels="deg deg m">-23.6015104222 148.5517288778 217.3588</gml:pos>
+				<geo:quality codeSpace="urn:xml-gov-au:icsm:egeodesy:sp1v17_std-deviation" uomLabels="m">0.0045 0.0048 0.1000</geo:quality>
+				<geo:quality codeSpace="urn:xml-gov-au:icsm:egeodesy:sp1v20_horizontal-positional-uncertainty" uomLabels="m">0.0114</geo:quality>
+				<geo:quality codeSpace="urn:xml-gov-au:icsm:egeodesy:sp1v20_ellipse" uomLabels="m m deg">0.0051 0.0042 34.0334</geo:quality>
+				<geo:quality codeSpace="urn:xml-gov-au:icsm:egeodesy:sp1v20_vertical-positional-uncertainty" uomLabels="m">0.1960</geo:quality>
+				<geo:quality codeSpace="urn:xml-gov-au:icsm:egeodesy:sp1v20_upper-vcv">6.120071225e-03 -3.729006320e-03 3.120704877e-03 2.300003327e-03 -1.912420646e-03 1.622467632e-03</geo:quality>
+				<geo:source xlink:href="#id2"/>
+			</geo:Position>
+		</geo:adjustedPosition>
+		<geo:adjustedPosition>
+			<geo:Position gml:id="id82" srsName="urn:ogc:def:crs:EPSG::4939" srsDimension="3">
+				<gml:identifier codeSpace="COMC94">77136</gml:identifier>
+				<geo:atNode xlink:href="#id12"/>
+				<geo:status codeSpace="urn:xml-gov-au:icsm:egeodesy:geodesyml_position-status">Pending</geo:status>
+				<gml:pos uomLabels="deg deg m">-23.6039801056 148.5469907722 217.1322</gml:pos>
+				<geo:quality codeSpace="urn:xml-gov-au:icsm:egeodesy:sp1v17_std-deviation" uomLabels="m">0.0053 0.0051 0.1000</geo:quality>
+				<geo:quality codeSpace="urn:xml-gov-au:icsm:egeodesy:sp1v20_horizontal-positional-uncertainty" uomLabels="m">0.0133</geo:quality>
+				<geo:quality codeSpace="urn:xml-gov-au:icsm:egeodesy:sp1v20_ellipse" uomLabels="m m deg">0.0064 0.0037 46.3605</geo:quality>
+				<geo:quality codeSpace="urn:xml-gov-au:icsm:egeodesy:sp1v20_vertical-positional-uncertainty" uomLabels="m">0.1960</geo:quality>
+				<geo:quality codeSpace="urn:xml-gov-au:icsm:egeodesy:sp1v20_upper-vcv">6.125586369e-03 -3.724087864e-03 3.114780838e-03 2.302552197e-03 -1.920148712e-03 1.625418527e-03</geo:quality>
+				<geo:source xlink:href="#id2"/>
+			</geo:Position>
+		</geo:adjustedPosition>
+		<geo:adjustedPosition>
+			<geo:Position gml:id="id83" srsName="urn:ogc:def:crs:EPSG::4939" srsDimension="3">
+				<gml:identifier codeSpace="COMC94">77148</gml:identifier>
+				<geo:atNode xlink:href="#id14"/>
+				<geo:status codeSpace="urn:xml-gov-au:icsm:egeodesy:geodesyml_position-status">Pending</geo:status>
+				<gml:pos uomLabels="deg deg m">-23.6024292139 148.5494560167 215.8955</gml:pos>
+				<geo:quality codeSpace="urn:xml-gov-au:icsm:egeodesy:sp1v17_std-deviation" uomLabels="m">0.0054 0.0050 0.1000</geo:quality>
+				<geo:quality codeSpace="urn:xml-gov-au:icsm:egeodesy:sp1v20_horizontal-positional-uncertainty" uomLabels="m">0.0134</geo:quality>
+				<geo:quality codeSpace="urn:xml-gov-au:icsm:egeodesy:sp1v20_ellipse" uomLabels="m m deg">0.0065 0.0035 49.1115</geo:quality>
+				<geo:quality codeSpace="urn:xml-gov-au:icsm:egeodesy:sp1v20_vertical-positional-uncertainty" uomLabels="m">0.1960</geo:quality>
+				<geo:quality codeSpace="urn:xml-gov-au:icsm:egeodesy:sp1v20_upper-vcv">6.126583349e-03 -3.723128194e-03 3.114728035e-03 2.303040398e-03 -1.920765356e-03 1.624127809e-03</geo:quality>
+				<geo:source xlink:href="#id2"/>
+			</geo:Position>
+		</geo:adjustedPosition>
+		<geo:adjustedLine>
+			<geo:atLine xlink:href="#id16"/>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_adjusted-value" uomLabels="deg">-23.36167027</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_correction" uomLabels="dms">0.0000</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_measured-std-deviation" uomLabels="dms">0.0000</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_adjusted-std-deviation" uomLabels="dms">0.0000</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_residual-std-deviation" uomLabels="dms">0.0000</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_nstat">-0.17</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_tstat">0.00</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_reliability">321.1</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_outlier-indicator">false</geo:adjustmentValue>
+		</geo:adjustedLine>
+		<geo:adjustedLine>
+			<geo:atLine xlink:href="#id19"/>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_adjusted-value" uomLabels="deg">148.33024074</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_correction" uomLabels="dms">0.0000</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_measured-std-deviation" uomLabels="dms">0.0000</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_adjusted-std-deviation" uomLabels="dms">0.0000</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_residual-std-deviation" uomLabels="dms">0.0000</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_nstat">-1.37</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_tstat">0.00</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_reliability">999.9</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_outlier-indicator">false</geo:adjustmentValue>
+		</geo:adjustedLine>
+		<geo:adjustedLine>
+			<geo:atLine xlink:href="#id21"/>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_adjusted-value" uomLabels="m">168.2900</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_correction" uomLabels="m">0.0000</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_measured-std-deviation" uomLabels="m">99.9900</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_adjusted-std-deviation" uomLabels="m">0.0000</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_residual-std-deviation" uomLabels="m">99.9900</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_nstat">0.00</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_tstat">0.00</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_reliability">1.0</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_outlier-indicator">false</geo:adjustmentValue>
+		</geo:adjustedLine>
+		<geo:adjustedLine>
+			<geo:atLine xlink:href="#id23"/>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_adjusted-value" uomLabels="deg">-23.37384599</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_correction" uomLabels="dms">0.0000</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_measured-std-deviation" uomLabels="dms">0.0000</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_adjusted-std-deviation" uomLabels="dms">0.0000</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_residual-std-deviation" uomLabels="dms">0.0000</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_nstat">0.53</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_tstat">0.00</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_reliability">999.9</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_outlier-indicator">false</geo:adjustmentValue>
+		</geo:adjustedLine>
+		<geo:adjustedLine>
+			<geo:atLine xlink:href="#id25"/>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_adjusted-value" uomLabels="deg">148.34500685</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_correction" uomLabels="dms">0.0000</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_measured-std-deviation" uomLabels="dms">0.0000</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_adjusted-std-deviation" uomLabels="dms">0.0000</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_residual-std-deviation" uomLabels="dms">0.0000</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_nstat">1.71</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_tstat">0.00</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_reliability">999.9</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_outlier-indicator">false</geo:adjustmentValue>
+		</geo:adjustedLine>
+		<geo:adjustedLine>
+			<geo:atLine xlink:href="#id27"/>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_adjusted-value" uomLabels="m">222.8900</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_correction" uomLabels="m">0.0000</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_measured-std-deviation" uomLabels="m">99.9900</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_adjusted-std-deviation" uomLabels="m">0.1000</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_residual-std-deviation" uomLabels="m">99.9900</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_nstat">0.00</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_tstat">0.00</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_reliability">1.0</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_outlier-indicator">false</geo:adjustmentValue>
+		</geo:adjustedLine>
+		<geo:adjustedLine>
+			<geo:atLine xlink:href="#id29"/>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_adjusted-value" uomLabels="deg">-23.36167027</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_correction" uomLabels="dms">0.0000</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_measured-std-deviation" uomLabels="dms">99.9990</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_adjusted-std-deviation" uomLabels="dms">0.0000</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_residual-std-deviation" uomLabels="dms">99.9990</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_nstat">0.00</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_tstat">0.00</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_reliability">1.0</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_outlier-indicator">false</geo:adjustmentValue>
+		</geo:adjustedLine>
+		<geo:adjustedLine>
+			<geo:atLine xlink:href="#id31"/>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_adjusted-value" uomLabels="deg">148.33024074</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_correction" uomLabels="dms">-0.0002</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_measured-std-deviation" uomLabels="dms">99.9990</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_adjusted-std-deviation" uomLabels="dms">0.0000</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_residual-std-deviation" uomLabels="dms">99.9990</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_nstat">0.00</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_tstat">0.00</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_reliability">1.0</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_outlier-indicator">false</geo:adjustmentValue>
+		</geo:adjustedLine>
+		<geo:adjustedLine>
+			<geo:atLine xlink:href="#id33"/>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_adjusted-value" uomLabels="m">168.2900</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_correction" uomLabels="m">0.0000</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_measured-std-deviation" uomLabels="m">0.0000</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_adjusted-std-deviation" uomLabels="m">0.0000</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_residual-std-deviation" uomLabels="m">0.0000</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_nstat">0.68</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_tstat">0.00</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_reliability">999.9</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_outlier-indicator">false</geo:adjustmentValue>
+		</geo:adjustedLine>
+		<geo:adjustedLine>
+			<geo:atLine xlink:href="#id35"/>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_adjusted-value" uomLabels="m">168.2900</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_correction" uomLabels="m">0.0000</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_measured-std-deviation" uomLabels="m">0.1000</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_adjusted-std-deviation" uomLabels="m">0.0000</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_residual-std-deviation" uomLabels="m">0.1000</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_nstat">0.00</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_tstat">0.00</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_reliability">1.0</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_outlier-indicator">false</geo:adjustmentValue>
+		</geo:adjustedLine>
+		<geo:adjustedLine>
+			<geo:atLine xlink:href="#id37"/>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_adjusted-value" uomLabels="m">222.8900</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_correction" uomLabels="m">0.0000</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_measured-std-deviation" uomLabels="m">0.1000</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_adjusted-std-deviation" uomLabels="m">0.1000</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_residual-std-deviation" uomLabels="m">0.0010</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_nstat">0.00</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_tstat">0.00</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_reliability">99.5</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_outlier-indicator">false</geo:adjustmentValue>
+		</geo:adjustedLine>
+		<geo:adjustedLine>
+			<geo:atLine xlink:href="#id39"/>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_adjusted-value" uomLabels="m">168.3480</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_correction" uomLabels="m">0.0000</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_measured-std-deviation" uomLabels="m">0.1000</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_adjusted-std-deviation" uomLabels="m">0.1000</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_residual-std-deviation" uomLabels="m">0.0010</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_nstat">-0.03</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_tstat">0.00</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_reliability">99.9</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_outlier-indicator">false</geo:adjustmentValue>
+		</geo:adjustedLine>
+		<geo:adjustedLine>
+			<geo:atLine xlink:href="#id41"/>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_adjusted-value" uomLabels="m">168.1340</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_correction" uomLabels="m">0.0000</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_measured-std-deviation" uomLabels="m">0.1000</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_adjusted-std-deviation" uomLabels="m">0.1000</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_residual-std-deviation" uomLabels="m">0.0010</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_nstat">0.04</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_tstat">0.00</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_reliability">99.9</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_outlier-indicator">false</geo:adjustmentValue>
+		</geo:adjustedLine>
+		<geo:adjustedLine>
+			<geo:atLine xlink:href="#id43"/>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_adjusted-value" uomLabels="m">166.8900</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_correction" uomLabels="m">0.0000</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_measured-std-deviation" uomLabels="m">0.1000</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_adjusted-std-deviation" uomLabels="m">0.1000</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_residual-std-deviation" uomLabels="m">0.0010</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_nstat">0.03</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_tstat">0.00</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_reliability">99.9</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_outlier-indicator">false</geo:adjustmentValue>
+		</geo:adjustedLine>
+		<geo:adjustedLine>
+			<geo:atLine xlink:href="#id45"/>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_adjusted-value" uomLabels="m">168.2900</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_correction" uomLabels="m">-0.1280</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_measured-std-deviation" uomLabels="m">0.1000</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_adjusted-std-deviation" uomLabels="m">0.0000</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_residual-std-deviation" uomLabels="m">0.1000</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_nstat">-1.28</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_tstat">0.00</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_reliability">1.0</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_outlier-indicator">false</geo:adjustmentValue>
+		</geo:adjustedLine>
+		<geo:adjustedLine>
+			<geo:atLine xlink:href="#id47"/>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_adjusted-value" uomLabels="m">167.8820</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_correction" uomLabels="m">0.0000</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_measured-std-deviation" uomLabels="m">0.1000</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_adjusted-std-deviation" uomLabels="m">0.1000</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_residual-std-deviation" uomLabels="m">0.0010</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_nstat">0.01</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_tstat">0.00</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_reliability">99.9</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_outlier-indicator">false</geo:adjustmentValue>
+		</geo:adjustedLine>
+		<geo:adjustedLine>
+			<geo:atLine xlink:href="#id49"/>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_adjusted-value" uomLabels="m">304.6479</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_correction" uomLabels="m">-0.0031</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_measured-std-deviation" uomLabels="m">0.0060</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_adjusted-std-deviation" uomLabels="m">0.0053</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_residual-std-deviation" uomLabels="m">0.0029</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_nstat">-1.06</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_tstat">0.00</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_reliability">2.0</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_outlier-indicator">false</geo:adjustmentValue>
+		</geo:adjustedLine>
+		<geo:adjustedLine>
+			<geo:atLine xlink:href="#id51"/>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_adjusted-value" uomLabels="m">253.3129</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_correction" uomLabels="m">-0.0021</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_measured-std-deviation" uomLabels="m">0.0060</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_adjusted-std-deviation" uomLabels="m">0.0052</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_residual-std-deviation" uomLabels="m">0.0030</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_nstat">-0.72</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_tstat">0.00</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_reliability">2.0</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_outlier-indicator">false</geo:adjustmentValue>
+		</geo:adjustedLine>
+		<geo:adjustedLine>
+			<geo:atLine xlink:href="#id53"/>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_adjusted-value" uomLabels="m">450.7481</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_correction" uomLabels="m">0.0011</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_measured-std-deviation" uomLabels="m">0.0061</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_adjusted-std-deviation" uomLabels="m">0.0051</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_residual-std-deviation" uomLabels="m">0.0034</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_nstat">0.32</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_tstat">0.00</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_reliability">1.7</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_outlier-indicator">false</geo:adjustmentValue>
+		</geo:adjustedLine>
+		<geo:adjustedLine>
+			<geo:atLine xlink:href="#id55"/>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_adjusted-value" uomLabels="m">363.0693</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_correction" uomLabels="m">0.0053</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_measured-std-deviation" uomLabels="m">0.0061</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_adjusted-std-deviation" uomLabels="m">0.0050</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_residual-std-deviation" uomLabels="m">0.0034</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_nstat">1.54</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_tstat">0.00</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_reliability">1.7</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_outlier-indicator">false</geo:adjustmentValue>
+		</geo:adjustedLine>
+		<geo:adjustedLine>
+			<geo:atLine xlink:href="#id57"/>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_adjusted-value" uomLabels="m">175.9742</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_correction" uomLabels="m">-0.0048</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_measured-std-deviation" uomLabels="m">0.0059</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_adjusted-std-deviation" uomLabels="m">0.0050</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_residual-std-deviation" uomLabels="m">0.0031</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_nstat">-1.55</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_tstat">0.00</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_reliability">1.8</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_outlier-indicator">false</geo:adjustmentValue>
+		</geo:adjustedLine>
+		<geo:adjustedLine>
+			<geo:atLine xlink:href="#id60"/>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_adjusted-value" uomLabels="dms">146.27180975</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_correction" uomLabels="sec">2.2600</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_measured-std-deviation" uomLabels="sec">3.4627</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_adjusted-std-deviation" uomLabels="sec">2.9980</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_residual-std-deviation" uomLabels="sec">2.7694</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_nstat">0.82</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_tstat">0.00</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_reliability">1.4</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_outlier-indicator">false</geo:adjustmentValue>
+		</geo:adjustedLine>
+		<geo:adjustedLine>
+			<geo:atLine xlink:href="#id63"/>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_adjusted-value" uomLabels="dms">48.58325928</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_correction" uomLabels="sec">0.2858</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_measured-std-deviation" uomLabels="sec">2.5108</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_adjusted-std-deviation" uomLabels="sec">2.1990</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_residual-std-deviation" uomLabels="sec">2.2473</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_nstat">0.13</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_tstat">0.00</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_reliability">1.4</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_outlier-indicator">false</geo:adjustmentValue>
+		</geo:adjustedLine>
+		<geo:adjustedLine>
+			<geo:atLine xlink:href="#id66"/>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_adjusted-value" uomLabels="dms">169.21504323</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_correction" uomLabels="sec">-1.5424</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_measured-std-deviation" uomLabels="sec">2.1604</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_adjusted-std-deviation" uomLabels="sec">2.6805</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_residual-std-deviation" uomLabels="sec">1.9459</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_nstat">-0.79</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_tstat">0.00</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_reliability">1.7</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_outlier-indicator">false</geo:adjustmentValue>
+		</geo:adjustedLine>
+		<geo:adjustedLine>
+			<geo:atLine xlink:href="#id69"/>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_adjusted-value" uomLabels="dms">359.55267690</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_correction" uomLabels="sec">1.7014</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_measured-std-deviation" uomLabels="sec">1.0108</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_adjusted-std-deviation" uomLabels="sec">1.6105</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_residual-std-deviation" uomLabels="sec">1.0504</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_nstat">1.62</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_tstat">0.00</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_reliability">1.8</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_outlier-indicator">false</geo:adjustmentValue>
+		</geo:adjustedLine>
+		<geo:adjustedLine>
+			<geo:atLine xlink:href="#id72"/>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_adjusted-value" uomLabels="dms">118.51070983</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_correction" uomLabels="sec">-0.3179</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_measured-std-deviation" uomLabels="sec">1.8926</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_adjusted-std-deviation" uomLabels="sec">2.1887</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_residual-std-deviation" uomLabels="sec">1.2112</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_nstat">-0.26</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_tstat">0.00</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_reliability">2.0</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_outlier-indicator">false</geo:adjustmentValue>
+		</geo:adjustedLine>
+		<geo:adjustedLine>
+			<geo:atLine xlink:href="#id75"/>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_adjusted-value" uomLabels="dms">56.21117797</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_correction" uomLabels="sec">1.2750</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_measured-std-deviation" uomLabels="sec">1.6356</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_adjusted-std-deviation" uomLabels="sec">2.6652</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_residual-std-deviation" uomLabels="sec">2.7500</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_nstat">0.46</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_tstat">0.00</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_reliability">1.3</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_outlier-indicator">false</geo:adjustmentValue>
+		</geo:adjustedLine>
+		<geo:adjustedLine>
+			<geo:atLine xlink:href="#id77"/>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_adjusted-value" uomLabels="dms">55.40483906</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_correction" uomLabels="sec">1.3806</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_measured-std-deviation" uomLabels="sec">1.7320</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_adjusted-std-deviation" uomLabels="sec">1.5078</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_residual-std-deviation" uomLabels="sec">0.8523</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_nstat">1.62</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_tstat">0.00</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_reliability">2.0</geo:adjustmentValue>
+			<geo:adjustmentValue codeSpace="urn:xml-gov-au:icsm:egeodesy:dynanet_outlier-indicator">false</geo:adjustmentValue>
+		</geo:adjustedLine>
+	</geo:Adjustment>
+</geo:GeodesyML>

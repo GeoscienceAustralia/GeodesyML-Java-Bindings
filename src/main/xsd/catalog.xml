@@ -1,0 +1,25 @@
+<!-- <!DOCTYPE catalog -->
+<!--     PUBLIC "&#45;//OASIS//DTD XML Catalogs V1.1//EN"> -->
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog"
+         prefer="public">
+
+    <rewriteSystem
+            systemIdStartString = "http://schemas.opengis.net/gml/3.2.1/"
+            rewritePrefix = "gml/"/>
+    <rewriteSystem
+            systemIdStartString = "http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/"
+            rewritePrefix = "igssitelog/"/>
+    <system
+            systemId = "receiver.xsd"
+            uri = "igssitelog/receiver.xsd"/>
+    <system
+            systemId = "radioInterferences.xsd"
+            uri = "igssitelog/radioInterferences.xsd"/>
+    <system
+            systemId = "formInformation.xsd"
+            uri = "igssitelog/formInformation.xsd"/>
+    <system
+            systemId = "baseContactLib.xsd"
+            uri = "igssitelog/baseContactLib.xsd"/>
+
+</catalog>

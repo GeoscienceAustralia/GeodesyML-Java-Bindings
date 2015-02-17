@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:sopac="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.1" targetNamespace="urn:xml-gov-au:icsm:egeodesy:0.1" elementFormDefault="qualified" version="0.1.2" xml:lang="en">
+	<annotation>
+		<documentation>eGeodesy schema implementation based on GML - draft. Copyright (c) 2013 Commonwealth of Australia, on behalf of the Intergovernmental Committee on Surveying and Mapping. All rights reserved.</documentation>
+	</annotation>
+	<!--  -->
+	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+	<import namespace="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"/>
+	<include schemaLocation="GeodesyML.xsd"/>
+	<!--  -->
+	<complexType name="NodePropertyType">
+		<sequence minOccurs="0">
+			<element ref="geo:Node"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+	</complexType>
+	<!--  -->
+	<element name="Node" type="geo:NodeType" substitutionGroup="gml:AbstractFeature"/>
+	<!--  -->
+	<complexType name="NodeType">
+		<complexContent>
+			<extension base="gml:AbstractFeatureType">
+				<sequence>
+					<element name="status" type="gml:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>Status of node.</documentation>
+						</annotation>
+					</element>
+					<element name="hasMonument" type="geo:MonumentPropertyType" minOccurs="0"/>
+					<element ref="sopac:igsSiteLog" minOccurs="0"/>
+					<element name="remarks" type="string" minOccurs="0"/>
+					<element name="associatedDocument" type="geo:DocumentPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="extension" type="anyType" minOccurs="0"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!--  -->
+	<complexType name="PositionPropertyType">
+		<sequence minOccurs="0">
+			<element ref="geo:Position"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+	</complexType>
+	<!--  -->
+	<element name="Position" type="geo:PositionType" substitutionGroup="gml:AbstractFeature"/>
+	<!--  -->
+	<complexType name="PositionType">
+		<annotation>
+			<documentation>Contains information about a 1d, 2d, or 3d position for a node.  In general a different position record is used for each datum and source.  For example if a 3d adjustment was the source a single 3d position record (e.g. lat, lon, ellipsoid ht) could be used. If there was an AHD height determined this would be a separate 1d position record.</documentation>
+		</annotation>
+		<complexContent>
+			<extension base="gml:AbstractFeatureType">
+				<sequence>
+					<element name="atNode" type="geo:NodePropertyType"/>
+					<element name="status" type="gml:CodeType">
+						<annotation>
+							<documentation>Current status of position.</documentation>
+						</annotation>
+					</element>
+					<element name="authorativeDate" type="gml:TimePositionType" minOccurs="0">
+						<annotation>
+							<documentation>Date position attained authorative status</documentation>
+						</annotation>
+					</element>
+					<element name="epoch" type="gml:TimePositionType" minOccurs="0">
+						<annotation>
+							<documentation>Epoch in which the position is defined in given spatial reference system.  For a static datum (e.g. GDA94) this element is not required.</documentation>
+						</annotation>
+					</element>
+					<element ref="gml:pos"/>
+					<element name="quality" type="geo:ValueType" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="velocity" type="geo:VelocityMapPropertyType" minOccurs="0"/>
+					<element name="source" type="geo:AbstractEstimationPropertyType" minOccurs="0">
+						<annotation>
+							<documentation>Estimation (adjustment) that defined position.</documentation>
+						</annotation>
+					</element>
+					<element name="originPosition" type="geo:PositionPropertyType" minOccurs="0">
+						<annotation>
+							<documentation>Origin position for this position.  For example an AHD height may have an origin height.</documentation>
+						</annotation>
+					</element>
+					<element name="remarks" type="string" minOccurs="0"/>
+					<element name="associatedDocument" type="geo:DocumentPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="extension" type="anyType" minOccurs="0"/>
+				</sequence>
+				<attributeGroup ref="geo:SpatialReferenceGroup"/>
+			</extension>
+		</complexContent>
+	</complexType>
+</schema>

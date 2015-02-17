@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<geo:GeodesyML xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.1" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xlink="http://www.w3.org/1999/xlink" gml:id="id1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.1 ../../schemas/0.1.2/GeodesyML.xsd">
+	<geo:Adjustment gml:id="id2">
+		<gml:identifier codeSpace="urn:qld-gov-au:egeodesy">PORT OF BRISBANE AUGUST 2003</gml:identifier>
+		<geo:status codeSpace="urn:xml-gov-au:icsm:egeodesy:geodesyml_adjustment-status">Executed</geo:status>
+		<geo:runDate>2004-03-12T00:00:00</geo:runDate>
+	</geo:Adjustment>
+	<geo:Position gml:id="id3" srsName="urn:ogc:def:crs:EPSG::4283" srsDimension="2">
+		<geo:atNode>
+			<geo:Node gml:id="id4">
+				<gml:identifier codeSpace="urn:qld-gov-au:egeodesy">151272</gml:identifier>
+				<geo:status codeSpace="urn:xml-gov-au:icsm:egeodesy:geodesyml_node-status">Authorative</geo:status>
+				<geo:hasMonument>
+					<geo:Monument gml:id="id5">
+						<gml:identifier codeSpace="urn:qld-gov-au:egeodesy">151272</gml:identifier>
+						<geo:type codeSpace="urn:qld-gov-au:egeodesy_monument-type">DDM</geo:type>
+						<geo:status codeSpace="urn:xml-gov-au:icsm:egeodesy:geodesyml_monument-status">Commissioned</geo:status>
+						<geo:installedBy>
+							<gmd:CI_ResponsibleParty id="id6">
+								<gmd:individualName>
+									<gco:CharacterString>C OVERELL</gco:CharacterString>
+								</gmd:individualName>
+								<gmd:role>
+									<gmd:CI_RoleCode codeList="urn:xml-gov-au:icsm:egeodesy:geodesyml_roles" codeListValue="Installer"/>
+								</gmd:role>
+							</gmd:CI_ResponsibleParty>
+						</geo:installedBy>
+						<geo:installedDate>2003-05-23T00:00:00</geo:installedDate>
+						<geo:siteVisit>
+							<geo:visitDate>2012-05-01T00:00:00</geo:visitDate>
+							<geo:condition codeSpace="urn:qld-gov-au:egeodesy_monument-condition">Good</geo:condition>
+						</geo:siteVisit>
+						<geo:associatedDocument>
+							<geo:Document gml:id="id7">
+								<gml:identifier codeSpace="urn:qld-gov-au:egeodesy">SCS151272</gml:identifier>
+								<geo:type codeSpace="urn:xml-gov-au:icsm:egeodesy:geodesyml_document-type">Sketch</geo:type>
+								<geo:body>
+									<geo:fileReference xlink:href="SCS151272.pdf"/>
+								</geo:body>
+							</geo:Document>
+						</geo:associatedDocument>
+					</geo:Monument>
+				</geo:hasMonument>
+				<geo:extension>
+					<geo:otherValue codeSpace="urn:qld-gov-au:egeodesy_cadastral-connection">SP161712</geo:otherValue>
+					<geo:otherValue codeSpace="urn:qld-gov-au:egeodesy_cadastral-connection">SP236522</geo:otherValue>
+					<geo:otherValue codeSpace="urn:qld-gov-au:egeodesy_cadastral-connection">SP236523</geo:otherValue>
+					<geo:otherValue codeSpace="urn:qld-gov-au:egeodesy_cadastral-connection">SP236524</geo:otherValue>
+					<geo:otherValue codeSpace="urn:qld-gov-au:egeodesy_cadastral-connection">SP236525</geo:otherValue>
+					<geo:otherValue codeSpace="urn:qld-gov-au:egeodesy_cadastral-connection">SP236526</geo:otherValue>
+					<geo:otherValue codeSpace="urn:qld-gov-au:egeodesy_cadastral-connection">SP236527</geo:otherValue>
+					<geo:otherValue codeSpace="urn:qld-gov-au:egeodesy_cadastral-connection">SP236528</geo:otherValue>
+					<geo:otherValue codeSpace="urn:qld-gov-au:egeodesy_cadastral-connection">SP236529</geo:otherValue>
+					<geo:otherValue codeSpace="urn:qld-gov-au:egeodesy_cadastral-connection">SP236530</geo:otherValue>
+					<geo:otherValue codeSpace="urn:qld-gov-au:egeodesy_cadastral-connection">SP238049</geo:otherValue>
+					<geo:otherValue codeSpace="urn:qld-gov-au:egeodesy_cadastral-connection">SP253787</geo:otherValue>
+				</geo:extension>
+			</geo:Node>
+		</geo:atNode>
+		<geo:status codeSpace="urn:xml-gov-au:icsm:egeodesy:geodesyml_position-status">Authorative</geo:status>
+		<geo:authorativeDate>2004-03-12T00:00:00</geo:authorativeDate>
+		<gml:pos uomLabels="deg deg">-27.3912589327 153.1711687222</gml:pos>
+		<geo:quality codeSpace="urn:qld-gov-au:egeodesy_horizontal-class">CLASS A</geo:quality>
+		<geo:quality codeSpace="urn:qld-gov-au:egeodesy_horizontal-order">1st ORDER</geo:quality>
+		<geo:source xlink:href="#id2"/>
+		<geo:extension>
+			<geo:otherValue codeSpace="urn:qld-gov-au:egeodesy_fix-by">GPS</geo:otherValue>
+		</geo:extension>
+	</geo:Position>
+	<geo:Position gml:id="id8" srsName="urn:ogc:def:crs:EPSG::5711" srsDimension="1">
+		<geo:atNode xlink:href="#id4"/>
+		<geo:status codeSpace="urn:xml-gov-au:icsm:egeodesy:geodesyml_position-status">Authorative</geo:status>
+		<geo:authorativeDate>2004-03-17T00:00:00</geo:authorativeDate>
+		<gml:pos uomLabels="m">4.278</gml:pos>
+		<geo:quality codeSpace="urn:qld-gov-au:egeodesy_vertical-class">Class A</geo:quality>
+		<geo:quality codeSpace="urn:qld-gov-au:egeodesy_vertical-order">4th ORDER</geo:quality>
+		<geo:extension>
+			<geo:otherValue codeSpace="urn:qld-gov-au:egeodesy_fix-by">GPS</geo:otherValue>
+			<geo:otherValue codeSpace="urn:qld-gov-au:egeodesy_origin-mark">53010</geo:otherValue>
+			<geo:otherValue codeSpace="urn:qld-gov-au:egeodesy_n-model">AUSGEOID98 INTERPOLATED</geo:otherValue>
+			<geo:otherValue codeSpace="urn:qld-gov-au:egeodesy_n-value" uomLabels="m">41.492</geo:otherValue>
+			<geo:otherValue codeSpace="urn:qld-gov-au:egeodesy_n-datum">GRS80</geo:otherValue>
+		</geo:extension>
+	</geo:Position>
+</geo:GeodesyML>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<geo:GeodesyML xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.1" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xlink="http://www.w3.org/1999/xlink" gml:id="id1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.1 ../../schemas/0.1.2/GeodesyML.xsd">
+	<geo:Adjustment gml:id="id2">
+		<gml:identifier codeSpace="urn:qld-gov-au:egeodesy">GDA - TRANSFORMED QLD_0900 GRID</gml:identifier>
+		<geo:status codeSpace="urn:xml-gov-au:icsm:egeodesy:geodesyml_adjustment-status">Executed</geo:status>
+		<geo:runDate>2000-10-24T00:00:00</geo:runDate>
+	</geo:Adjustment>
+	<geo:Adjustment gml:id="id3">
+		<gml:identifier codeSpace="urn:qld-gov-au:egeodesy">SECTION Q-NSWPEG</gml:identifier>
+		<geo:status codeSpace="urn:xml-gov-au:icsm:egeodesy:geodesyml_adjustment-status">Executed</geo:status>
+		<geo:runDate>1992-02-17T00:00:00</geo:runDate>
+	</geo:Adjustment>
+	<geo:Position gml:id="id4" srsName="urn:ogc:def:crs:EPSG::4203" srsDimension="2">
+		<geo:atNode>
+			<geo:Node gml:id="id5">
+				<gml:identifier codeSpace="urn:qld-gov-au:egeodesy">17681</gml:identifier>
+				<gml:name codeSpace="urn:qld-gov-au:egeodesy">BYGRAVE RANGE STH</gml:name>
+				<gml:name codeSpace="urn:qld-gov-au:egeodesy">NM B 21</gml:name>
+				<geo:status codeSpace="urn:xml-gov-au:icsm:egeodesy:geodesyml_node-status">Authorative</geo:status>
+				<geo:hasMonument>
+					<geo:Monument gml:id="id6">
+						<gml:identifier codeSpace="urn:qld-gov-au:egeodesy">17681</gml:identifier>
+						<geo:type codeSpace="urn:qld-gov-au:egeodesy_monument-type">OTHER COPPER PIPE IN CONC</geo:type>
+						<geo:status codeSpace="urn:xml-gov-au:icsm:egeodesy:geodesyml_monument-status">Commissioned</geo:status>
+						<geo:installedBy>
+							<gmd:CI_ResponsibleParty id="id7">
+								<gmd:individualName>
+									<gco:CharacterString>NATMAP</gco:CharacterString>
+								</gmd:individualName>
+								<gmd:role>
+									<gmd:CI_RoleCode codeList="urn:xml-gov-au:icsm:egeodesy:geodesyml_roles" codeListValue="Installer"/>
+								</gmd:role>
+							</gmd:CI_ResponsibleParty>
+						</geo:installedBy>
+						<geo:installedDate>1960-01-01T00:00:00</geo:installedDate>
+						<geo:siteVisit>
+							<geo:visitDate>1989-10-01T00:00:00</geo:visitDate>
+							<geo:condition codeSpace="urn:qld-gov-au:egeodesy_monument-condition">Good</geo:condition>
+						</geo:siteVisit>
+						<geo:SupplementaryMonument gml:id="id8">
+							<gml:description><![CDATA[AT STATION TIMBER QUAD]]></gml:description>
+							<geo:type codeSpace="urn:qld-gov-au:egeodesy_monument-type">Beacon</geo:type>
+							<geo:status codeSpace="urn:xml-gov-au:icsm:egeodesy:geodesyml_monument-status">Unknown</geo:status>
+						</geo:SupplementaryMonument>
+						<geo:associatedDocument>
+							<geo:Document gml:id="id9">
+								<gml:identifier codeSpace="urn:qld-gov-au:egeodesy">SCS017681</gml:identifier>
+								<geo:type codeSpace="urn:xml-gov-au:icsm:egeodesy:geodesyml_document-type">Sketch</geo:type>
+								<geo:body>
+									<geo:fileReference xlink:href="SCS017681.pdf"/>
+								</geo:body>
+							</geo:Document>
+						</geo:associatedDocument>
+					</geo:Monument>
+				</geo:hasMonument>
+			</geo:Node>
+		</geo:atNode>
+		<geo:status codeSpace="urn:xml-gov-au:icsm:egeodesy:geodesyml_position-status">Authorative</geo:status>
+		<geo:authorativeDate>1996-12-18T00:00:00</geo:authorativeDate>
+		<gml:pos uomLabels="deg deg">-28.9948336110 142.0016496107</gml:pos>
+		<geo:quality codeSpace="urn:qld-gov-au:egeodesy_horizontal-class">CLASS A</geo:quality>
+		<geo:quality codeSpace="urn:qld-gov-au:egeodesy_horizontal-order">1st ORDER</geo:quality>
+		<geo:source xlink:href="#id3"/>
+		<geo:extension>
+			<geo:otherValue codeSpace="urn:qld-gov-au:egeodesy_fix-by">TRIG</geo:otherValue>
+		</geo:extension>
+	</geo:Position>
+	<geo:Position gml:id="id10" srsName="urn:ogc:def:crs:EPSG::4283" srsDimension="2">
+		<geo:atNode xlink:href="#id5"/>
+		<geo:status codeSpace="urn:xml-gov-au:icsm:egeodesy:geodesyml_position-status">Authorative</geo:status>
+		<geo:authorativeDate>2000-10-25T00:00:00</geo:authorativeDate>
+		<gml:pos uomLabels="deg deg">-28.9933180735 142.0028884113</gml:pos>
+		<geo:quality codeSpace="urn:qld-gov-au:egeodesy_horizontal-class">CLASS A</geo:quality>
+		<geo:quality codeSpace="urn:qld-gov-au:egeodesy_horizontal-order">1st ORDER</geo:quality>
+		<geo:source xlink:href="#id2"/>
+		<geo:extension>
+			<geo:otherValue codeSpace="urn:qld-gov-au:egeodesy_fix-by">TRIG</geo:otherValue>
+		</geo:extension>
+	</geo:Position>
+	<geo:Position gml:id="id11" srsName="urn:ogc:def:crs:EPSG::5711" srsDimension="1">
+		<geo:atNode xlink:href="#id5"/>
+		<geo:status codeSpace="urn:xml-gov-au:icsm:egeodesy:geodesyml_position-status">Authorative</geo:status>
+		<geo:authorativeDate>1996-12-18T00:00:00</geo:authorativeDate>
+		<gml:pos uomLabels="m">227.026</gml:pos>
+		<geo:quality codeSpace="urn:qld-gov-au:egeodesy_vertical-class">Class C</geo:quality>
+		<geo:quality codeSpace="urn:qld-gov-au:egeodesy_vertical-order">3rd ORDER</geo:quality>
+		<geo:extension>
+			<geo:otherValue codeSpace="urn:qld-gov-au:egeodesy_fix-by">SPIRIT LEVELLING</geo:otherValue>
+			<geo:otherValue codeSpace="urn:qld-gov-au:egeodesy_nln-section">61-216</geo:otherValue>
+		</geo:extension>
+	</geo:Position>
+</geo:GeodesyML>

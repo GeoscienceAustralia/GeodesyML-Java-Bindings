@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<geo:Node gml:id="id2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.1 ../../schemas/0.1.2/GeodesyML.xsd">
+	<gml:description>Linked document example.</gml:description>
+	<gml:identifier codeSpace="urn:qld-gov-au:egeodesy">753339</gml:identifier>
+	<gml:name codeSpace="sopac">JLCK</gml:name>
+	<geo:associatedDocument>
+		<geo:Document gml:id="id3">
+			<gml:description>IGS site log for mark 753339</gml:description>
+			<geo:type codeSpace="urn:xml-gov-au:icsm:egeodesy:geodesyml_document-type">IGS Site Log</geo:type>
+			<geo:body>
+				<geo:fileReference xlink:href="ftp://information.qld.gov.au/spatial/igs/JLCK_20120311.log"/> <!-- example link only to ftp server -->
+			</geo:body>
+		</geo:Document>
+	</geo:associatedDocument>
+	<geo:associatedDocument>
+		<geo:Document gml:id="id4">
+			<gml:description>Form 6 for mark 753339</gml:description>
+			<geo:type codeSpace="urn:xml-gov-au:icsm:egeodesy:geodesyml_document-type">Mark Diagram</geo:type>
+			<geo:body>
+				<geo:fileReference xlink:href="http://information.qld.gov.au/spatial/get_document?type=form6&amp;id=753339"/> <!-- example link only to http rest service -->
+			</geo:body>
+		</geo:Document>
+	</geo:associatedDocument>
+</geo:Node>
