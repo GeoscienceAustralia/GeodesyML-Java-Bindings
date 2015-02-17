@@ -1,6 +1,4 @@
-## geodesyml-java-bindings
-
-### Java Bindings for GeodesyML v0.1.2
+## Java Bindings for GeodesyML v0.1.2
 
 #### Background
 
