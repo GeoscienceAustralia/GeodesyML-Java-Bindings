@@ -104,5 +104,3 @@ public class GeodesyMLMoxyTest {
         printSuccess("IGSSiteLogExample.xml", Marshallable.class);
     }
 }
-
-

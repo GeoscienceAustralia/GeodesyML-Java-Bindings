@@ -13,11 +13,14 @@ import javax.xml.transform.stream.StreamSource;
 import au.gov.ga.geodesy.interfaces.geodesyml.GeodesyMLMarshaller;
 import au.gov.ga.geodesy.interfaces.geodesyml.Marshallable;
 import au.gov.ga.geodesy.interfaces.geodesyml.TypeMismatchException;
-import au.gov.ga.geodesy.interfaces.geodesyml.dto.AdjustmentType;
 import au.gov.ga.geodesy.interfaces.geodesyml.dto.GeodesyMLType;
 import au.gov.ga.geodesy.interfaces.geodesyml.dto.gml.AbstractFeatureType;
 import au.gov.ga.geodesy.interfaces.geodesyml.dto.igssitelog.IgsSiteLogType;
 
+/**
+ * GeodesyML marshaller backed by the EclipseLink/MOXy implementation
+ * of JAXB API.
+ */
 public class GeodesyMLMoxy implements GeodesyMLMarshaller {
 
     private JAXBContext jaxbContext;
@@ -34,6 +37,9 @@ public class GeodesyMLMoxy implements GeodesyMLMarshaller {
         }
     }
 
+    /**
+     * {@inheritDoc}
+     */
     public <T extends Marshallable> void marshal(T t, Writer out) {
         try {
             createMarshaller().marshal(t, out);
@@ -42,25 +48,20 @@ public class GeodesyMLMoxy implements GeodesyMLMarshaller {
         }
     }
 
-    public void marshal(JAXBElement<?> element, Writer out) {
-        try {
-            createMarshaller().marshal(element, out);
-        } catch (JAXBException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
+    /**
+     * {@inheritDoc}
+     */
     public Marshallable unmarshal(Reader in) throws TypeMismatchException {
         return unmarshal(in, Marshallable.class);
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @SuppressWarnings("unchecked")
     public <T extends Marshallable> T unmarshal(Reader in, Class<T> type) throws TypeMismatchException {
         try {
-            StreamSource source = new StreamSource(in);
-            /* return createUnmarshaller().unmarshal(source, type).getValue(); */
-            
-            Object x = createUnmarshaller().unmarshal(source);
+            Object x = createUnmarshaller().unmarshal(new StreamSource(in));
             if (x instanceof JAXBElement) {
                 x = ((JAXBElement<?>) x).getValue();
             }

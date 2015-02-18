@@ -45,7 +45,7 @@ for analysis and transformation of Java source code.
 #### API
 
 Besides the generated GeodesyML (and dependent schema) DTOs, the library
-defines methods for marshalling and unmarshalling GeodesyML documents to and
+defines a service for marshalling and unmarshalling GeodesyML documents to and
 from XML.
 
 ```java
@@ -55,6 +55,7 @@ public interface GeodesyMLMarshaller {
     Marshallable unmarshal(Reader in) throws TypeMismatchException;
 }
 ```
+
 `Marshallable` is a marker interface, a compile-time witness to a
 run-time capability. XML elements that are mapped to `Marshallable` DTOs can
 appear as root elements of incoming and outgoing GeodesyML documents. Instances
