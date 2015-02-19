@@ -1,22 +1,9 @@
-<jxb:bindings version="2.0"
-      xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
-      xmlns:xs="http://www.w3.org/2001/XMLSchema"
-      xmlns:annox="http://annox.dev.java.net"
-      xmlns:namespace="http://jaxb2-commons.dev.java.net/namespace-prefix"
-      xmlns:inheritance="http://jaxb2-commons.dev.java.net/basic/inheritance"
-      xmlns:simplify="http://jaxb2-commons.dev.java.net/basic/simplify"
-      xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
-      jxb:extensionBindingPrefixes = "namespace annox xjc simplify">
-
-    <jxb:globalBindings choiceContentProperty="false">
-        <!-- <simplify:as&#45;element&#45;property/> -->
-        <!-- <xjc:simple/> -->
-    </jxb:globalBindings>
-
-    <jxb:bindings schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd" node="/xs:schema">
+<?xml version="1.0"?>
+<jxb:bindings jxb:extensionBindingPrefixes="namespace annox xjc simplify" version="2.0" xmlns:annox="http://annox.dev.java.net" xmlns:inheritance="http://jaxb2-commons.dev.java.net/basic/inheritance" xmlns:jxb="http://java.sun.com/xml/ns/jaxb" xmlns:namespace="http://jaxb2-commons.dev.java.net/namespace-prefix" xmlns:simplify="http://jaxb2-commons.dev.java.net/basic/simplify" xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <jxb:globalBindings choiceContentProperty="false"/>
+    <jxb:bindings node="/xs:schema" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd">
         <jxb:schemaBindings>
             <jxb:package name="au.gov.ga.geodesy.interfaces.geodesyml.dto.gml"/>
-            <!-- <jxb:package name="au.gov.ga.geodesy.interfaces.geodesyml.dto"/> -->
         </jxb:schemaBindings>
         <jxb:bindings>
             <namespace:prefix name="gml"/>
@@ -25,8 +12,7 @@
             <inheritance:implements>au.gov.ga.geodesy.interfaces.geodesyml.Marshallable</inheritance:implements>
         </jxb:bindings>
     </jxb:bindings>
-
-    <jxb:bindings schemaLocation="geodesyml/GeodesyML.xsd" node="/xs:schema">
+    <jxb:bindings node="/xs:schema" schemaLocation="geodesyml/GeodesyML.xsd">
         <jxb:schemaBindings>
             <jxb:package name="au.gov.ga.geodesy.interfaces.geodesyml.dto"/>
         </jxb:schemaBindings>
@@ -41,15 +27,9 @@
             <simplify:property name="nodeOrPositionOrMonument">
                 <simplify:as-element-property/>
             </simplify:property>
-
-            <!-- <jxb:bindings name="//xs:element[@ref='geo:AbstractEstimation']"> -->
-            <!--     <annox:annotate target="field">@javax.xml.bind.annotation.XmlRootElement</annox:annotate> -->
-            <!-- </jxb:bindings> -->
-
         </jxb:bindings>
     </jxb:bindings>
-
-    <jxb:bindings schemaLocation="geodesyml/Station.xsd" node="/xs:schema">
+    <jxb:bindings node="/xs:schema" schemaLocation="geodesyml/Station.xsd">
         <jxb:bindings node="xs:complexType[@name='NodeType']">
             <inheritance:implements>au.gov.ga.geodesy.interfaces.geodesyml.Marshallable</inheritance:implements>
             <annox:annotate>
@@ -57,8 +37,7 @@
             </annox:annotate>
         </jxb:bindings>
     </jxb:bindings>
-
-    <jxb:bindings schemaLocation="geodesyml/Document.xsd" node="/xs:schema">
+    <jxb:bindings node="/xs:schema" schemaLocation="geodesyml/Document.xsd">
         <jxb:bindings node="xs:complexType[@name='DocumentType']">
             <inheritance:implements>au.gov.ga.geodesy.interfaces.geodesyml.Marshallable</inheritance:implements>
             <annox:annotate>
@@ -66,8 +45,7 @@
             </annox:annotate>
         </jxb:bindings>
     </jxb:bindings>
-
-    <jxb:bindings schemaLocation="geodesyml/Adjustment.xsd" node="/xs:schema">
+    <jxb:bindings node="/xs:schema" schemaLocation="geodesyml/Adjustment.xsd">
         <jxb:bindings node="xs:complexType[@name='AdjustmentType']">
             <inheritance:implements>au.gov.ga.geodesy.interfaces.geodesyml.Marshallable</inheritance:implements>
             <annox:annotate>
@@ -78,20 +56,15 @@
             <jxb:class name="au.gov.ga.geodesy.interfaces.geodesyml.dto.AdjustmentType"/>
         </jxb:bindings>
     </jxb:bindings>
-
-    <!-- IGS Site Log -->
-
-    <jxb:bindings schemaLocation="http://schemas.opengis.net/iso/19139/20070417/gco/gco.xsd" node="/xs:schema">
+    <jxb:bindings node="/xs:schema" schemaLocation="http://schemas.opengis.net/iso/19139/20070417/gco/gco.xsd">
         <jxb:schemaBindings>
             <jxb:package name="au.gov.ga.geodesy.interfaces.geodesyml.dto.iso19139.gco"/>
         </jxb:schemaBindings>
         <jxb:bindings>
             <namespace:prefix name="gco"/>
         </jxb:bindings>
-        <!-- <xjc:simple/> -->
     </jxb:bindings>
-
-    <jxb:bindings schemaLocation="http://schemas.opengis.net/iso/19139/20070417/gmd/gmd.xsd" node="/xs:schema">
+    <jxb:bindings node="/xs:schema" schemaLocation="http://schemas.opengis.net/iso/19139/20070417/gmd/gmd.xsd">
         <jxb:schemaBindings>
             <jxb:package name="au.gov.ga.geodesy.interfaces.geodesyml.dto.iso19139.gmd"/>
         </jxb:schemaBindings>
@@ -99,8 +72,7 @@
             <namespace:prefix name="gmd"/>
         </jxb:bindings>
     </jxb:bindings>
-
-    <jxb:bindings schemaLocation="http://schemas.opengis.net/iso/19139/20070417/gss/gss.xsd" node="/xs:schema">
+    <jxb:bindings node="/xs:schema" schemaLocation="http://schemas.opengis.net/iso/19139/20070417/gss/gss.xsd">
         <jxb:schemaBindings>
             <jxb:package name="au.gov.ga.geodesy.interfaces.geodesyml.dto.iso19139.gss"/>
         </jxb:schemaBindings>
@@ -108,16 +80,7 @@
             <namespace:prefix name="gss"/>
         </jxb:bindings>
     </jxb:bindings>
-    <jxb:bindings schemaLocation="http://schemas.opengis.net/iso/19139/20070417/gss/geometry.xsd" node="/xs:schema">
-        <jxb:bindings node="xs:complexType[@name='GM_Object_PropertyType']">
-            <!-- <simplify:property name="abstractGeometry"> -->
-            <!--     <simplify:as&#45;element&#45;property/> -->
-            <!-- </simplify:property> -->
-            <!-- <xjc:javaType name="au.gov.ga.geodesy.interfaces.geodesyml.dto.gml.AbstractGeometryType"/> -->
-        </jxb:bindings>
-    </jxb:bindings>
-
-    <jxb:bindings schemaLocation="http://schemas.opengis.net/iso/19139/20070417/gsr/gsr.xsd" node="/xs:schema">
+    <jxb:bindings node="/xs:schema" schemaLocation="http://schemas.opengis.net/iso/19139/20070417/gsr/gsr.xsd">
         <jxb:schemaBindings>
             <jxb:package name="au.gov.ga.geodesy.interfaces.geodesyml.dto.iso19139.gsr"/>
         </jxb:schemaBindings>
@@ -125,8 +88,7 @@
             <namespace:prefix name="gsr"/>
         </jxb:bindings>
     </jxb:bindings>
-
-    <jxb:bindings schemaLocation="http://schemas.opengis.net/iso/19139/20070417/gts/gts.xsd" node="/xs:schema">
+    <jxb:bindings node="/xs:schema" schemaLocation="http://schemas.opengis.net/iso/19139/20070417/gts/gts.xsd">
         <jxb:schemaBindings>
             <jxb:package name="au.gov.ga.geodesy.interfaces.geodesyml.dto.iso19139.gts"/>
         </jxb:schemaBindings>
@@ -134,8 +96,7 @@
             <namespace:prefix name="gts"/>
         </jxb:bindings>
     </jxb:bindings>
-
-    <jxb:bindings schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd" node="/xs:schema">
+    <jxb:bindings node="/xs:schema" schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd">
         <jxb:schemaBindings>
             <jxb:package name="au.gov.ga.geodesy.interfaces.geodesyml.dto.igssitelog"/>
         </jxb:schemaBindings>
@@ -151,14 +112,12 @@
             </simplify:property>
         </jxb:bindings>
     </jxb:bindings>
-
-    <jxb:bindings schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/receiver.xsd" node="/xs:schema">
+    <jxb:bindings node="/xs:schema" schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/receiver.xsd">
         <jxb:schemaBindings>
             <jxb:package name="au.gov.ga.geodesy.interfaces.geodesyml.dto.igssitelog"/>
         </jxb:schemaBindings>
     </jxb:bindings>
-
-    <jxb:bindings schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/baseContactLib.xsd" node="/xs:schema">
+    <jxb:bindings node="/xs:schema" schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/baseContactLib.xsd">
         <jxb:schemaBindings>
             <jxb:package name="au.gov.ga.geodesy.interfaces.geodesyml.dto.igssitelog"/>
         </jxb:schemaBindings>
@@ -168,35 +127,29 @@
             </simplify:property>
         </jxb:bindings>
     </jxb:bindings>
-
-    <jxb:bindings schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/radioInterferences.xsd" node="/xs:schema">
+    <jxb:bindings node="/xs:schema" schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/radioInterferences.xsd">
         <jxb:schemaBindings>
             <jxb:package name="au.gov.ga.geodesy.interfaces.geodesyml.dto.igssitelog"/>
         </jxb:schemaBindings>
     </jxb:bindings>
-
-    <jxb:bindings schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/formInformation.xsd" node="/xs:schema">
+    <jxb:bindings node="/xs:schema" schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/formInformation.xsd">
         <jxb:schemaBindings>
             <jxb:package name="au.gov.ga.geodesy.interfaces.geodesyml.dto.igssitelog"/>
         </jxb:schemaBindings>
     </jxb:bindings>
-
-    <jxb:bindings schemaLocation="http://www.w3.org/1999/xlink.xsd" node="/xs:schema">
+    <jxb:bindings node="/xs:schema" schemaLocation="http://www.w3.org/1999/xlink.xsd">
         <jxb:schemaBindings>
             <jxb:package name="au.gov.ga.geodesy.interfaces.geodesyml.dto.xlink"/>
         </jxb:schemaBindings>
-
         <jxb:bindings node="//xs:attributeGroup[@name='locatorAttrs']">
             <jxb:bindings node=".//xs:attribute[@ref='xlink:title']">
                 <jxb:property name="title1"/>
             </jxb:bindings>
         </jxb:bindings>
-
-        <jxb:bindings node="//xs:attributeGroup[@name='arcAttrs']">           
+        <jxb:bindings node="//xs:attributeGroup[@name='arcAttrs']">
             <jxb:bindings node=".//xs:attribute[@ref='xlink:title']">
                 <jxb:property name="title2"/>
-            </jxb:bindings>            
-        </jxb:bindings>        
-
+            </jxb:bindings>
+        </jxb:bindings>
     </jxb:bindings>
 </jxb:bindings>
