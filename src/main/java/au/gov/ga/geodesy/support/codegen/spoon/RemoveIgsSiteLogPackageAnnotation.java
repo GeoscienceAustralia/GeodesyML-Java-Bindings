@@ -11,7 +11,7 @@ import au.gov.ga.geodesy.interfaces.geodesyml.dto.igssitelog.BasePossibleProblem
 
 /**
  * In case of <code>BasePossibleProblemSourceType</code>, Spoon outputs a Java
- * file with a package annotation, which is not allowed according the bompiler.
+ * file with a package annotation, which is not allowed according the compiler.
  */
 /*
   TODO: The package-info.java files that Spoon outputs, lack the

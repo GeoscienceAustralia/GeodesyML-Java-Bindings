@@ -29,7 +29,7 @@ import au.gov.ga.geodesy.interfaces.geodesyml.dto.GeodesyMLType;
 /*
   TODO: Review this decision. If ever different types of
   estimations are defined, we will generilise them all with an interface.
-  Also, if this the way to go, we will apply the same technique to abstract
+  Also, if this is the way to go, we will apply the same technique to abstract
   measurements, and potentially other elements, too.
 */
 public class SpecialiseAbstractEstimation extends AbstractProcessor<CtClass<?>> {
