@@ -12,7 +12,9 @@
 		<xsd:restriction base="xsd:string">
 			<xsd:enumeration value="unknown"/>
 			<xsd:enumeration value="no receiver"/>
-			<!--<xsd:enumeration value="3SNAV GNSS-300"/>-->
+            <!-- TODO: These enum values make JAXB-XJC barf, because they begin -->
+            <!-- with numbers and Java identifiers can't. Find a solution. -->
+            <!--<xsd:enumeration value="3SNAV GNSS-300"/>-->
 			<!--<xsd:enumeration value="3SNAV GNSS-300T"/>-->
 			<!--<xsd:enumeration value="3SNAV R100 OLD"/>-->
 			<!--<xsd:enumeration value="3SNAV R100-30"/>-->
