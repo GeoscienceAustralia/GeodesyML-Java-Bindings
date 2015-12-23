@@ -8,6 +8,7 @@ import spoon.reflect.declaration.CtAnnotation;
 import spoon.reflect.declaration.CtClass;
 import spoon.reflect.declaration.CtPackage;
 
+import au.gov.ga.geodesy.interfaces.geodesyml.dto.gml.AbstractCRSType;
 import au.gov.ga.geodesy.interfaces.geodesyml.dto.igssitelog.BasePossibleProblemSourcesType;
 
 /**
@@ -26,6 +27,7 @@ import au.gov.ga.geodesy.interfaces.geodesyml.dto.igssitelog.BasePossibleProblem
 public class RemoveMisplacedPackageAnnotations extends AbstractProcessor<CtClass<?>> {
 
     public static final Class<?>[] affectedClasses = {
+        AbstractCRSType.class,
         BasePossibleProblemSourcesType.class,
     };
 
