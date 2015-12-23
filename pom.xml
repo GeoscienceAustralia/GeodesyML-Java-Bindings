@@ -155,7 +155,7 @@
                                 <argument>-d</argument>
                                 <argument>target/classes</argument>
                                 <argument>-p</argument>
-                                <argument>au.gov.ga.geodesy.support.codegen.spoon.SpecialiseAbstractEstimation:au.gov.ga.geodesy.support.codegen.spoon.RemoveIgsSiteLogPackageAnnotation</argument>
+                                <argument>au.gov.ga.geodesy.support.codegen.spoon.SpecialiseAbstractEstimation:au.gov.ga.geodesy.support.codegen.spoon.RemoveMisplacedPackageAnnotations</argument>
                             </arguments>
                             <includeProjectDependencies>true</includeProjectDependencies>
                         </configuration>

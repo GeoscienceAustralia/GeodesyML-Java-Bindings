@@ -20,7 +20,7 @@ import au.gov.ga.geodesy.interfaces.geodesyml.dto.igssitelog.BasePossibleProblem
   package-info.java files instead of those output by Spoon. Is this a bug in
   Spoon? Is there a better way of dealing with this problem?
 */
-public class RemoveIgsSiteLogPackageAnnotation extends AbstractProcessor<CtClass<?>> {
+public class RemoveMisplacedPackageAnnotations extends AbstractProcessor<CtClass<?>> {
 
     @Override
     public boolean isToBeProcessed(CtClass<?> element) {
