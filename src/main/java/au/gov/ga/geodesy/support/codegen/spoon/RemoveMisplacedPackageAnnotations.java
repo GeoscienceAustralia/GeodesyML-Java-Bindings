@@ -1,5 +1,6 @@
 package au.gov.ga.geodesy.support.codegen.spoon;
 
+import java.util.Arrays;
 import java.util.List;
 
 import spoon.processing.AbstractProcessor;
@@ -10,8 +11,10 @@ import spoon.reflect.declaration.CtPackage;
 import au.gov.ga.geodesy.interfaces.geodesyml.dto.igssitelog.BasePossibleProblemSourcesType;
 
 /**
- * In case of <code>BasePossibleProblemSourceType</code>, Spoon outputs a Java
- * file with a package annotation, which is not allowed according the compiler.
+ * Remove misplaced package annotations from Java files.
+ *
+ * Sometimes spoon outputs classes with package annotations, which, according to
+ * the compiler, are not allowed.
  */
 /*
   TODO: The package-info.java files that Spoon outputs, lack the
@@ -22,9 +25,13 @@ import au.gov.ga.geodesy.interfaces.geodesyml.dto.igssitelog.BasePossibleProblem
 */
 public class RemoveMisplacedPackageAnnotations extends AbstractProcessor<CtClass<?>> {
 
+    public static final Class<?>[] affectedClasses = {
+        BasePossibleProblemSourcesType.class,
+    };
+
     @Override
     public boolean isToBeProcessed(CtClass<?> element) {
-        return element.getActualClass().equals(BasePossibleProblemSourcesType.class);
+        return Arrays.asList(affectedClasses).contains(element.getActualClass());
     }
 
     /**
