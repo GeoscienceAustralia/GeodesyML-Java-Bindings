@@ -6,17 +6,16 @@
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
     <scm>
-        <connection>scm:git:http://rhe-neo-dev-repo.dev.lan/git/r/ngrs/geodesyml-java-bindings.git</connection>
-        <developerConnection>scm:git:http://rhe-neo-dev-repo.dev.lan/git/r/ngrs/geodesyml-java-bindings.git</developerConnection>
-        <url>http://rhe-neo-dev-repo.dev.lan/git/summary/geodesyml-java-bindings.git</url>
+        <connection>scm:git:https://github.com/GeoscienceAustralia/geodesyml-java-bindings.git</connection>
+        <developerConnection>scm:git:https://github.com/GeoscienceAustralia/geodesyml-java-bindings.git</developerConnection>
+        <url>https://github.com/GeoscienceAustralia/geodesyml-java-bindings/tree/geodesyml-v022</url>
         <tag>0.0.1-SNAPSHOT</tag>
     </scm>
     <properties>
-        <java.version>1.6</java.version>
+        <java.version>1.8</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <encoding>UTF-8</encoding>
-        <http.proxy>sun-web-intdev.ga.gov.au:2710</http.proxy>
     </properties>
     <repositories>
         <repository>
@@ -27,19 +26,19 @@
     </repositories>
     <dependencies>
         <dependency>
-            <groupId>commons-io</groupId>
-            <artifactId>commons-io</artifactId>
-            <version>2.4</version>
-        </dependency>
-        <dependency>
-            <groupId>fr.inria.gforge.spoon</groupId>
-            <artifactId>spoon-core</artifactId>
-            <version>3.0</version>
-        </dependency>
-        <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.12</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jvnet.ogc</groupId>
+            <artifactId>gml-v_3_2_1</artifactId>
+            <version>2.6.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jvnet.ogc</groupId>
+            <artifactId>geodesyml-v_0_2_2</artifactId>
+            <version>2.6.1-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>org.eclipse.persistence</groupId>
@@ -49,171 +48,6 @@
     </dependencies>
     <profiles>
         <profile>
-            <id>jaxb</id>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.jvnet.jaxb2.maven2</groupId>
-                        <artifactId>maven-jaxb2-plugin</artifactId>
-                        <version>0.12.3</version>
-                        <executions>
-                            <execution>
-                                <phase>generate-sources</phase>
-                                <goals>
-                                    <goal>generate</goal>
-                                </goals>
-                                <configuration>
-                                    <schemaDirectory>src/main/xsd</schemaDirectory>
-                                    <schemaIncludes>
-                                        <include>geodesyml/GeodesyML.xsd</include>
-                                    </schemaIncludes>
-                                    <bindingDirectory>src/main/xsd</bindingDirectory>
-                                    <bindingIncludes>
-                                        <include>binding.xjb</include>
-                                    </bindingIncludes>
-                                    <catalog>src/main/xsd/catalog.xml</catalog>
-                                    <strict>false</strict>
-                                    <extension>true</extension>
-                                    <args>
-                                        <args>-Xinheritance</args>
-                                        <args>-Xsimplify</args>
-                                        <args>-Xannotate</args>
-                                        <args>-Xnamespace-prefix</args>
-                                        <arg>-httpproxy</arg>
-                                        <arg>${http.proxy}</arg>
-                                    </args>
-                                    <plugins>
-                                        <plugin>
-                                            <groupId>org.jvnet.jaxb2_commons</groupId>
-                                            <artifactId>jaxb2-basics</artifactId>
-                                            <version>0.9.3</version>
-                                        </plugin>
-                                        <plugin>
-                                            <groupId>org.jvnet.jaxb2_commons</groupId>
-                                            <artifactId>jaxb2-basics-annotate</artifactId>
-                                            <version>1.0.1</version>
-                                        </plugin>
-                                        <plugin>
-                                            <groupId>org.jvnet.jaxb2_commons</groupId>
-                                            <artifactId>jaxb2-namespace-prefix</artifactId>
-                                            <version>1.1</version>
-                                        </plugin>
-                                    </plugins>
-                                </configuration>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-        <profile>
-            <id>spoon</id>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-compiler-plugin</artifactId>
-                        <version>3.2</version>
-                        <configuration>
-                            <source>${maven.compiler.source}</source>
-                            <target>${maven.compiler.target}</target>
-                            <encoding>${encoding}</encoding>
-                        </configuration>
-                        <executions>
-                            <execution>
-                                <id>default-compile</id>
-                                <phase>initialize</phase>
-                            </execution>
-                            <execution>
-                                <id>compile-generated-sources</id>
-                                <phase>compile</phase>
-                                <goals>
-                                    <goal>compile</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                    <plugin>
-                        <groupId>org.codehaus.mojo</groupId>
-                        <artifactId>exec-maven-plugin</artifactId>
-                        <version>1.2.1</version>
-                        <executions>
-                            <execution>
-                                <phase>generate-sources</phase>
-                                <goals>
-                                    <goal>java</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                        <configuration>
-                            <mainClass>spoon.Launcher</mainClass>
-                            <arguments>
-                                <argument>-i</argument>
-                                <argument>target/generated-sources/xjc</argument>
-                                <argument>-o</argument>
-                                <argument>target/generated-sources/spoon</argument>
-                                <argument>-d</argument>
-                                <argument>target/classes</argument>
-                                <argument>-p</argument>
-                                <argument>au.gov.ga.geodesy.support.codegen.spoon.SpecialiseAbstractEstimation:au.gov.ga.geodesy.support.codegen.spoon.RemoveIgsSiteLogPackageAnnotation</argument>
-                            </arguments>
-                            <includeProjectDependencies>true</includeProjectDependencies>
-                        </configuration>
-                    </plugin>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-resources-plugin</artifactId>
-                        <version>2.7</version>
-                        <configuration>
-                            <encoding>${encoding}</encoding>
-                        </configuration>
-                        <executions>
-                            <execution>
-                                <id>foo</id>
-                                <phase>generate-sources</phase>
-                                <goals>
-                                    <goal>copy-resources</goal>
-                                </goals>
-                                <configuration>
-                                    <overwrite>true</overwrite>
-                                    <outputDirectory>target/generated-sources/spoon/</outputDirectory>
-                                    <resources>
-                                        <resource>
-                                            <directory>target/generated-sources/xjc/</directory>
-                                            <includes>
-                                                <include>**/package-info.java</include>
-                                            </includes>
-                                        </resource>
-                                    </resources>
-                                </configuration>
-                            </execution>
-                        </executions>
-                    </plugin>
-                    <plugin>
-                        <groupId>org.codehaus.mojo</groupId>
-                        <artifactId>build-helper-maven-plugin</artifactId>
-                        <version>1.9.1</version>
-                        <executions>
-                            <execution>
-                                <phase>process-sources</phase>
-                                <goals>
-                                    <goal>add-source</goal>
-                                </goals>
-                                <configuration>
-                                    <sources>
-                                        <source>target/generated-sources/spoon</source>
-                                    </sources>
-                                </configuration>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-        <profile>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
             <build>
                 <finalName>geodesyml-bindings</finalName>
             </build>
