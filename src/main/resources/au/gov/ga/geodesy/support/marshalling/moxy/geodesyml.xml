@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<xml-bindings package-name="au.gov.xml.icsm.geodesyml.v_0_2_2" version="2.5" xmlns="http://www.eclipse.org/eclipselink/xsds/persistence/oxm">
+    <xml-schema element-form-default="QUALIFIED">
+        <xml-ns namespace-uri="urn:xml-gov-au:icsm:egeodesy:0.2" prefix="geo"/>
+    </xml-schema>
+</xml-bindings>
