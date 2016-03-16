@@ -11,12 +11,11 @@ import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 
 import org.eclipse.persistence.jaxb.JAXBContextFactory;
-import org.springframework.stereotype.Component;
 
 import au.gov.ga.geodesy.interfaces.geodesyml.GeodesyMLMarshaller;
 import au.gov.ga.geodesy.interfaces.geodesyml.MarshallingException;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.GeodesyMLType;
-@Component
+
 public class GeodesyMLMoxy implements GeodesyMLMarshaller {
 
     private JAXBContext jaxbContext;

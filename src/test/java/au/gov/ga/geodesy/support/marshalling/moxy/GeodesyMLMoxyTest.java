@@ -15,6 +15,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.support.AnnotationConfigContextLoader;
 
 import au.gov.ga.geodesy.bindings.AppConfig;
+import au.gov.ga.geodesy.interfaces.geodesyml.GeodesyMLMarshaller;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.GeodesyMLType;
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -25,7 +26,7 @@ import au.gov.xml.icsm.geodesyml.v_0_2_2.GeodesyMLType;
 public class GeodesyMLMoxyTest {
 
     @Autowired
-    private GeodesyMLMoxy marshaller;
+    private GeodesyMLMarshaller marshaller;
 
 //    public GeodesyMLMoxyTest() throws Exception {
 //        marshaller = new GeodesyMLMoxy();
