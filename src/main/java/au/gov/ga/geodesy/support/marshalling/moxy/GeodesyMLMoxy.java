@@ -34,6 +34,7 @@ public class GeodesyMLMoxy implements GeodesyMLMarshaller {
             Marshaller marshaller = jaxbContext.createMarshaller();
             marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
             marshaller.setProperty(Marshaller.JAXB_ENCODING, "ISO-8859-1");
+            marshaller.setProperty(Marshaller.JAXB_SCHEMA_LOCATION, "urn:xml-gov-au:icsm:egeodesy:0.2");
             return marshaller;
         } catch (JAXBException e) {
             throw new MarshallingException("Failed to create marshaller", e);
@@ -49,7 +50,7 @@ public class GeodesyMLMoxy implements GeodesyMLMarshaller {
         }
     }
 
-    public void marshal(GeodesyMLType site, Writer writer) throws MarshallingException {
+    public void marshal(JAXBElement<GeodesyMLType> site, Writer writer) throws MarshallingException {
         try {
             createMarshaller().marshal(site, writer);
         } catch (JAXBException e) {
