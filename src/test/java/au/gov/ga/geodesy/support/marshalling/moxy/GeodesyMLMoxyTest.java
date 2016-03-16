@@ -28,10 +28,6 @@ public class GeodesyMLMoxyTest {
     @Autowired
     private GeodesyMLMarshaller marshaller;
 
-//    public GeodesyMLMoxyTest() throws Exception {
-//        marshaller = new GeodesyMLMoxy();
-//    }
-
     @Test
     public void unmarshal() throws Exception {
         Reader input = new InputStreamReader(Thread.currentThread()
