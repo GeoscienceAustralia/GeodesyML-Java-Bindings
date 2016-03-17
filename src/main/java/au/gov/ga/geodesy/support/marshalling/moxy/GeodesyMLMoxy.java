@@ -11,11 +11,13 @@ import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 
 import org.eclipse.persistence.jaxb.JAXBContextFactory;
+import org.springframework.stereotype.Component;
 
 import au.gov.ga.geodesy.interfaces.geodesyml.GeodesyMLMarshaller;
 import au.gov.ga.geodesy.interfaces.geodesyml.MarshallingException;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.GeodesyMLType;
 
+@Component
 public class GeodesyMLMoxy implements GeodesyMLMarshaller {
 
     private JAXBContext jaxbContext;
@@ -33,6 +35,7 @@ public class GeodesyMLMoxy implements GeodesyMLMarshaller {
             Marshaller marshaller = jaxbContext.createMarshaller();
             marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
             marshaller.setProperty(Marshaller.JAXB_ENCODING, "ISO-8859-1");
+            marshaller.setProperty(Marshaller.JAXB_SCHEMA_LOCATION, "urn:xml-gov-au:icsm:egeodesy:0.2");
             return marshaller;
         } catch (JAXBException e) {
             throw new MarshallingException("Failed to create marshaller", e);
@@ -48,7 +51,7 @@ public class GeodesyMLMoxy implements GeodesyMLMarshaller {
         }
     }
 
-    public void marshal(GeodesyMLType site, Writer writer) throws MarshallingException {
+    public void marshal(JAXBElement<GeodesyMLType> site, Writer writer) throws MarshallingException {
         try {
             createMarshaller().marshal(site, writer);
         } catch (JAXBException e) {
