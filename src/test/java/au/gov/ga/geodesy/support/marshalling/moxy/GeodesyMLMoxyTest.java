@@ -1,6 +1,7 @@
 package au.gov.ga.geodesy.support.marshalling.moxy;
 
 import java.io.InputStreamReader;
+import java.io.PrintWriter;
 import java.io.Reader;
 import java.util.List;
 
@@ -43,5 +44,14 @@ public class GeodesyMLMoxyTest {
         geodesyML.getNodeOrAbstractPositionOrPositionPairCovariance().forEach(x -> {
             System.out.println("  "+x.getName());
         });
+    }
+
+    @Test
+    public void marshal() throws Exception {
+        Reader input = new InputStreamReader(Thread.currentThread()
+            .getContextClassLoader()
+            .getResourceAsStream("MOBS.xml"));
+
+        marshaller.marshal(marshaller.unmarshal(input), new PrintWriter(System.out));
     }
 }
