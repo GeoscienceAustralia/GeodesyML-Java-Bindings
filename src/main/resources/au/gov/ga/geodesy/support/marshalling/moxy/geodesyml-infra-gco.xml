@@ -1,6 +1,0 @@
-<?xml version="1.0"?>
-<xml-bindings package-name="net.opengis.iso19139.gco.v_20070417" version="2.5" xmlns="http://www.eclipse.org/eclipselink/xsds/persistence/oxm">
-    <xml-schema element-form-default="QUALIFIED">
-        <xml-ns namespace-uri="http://www.isotc211.org/2005/gco" prefix="gco"/>
-     </xml-schema>
-</xml-bindings>
