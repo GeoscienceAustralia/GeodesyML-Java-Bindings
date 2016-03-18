@@ -35,7 +35,7 @@ public class GeodesyMLMoxyTest {
             .getContextClassLoader()
             .getResourceAsStream("MOBS.xml"));
 
-        GeodesyMLType geodesyML = marshaller.unmarshal(input).getValue();
+        GeodesyMLType geodesyML = marshaller.unmarshal(input, GeodesyMLType.class).getValue();
         List<JAXBElement<?>> els = geodesyML.getNodeOrAbstractPositionOrPositionPairCovariance();
         Assert.assertNotNull(els);
         Assert.assertNotEquals(0, els.size());
@@ -52,6 +52,6 @@ public class GeodesyMLMoxyTest {
             .getContextClassLoader()
             .getResourceAsStream("MOBS.xml"));
 
-        marshaller.marshal(marshaller.unmarshal(input), new PrintWriter(System.out));
+        marshaller.marshal(marshaller.unmarshal(input, GeodesyMLType.class), new PrintWriter(System.out));
     }
 }

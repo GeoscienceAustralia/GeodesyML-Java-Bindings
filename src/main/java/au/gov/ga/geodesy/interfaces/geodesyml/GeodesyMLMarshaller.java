@@ -9,6 +9,6 @@ import javax.xml.bind.JAXBElement;
 import java.io.Reader;
 
 public interface GeodesyMLMarshaller {
-    void marshal(JAXBElement<GeodesyMLType> doc, Writer writer) throws MarshallingException;
-    JAXBElement<GeodesyMLType> unmarshal(Reader reader) throws MarshallingException;
+    void marshal(JAXBElement<?> doc, Writer writer) throws MarshallingException;
+    <T> JAXBElement<T> unmarshal(Reader reader, Class<T> type) throws MarshallingException;
 }

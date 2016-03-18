@@ -36,6 +36,7 @@ public class GeodesyMLMoxy implements GeodesyMLMarshaller {
     private void configureNamespacePrefixMapping(Marshaller marshaller) throws PropertyException {
         marshaller.setProperty("com.sun.xml.bind.namespacePrefixMapper", new NamespacePrefixMapper() {
 
+            @SuppressWarnings("serial")
             private Map<String, String> namespacePrefixMap = new HashMap<String, String>() {{
                 put("http://www.opengis.net/gml/3.2", "gml");
                 put("http://www.isotc211.org/2005/gco", "gco");
@@ -73,7 +74,7 @@ public class GeodesyMLMoxy implements GeodesyMLMarshaller {
         }
     }
 
-    public void marshal(JAXBElement<GeodesyMLType> site, Writer writer) throws MarshallingException {
+    public void marshal(JAXBElement<?> site, Writer writer) throws MarshallingException {
         try {
             createMarshaller().marshal(site, writer);
         } catch (JAXBException e) {
@@ -82,9 +83,15 @@ public class GeodesyMLMoxy implements GeodesyMLMarshaller {
     }
 
     @SuppressWarnings("unchecked")
-    public JAXBElement<GeodesyMLType> unmarshal(Reader reader) throws MarshallingException {
+    public <T> JAXBElement<T> unmarshal(Reader reader, Class<T> type) throws MarshallingException {
         try {
-            return (JAXBElement<GeodesyMLType>) createUnmarshaller().unmarshal(reader);
+            JAXBElement<?> element = (JAXBElement<?>) createUnmarshaller().unmarshal(reader);
+            Class<?> actualType = element.getDeclaredType();
+            if (type.isAssignableFrom(actualType)) {
+                return (JAXBElement<T>) element;
+            } else {
+                throw new MarshallingException("Type mismatch: expected " + type.getClass() + ", but got " + actualType);
+            }
         } catch (JAXBException e) {
             throw new MarshallingException("Failed to unmarshal a site log", e);
         }
