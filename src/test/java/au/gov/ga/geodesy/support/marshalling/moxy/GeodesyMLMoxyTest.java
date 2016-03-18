@@ -14,8 +14,8 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.support.AnnotationConfigContextLoader;
 
-import au.gov.ga.geodesy.bindings.AppConfig;
 import au.gov.ga.geodesy.interfaces.geodesyml.GeodesyMLMarshaller;
+import au.gov.ga.geodesy.support.spring.AppConfig;
 import au.gov.xml.icsm.geodesyml.v_0_2_2.GeodesyMLType;
 
 @RunWith(SpringJUnit4ClassRunner.class)
