@@ -47,11 +47,21 @@ public class GeodesyMLMoxyTest {
     }
 
     @Test
-    public void marshal() throws Exception {
+    public void marshalJAXBElement() throws Exception {
         Reader input = new InputStreamReader(Thread.currentThread()
             .getContextClassLoader()
             .getResourceAsStream("MOBS.xml"));
 
         marshaller.marshal(marshaller.unmarshal(input, GeodesyMLType.class), new PrintWriter(System.out));
+    }
+
+    @Test
+    public void marshal() throws Exception {
+        Reader input = new InputStreamReader(Thread.currentThread()
+            .getContextClassLoader()
+            .getResourceAsStream("MOBS.xml"));
+
+        GeodesyMLType ml = marshaller.unmarshal(input, GeodesyMLType.class).getValue();
+        marshaller.marshal(ml, new PrintWriter(System.out));
     }
 }
