@@ -1,7 +1,5 @@
 package au.gov.ga.geodesy.interfaces.geodesyml;
 
-import au.gov.xml.icsm.geodesyml.v_0_2_2.GeodesyMLType;
-
 import java.io.Writer;
 
 import javax.xml.bind.JAXBElement;
@@ -10,5 +8,10 @@ import java.io.Reader;
 
 public interface GeodesyMLMarshaller {
     void marshal(JAXBElement<?> doc, Writer writer) throws MarshallingException;
+    void marshal(Object x, Writer writer) throws MarshallingException;
+
+
+    // TODO: unmarshal to plain DTO instead, why not?
     <T> JAXBElement<T> unmarshal(Reader reader, Class<T> type) throws MarshallingException;
+
 }
