@@ -10,6 +10,10 @@ import org.eclipse.persistence.sessions.Project;
 import org.eclipse.persistence.sessions.SessionEvent;
 import org.eclipse.persistence.sessions.SessionEventAdapter;
 
+/**
+ * Ensure null values are marshalled as absent, rather than empty, XML elements.
+ * Empty XML elements will often break schema validation.
+ */
 public class NullPolicySessionEventListener extends SessionEventAdapter {
 
     @Override
