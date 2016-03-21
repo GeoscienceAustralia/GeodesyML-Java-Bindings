@@ -4,6 +4,7 @@ import java.io.Reader;
 import java.io.Writer;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Properties;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBElement;
@@ -13,7 +14,9 @@ import javax.xml.bind.PropertyException;
 import javax.xml.bind.Unmarshaller;
 
 import org.eclipse.persistence.jaxb.JAXBContextFactory;
+import org.eclipse.persistence.jaxb.JAXBContextProperties;
 import org.eclipse.persistence.oxm.NamespacePrefixMapper;
+import org.eclipse.persistence.sessions.SessionEventListener;
 import org.springframework.stereotype.Component;
 
 import au.gov.ga.geodesy.interfaces.geodesyml.GeodesyMLMarshaller;
@@ -27,7 +30,10 @@ public class GeodesyMLMoxy implements GeodesyMLMarshaller {
 
     public GeodesyMLMoxy() throws MarshallingException {
         try {
-            jaxbContext = JAXBContextFactory.createContext(new Class[] {GeodesyMLType.class}, null);
+            Properties properties = new Properties();
+            SessionEventListener sessionEventListener = new NullPolicySessionEventListener();
+            properties.put(JAXBContextProperties.SESSION_EVENT_LISTENER, sessionEventListener);
+            jaxbContext = JAXBContextFactory.createContext(new Class[] {GeodesyMLType.class}, properties);
         } catch (JAXBException e) {
             throw new MarshallingException("Failed to initialise JAXBContext", e);
         }
