@@ -7,8 +7,10 @@ import javax.xml.bind.JAXBElement;
 import java.io.Reader;
 
 public interface GeodesyMLMarshaller {
-    void marshal(JAXBElement<?> doc, Writer writer) throws MarshallingException;
     void marshal(Object x, Writer writer) throws MarshallingException;
+
+    // TODO: remove
+    void marshal(JAXBElement<?> doc, Writer writer) throws MarshallingException;
 
 
     // TODO: unmarshal to plain DTO instead, why not?

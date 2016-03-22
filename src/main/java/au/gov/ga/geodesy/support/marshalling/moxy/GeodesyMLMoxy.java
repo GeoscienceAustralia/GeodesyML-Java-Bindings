@@ -82,29 +82,37 @@ public class GeodesyMLMoxy implements GeodesyMLMarshaller {
     }
 
     public void marshal(JAXBElement<?> site, Writer writer) throws MarshallingException {
+        marshalJAXBElement(site, writer);
+    }
+
+    private void marshalJAXBElement(JAXBElement<?> x, Writer writer) throws MarshallingException {
         try {
-            createMarshaller().marshal(site, writer);
+            createMarshaller().marshal(x, writer);
         } catch (JAXBException e) {
             throw new MarshallingException("Failed to marshal a site log", e);
         }
     }
 
     public void marshal(Object x, Writer writer) throws MarshallingException {
-        // TODO: how can we restrict x?
-        String typeName = x.getClass().getSimpleName();
-        String factoryName = x.getClass().getPackage().getName() + ".ObjectFactory";
-        String factoryMethodName = "create" + typeName.substring(0, typeName.length() - "Type".length());
-        try {
-            Class<?> factoryClass = Class.forName(factoryName);
-            Object factory = factoryClass.newInstance();
-            Method factoryMethod = factoryClass.getMethod(factoryMethodName, new Class<?>[]{x.getClass()});
-            JAXBElement<?> element = (JAXBElement<?>) factoryMethod.invoke(factory, new Object[]{x});
-            marshal(element, writer);
-        } catch (MarshallingException e) {
-            throw e;
-        }
-        catch (Exception e) {
-            throw new RuntimeException(e);
+        if (x instanceof JAXBElement) {
+            marshalJAXBElement((JAXBElement<?>) x, writer);
+        } else {
+            // TODO: how can we restrict x?
+            String typeName = x.getClass().getSimpleName();
+            String factoryName = x.getClass().getPackage().getName() + ".ObjectFactory";
+            String factoryMethodName = "create" + typeName.substring(0, typeName.length() - "Type".length());
+            try {
+                Class<?> factoryClass = Class.forName(factoryName);
+                Object factory = factoryClass.newInstance();
+                Method factoryMethod = factoryClass.getMethod(factoryMethodName, new Class<?>[]{x.getClass()});
+                JAXBElement<?> element = (JAXBElement<?>) factoryMethod.invoke(factory, new Object[]{x});
+                marshal(element, writer);
+            } catch (MarshallingException e) {
+                throw e;
+            }
+            catch (Exception e) {
+                throw new RuntimeException(e);
+            }
         }
     }
 
