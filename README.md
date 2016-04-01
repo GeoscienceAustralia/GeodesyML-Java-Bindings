@@ -1,4 +1,4 @@
-# Java Bindings for GeodesyML v0.2.2
+# Java Bindings for GeodesyML v0.3
 
 #### Background
 

@@ -9,7 +9,7 @@
     <scm>
         <connection>scm:git:https://github.com/GeoscienceAustralia/geodesyml-java-bindings.git</connection>
         <developerConnection>scm:git:https://github.com/GeoscienceAustralia/geodesyml-java-bindings.git</developerConnection>
-        <url>https://github.com/GeoscienceAustralia/geodesyml-java-bindings/tree/geodesyml-v022</url>
+        <url>https://github.com/GeoscienceAustralia/geodesyml-java-bindings/tree/geodesyml-v03</url>
         <tag>0.0.1-SNAPSHOT</tag>
     </scm>
     <properties>
@@ -39,7 +39,7 @@
         </dependency>
         <dependency>
             <groupId>org.jvnet.ogc</groupId>
-            <artifactId>geodesyml-v_0_2_2</artifactId>
+            <artifactId>geodesyml-v_0_3</artifactId>
             <version>2.6.1-SNAPSHOT</version>
         </dependency>
         <dependency>
