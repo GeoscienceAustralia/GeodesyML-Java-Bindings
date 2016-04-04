@@ -50,7 +50,7 @@ public class GeodesyMLMoxy implements GeodesyMLMarshaller {
                 put("http://www.isotc211.org/2005/gmd", "gmd");
                 put("http://www.isotc211.org/2005/gmx", "gmx");
                 put("http://www.opengis.net/om/2.0", "om");
-                put("urn:xml-gov-au:icsm:egeodesy:0.2", "geo");
+                put("urn:xml-gov-au:icsm:egeodesy:0.3", "geo");
             }};
 
             public String getPreferredPrefix(String namespaceUri, String suggestion, boolean requirePrefix) {
@@ -64,7 +64,7 @@ public class GeodesyMLMoxy implements GeodesyMLMarshaller {
             Marshaller marshaller = jaxbContext.createMarshaller();
             marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
             marshaller.setProperty(Marshaller.JAXB_ENCODING, "ISO-8859-1");
-            marshaller.setProperty(Marshaller.JAXB_SCHEMA_LOCATION, "urn:xml-gov-au:icsm:egeodesy:0.2");
+            marshaller.setProperty(Marshaller.JAXB_SCHEMA_LOCATION, "urn:xml-gov-au:icsm:egeodesy:0.3");
             configureNamespacePrefixMapping(marshaller);
             return marshaller;
         } catch (JAXBException e) {
