@@ -7,10 +7,9 @@
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
     <scm>
-        <connection>scm:git:https://github.com/GeoscienceAustralia/geodesyml-java-bindings.git</connection>
-        <developerConnection>scm:git:https://github.com/GeoscienceAustralia/geodesyml-java-bindings.git</developerConnection>
-        <url>https://github.com/GeoscienceAustralia/geodesyml-java-bindings/tree/geodesyml-v03</url>
-        <tag>0.0.1-SNAPSHOT</tag>
+        <connection>scm:git:git@github.com:GeoscienceAustralia/geodesyml-java-bindings.git</connection>
+        <developerConnection>scm:git:git@github.com:GeoscienceAustralia/geodesyml-java-bindings.git</developerConnection>
+        <url>https://github.com/GeoscienceAustralia/geodesyml-java-bindings</url>
     </scm>
     <properties>
         <java.version>1.8</java.version>
