@@ -9,25 +9,17 @@ import javax.xml.bind.JAXBElement;
 
 import org.junit.Assert;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.springframework.test.context.support.AnnotationConfigContextLoader;
 
-import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLMarshaller;
-import au.gov.ga.geodesy.support.spring.AppConfig;
+import au.gov.ga.geodesy.port.adapter.geodesyml.MarshallingException;
 import au.gov.xml.icsm.geodesyml.v_0_3.GeodesyMLType;
 
-@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(
-    classes = {AppConfig.class},
-    loader  = AnnotationConfigContextLoader.class
-)
 public class GeodesyMLMoxyTest {
 
-    @Autowired
-    private GeodesyMLMarshaller marshaller;
+    private GeodesyMLMoxy marshaller;
+
+    public GeodesyMLMoxyTest() throws MarshallingException {
+        marshaller = new GeodesyMLMoxy();
+    }
 
     @Test
     public void unmarshal() throws Exception {

@@ -18,13 +18,11 @@ import org.eclipse.persistence.jaxb.JAXBContextFactory;
 import org.eclipse.persistence.jaxb.JAXBContextProperties;
 import org.eclipse.persistence.oxm.NamespacePrefixMapper;
 import org.eclipse.persistence.sessions.SessionEventListener;
-import org.springframework.stereotype.Component;
 
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLMarshaller;
 import au.gov.ga.geodesy.port.adapter.geodesyml.MarshallingException;
 import au.gov.xml.icsm.geodesyml.v_0_3.GeodesyMLType;
 
-@Component
 public class GeodesyMLMoxy implements GeodesyMLMarshaller {
 
     private JAXBContext jaxbContext;
