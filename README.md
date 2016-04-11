@@ -33,7 +33,7 @@ work-in-progress; collaborators, users, and reviewers are more than welcome.
 
 Since GeodesyML is in active development, currently in beta release,
 the implementation relies heavily on code generation to minimise manual
-intervention following schema updates. Generation of JAXB model classes is handled
+intervention following schema updates. Generation of JAXB binding classes is handled
 in a fork of [JAXB for OGC Project](http://www.ogcnetwork.net/jaxb4ogc) at
 https://github.com/GeoscienceAustralia/ogc-schemas/tree/geodesyml.
 
