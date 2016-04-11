@@ -15,17 +15,16 @@ and relationships within the geodetic domain.
 
 <!-- ##### GeodesyML-->
 
-[GeodesyML](http://icsm.govspace.gov.au/egeodesy/egeodesy-schema/), an XML
+[GeodesyML](http://github.com/GeoscienceAustralia/GeodesyML), an XML
 implementation of the eGeodesy model, is a Geography Markup Language
 ([GML](http://www.opengeospatial.org/standards/gml))
 application schema for transfer of geodetic information. For more information
-about eGeodesy and GeodesyML, see http://icsm.govspace.gov.au/egeodesy/.
+about eGeodesy and GeodesyML, see http://www.geodesyml.org.
 
 <!-- ##### Geoscience Australia-->
 
-The National Geospatial Reference Systems (NGRS) section at Geoscience
-Australia ([GA](http://www.ga.gov.au)) is adopting GeodesyML as the standard for
-encoding and exchange of geodetic information.
+Geoscience Australia ([GA](http://www.ga.gov.au)) is adopting GeodesyML as the standard for
+exchange of geodetic information.
 
 This library is part of GA's codebase, released as open-source. It is a
 work-in-progress; collaborators, users, and reviewers are more than welcome.
@@ -44,9 +43,9 @@ See unit test-cases for usage.
 
 Contributions and bug reports are welcome!
 
-Please feel free to contact me through github or at lazar.bodor@ga.gov.au.
+Please feel free to contact us through GitHub or at geodesy@ga.gov.au.
 
--Lazar Bodor
+-Lazar Bodor (lazar.bodor@ga.gov.au)
 
 
 
