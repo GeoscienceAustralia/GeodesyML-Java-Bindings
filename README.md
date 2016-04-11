@@ -37,6 +37,14 @@ intervention following schema updates. Generation of JAXB model classes is handl
 in a fork of [JAXB for OGC Project](http://www.ogcnetwork.net/jaxb4ogc) at
 https://github.com/GeoscienceAustralia/ogc-schemas/tree/geodesyml.
 
+GeodesyML binding classes are generated in an almost one-to-one correspondence
+with GeodesyML schema element definitions. The generated code is often not
+idiomatic Java, rather it follows in structure more closely the conventions of
+GML, an XML-based language. It is unlikely that these classes will be
+particularly suitable for any non-trivial amount of processing. Their job is to
+load XML data in and out of memory, where it can be manipulated into structures
+suitable to specific tasks.
+
 ##### About JAXB
 Java Architecture for XML Bindings (JAXB) allows Java programs to specify a
 static, type-driven, mapping from Java classes to XML element definitions.
