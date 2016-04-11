@@ -31,13 +31,23 @@ work-in-progress; collaborators, users, and reviewers are more than welcome.
 
 #### Implementation
 
-Since the GeodesyML schema is in active development, currently in beta release,
+Since GeodesyML is in active development, currently in beta release,
 the implementation relies heavily on code generation to minimise manual
 intervention following schema updates. Generation of JAXB model classes is handled
 in a fork of [JAXB for OGC Project](http://www.ogcnetwork.net/jaxb4ogc) at
 https://github.com/GeoscienceAustralia/ogc-schemas/tree/geodesyml.
 
-See unit test-cases for usage.
+##### About JAXB
+Java Architecture for XML Bindings (JAXB) allows Java programs to specify a
+static, type-driven, mapping from Java classes to XML element definitions.
+JAXB's binding compiler (XJC) can be used to automatically generate Java
+binding classes from XML schema files, which is useful particulary in the early
+stages of XML schema development.
+
+At runtime, Java programs can use the JAXB API to unmarshal XML documents into Java object and to marshal
+Java objects back into conformant XML documents.
+
+See unit tests for examples of usage.
 
 #### Contact Information
 
