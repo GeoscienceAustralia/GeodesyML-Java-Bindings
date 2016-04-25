@@ -28,12 +28,12 @@ public class GeodesyMLMoxyTest {
             .getResourceAsStream("MOBS.xml"));
 
         GeodesyMLType geodesyML = marshaller.unmarshal(input, GeodesyMLType.class).getValue();
-        List<JAXBElement<?>> els = geodesyML.getNodeOrAbstractPositionOrPositionPairCovariance();
+        List<JAXBElement<?>> els = geodesyML.getElements();
         Assert.assertNotNull(els);
         Assert.assertNotEquals(0, els.size());
 
-        System.out.println("geodesyML.getNodeOrAbstractPositionOrPositionPairCovariance elements:");
-        geodesyML.getNodeOrAbstractPositionOrPositionPairCovariance().forEach(x -> {
+        System.out.println("geodesyML elements:");
+        geodesyML.getElements().forEach(x -> {
             System.out.println("  "+x.getName());
         });
     }
