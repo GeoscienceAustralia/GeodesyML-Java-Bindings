@@ -27,14 +27,14 @@ public class GeodesyMLMoxy implements GeodesyMLMarshaller {
 
     private JAXBContext jaxbContext;
 
-    public GeodesyMLMoxy() throws MarshallingException {
+    public GeodesyMLMoxy() {
         try {
             Properties properties = new Properties();
             SessionEventListener sessionEventListener = new NullPolicySessionEventListener();
             properties.put(JAXBContextProperties.SESSION_EVENT_LISTENER, sessionEventListener);
             jaxbContext = JAXBContextFactory.createContext(new Class[] {GeodesyMLType.class}, properties);
         } catch (JAXBException e) {
-            throw new MarshallingException("Failed to initialise JAXBContext", e);
+            throw new RuntimeException("Failed to initialise JAXBContext", e);
         }
     }
 
