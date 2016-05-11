@@ -21,7 +21,7 @@ import org.eclipse.persistence.sessions.SessionEventListener;
 
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLMarshaller;
 import au.gov.ga.geodesy.port.adapter.geodesyml.MarshallingException;
-import au.gov.xml.icsm.geodesyml.v_0_3.GeodesyMLType;
+import au.gov.xml.icsm.geodesyml.v_0_4.GeodesyMLType;
 
 public class GeodesyMLMoxy implements GeodesyMLMarshaller {
 
@@ -51,6 +51,7 @@ public class GeodesyMLMoxy implements GeodesyMLMarshaller {
                 put("urn:xml-gov-au:icsm:egeodesy:0.3", "geo");
             }};
 
+            @Override
             public String getPreferredPrefix(String namespaceUri, String suggestion, boolean requirePrefix) {
                 return namespacePrefixMap.getOrDefault(namespaceUri, suggestion);
             }
@@ -79,6 +80,7 @@ public class GeodesyMLMoxy implements GeodesyMLMarshaller {
         }
     }
 
+    @Override
     public void marshal(JAXBElement<?> site, Writer writer) throws MarshallingException {
         marshalJAXBElement(site, writer);
     }
@@ -91,6 +93,7 @@ public class GeodesyMLMoxy implements GeodesyMLMarshaller {
         }
     }
 
+    @Override
     public void marshal(Object x, Writer writer) throws MarshallingException {
         if (x instanceof JAXBElement) {
             marshalJAXBElement((JAXBElement<?>) x, writer);
@@ -114,6 +117,7 @@ public class GeodesyMLMoxy implements GeodesyMLMarshaller {
         }
     }
 
+    @Override
     @SuppressWarnings("unchecked")
     public <T> JAXBElement<T> unmarshal(Reader reader, Class<T> type) throws MarshallingException {
         try {
