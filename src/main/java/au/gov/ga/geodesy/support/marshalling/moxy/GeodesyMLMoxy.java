@@ -119,6 +119,7 @@ public class GeodesyMLMoxy implements GeodesyMLMarshaller {
     public <T> JAXBElement<T> unmarshal(Reader reader, Class<T> type) throws MarshallingException {
         try {
             JAXBElement<?> element = (JAXBElement<?>) createUnmarshaller().unmarshal(reader);
+            // TODO - this is odd - a constructor that has side-effects.  Perhaps better suited as a static method.
             new GMLPropertyTypeResolver(element.getValue());
             Class<?> actualType = element.getDeclaredType();
             if (type.isAssignableFrom(actualType)) {
