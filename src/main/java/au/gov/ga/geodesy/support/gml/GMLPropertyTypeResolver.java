@@ -64,7 +64,7 @@ public class GMLPropertyTypeResolver {
 
     private static final Logger log = LoggerFactory.getLogger(GMLPropertyTypeResolver.class);
 
-    private AbstractGMLType rootElement;
+    private Object rootElement;
 
     @SuppressWarnings("serial")
     private class ElementMap extends HashMap<String, AbstractGMLType> {}
@@ -75,7 +75,7 @@ public class GMLPropertyTypeResolver {
      * Resolve all GML property types under the given root element. The
      * modifications to the argument are eager and destructive.
      */
-    public GMLPropertyTypeResolver(AbstractGMLType rootElement) {
+    public GMLPropertyTypeResolver(Object rootElement) {
         this.rootElement = rootElement;
         mapAllElements();
         resolveAllProperties();
