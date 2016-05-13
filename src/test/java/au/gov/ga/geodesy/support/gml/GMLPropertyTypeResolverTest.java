@@ -1,7 +1,6 @@
 package au.gov.ga.geodesy.support.gml;
 
 import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNull;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -32,12 +31,8 @@ public class GMLPropertyTypeResolverTest {
             .findFirst()
             .get();
         SitePropertyType siteProperty = siteLog.getAtSite();
-
-        assertNull(siteProperty.getSite());
         assertNotNull(siteProperty.getHref());
-
         new GMLPropertyTypeResolver(geodesyML);
-
         assertNotNull(siteProperty.getSite());
     }
 }

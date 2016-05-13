@@ -21,6 +21,7 @@ import org.eclipse.persistence.sessions.SessionEventListener;
 
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLMarshaller;
 import au.gov.ga.geodesy.port.adapter.geodesyml.MarshallingException;
+import au.gov.ga.geodesy.support.gml.GMLPropertyTypeResolver;
 import au.gov.xml.icsm.geodesyml.v_0_3.GeodesyMLType;
 
 public class GeodesyMLMoxy implements GeodesyMLMarshaller {
@@ -118,6 +119,8 @@ public class GeodesyMLMoxy implements GeodesyMLMarshaller {
     public <T> JAXBElement<T> unmarshal(Reader reader, Class<T> type) throws MarshallingException {
         try {
             JAXBElement<?> element = (JAXBElement<?>) createUnmarshaller().unmarshal(reader);
+            // TODO - this is odd - a constructor that has side-effects.  Perhaps better suited as a static method.
+            new GMLPropertyTypeResolver(element.getValue());
             Class<?> actualType = element.getDeclaredType();
             if (type.isAssignableFrom(actualType)) {
                 return (JAXBElement<T>) element;
