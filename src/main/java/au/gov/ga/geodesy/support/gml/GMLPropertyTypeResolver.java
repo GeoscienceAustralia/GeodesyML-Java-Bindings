@@ -127,15 +127,6 @@ public class GMLPropertyTypeResolver {
     }
 
     /**
-     * Return a property type's nested element name. For example, given an
-     * instance of GnssReceiverPropertyType, return 'gnssReceiver'.
-     */
-    private String propertyTypeElementName(GMLPropertyType propertyType) {
-        String propertyTypeName = propertyType.getClass().getSimpleName();
-        return StringUtils.uncapitalize(StringUtils.removeEnd(propertyTypeName, "PropertyType"));
-    }
-
-    /**
      * Resolve and modify the given property type.
      */
     private void resolveProperty(GMLPropertyType propertyType) {
@@ -149,9 +140,8 @@ public class GMLPropertyTypeResolver {
      */
     @SuppressWarnings("unchecked")
     public <T extends AbstractGMLType> Optional<T> getPropertyElement(GMLPropertyType propertyType) {
-        String elementName = propertyTypeElementName(propertyType);
         try {
-            Object element = PropertyUtils.getProperty(propertyType, elementName);
+            Object element = propertyType.getTargetElement();
             if (element instanceof JAXBElement) {
                 return Optional.of(((JAXBElement<T>) element).getValue());
             }
@@ -161,20 +151,21 @@ public class GMLPropertyTypeResolver {
             if (StringUtils.isNotEmpty(propertyType.getHref())) {
                 Optional<T> resolvedElement = (Optional<T>) findElementByHref(propertyType.getHref());
                 if (resolvedElement.isPresent()) {
-                    Class<?> type = PropertyUtils.getPropertyDescriptor(propertyType, elementName).getPropertyType();
-                    if (type == JAXBElement.class) {
+                    Class<?> type = propertyType.getTargetElementType();
+                    if (propertyType.getTargetElementType() == JAXBElement.class) {
+                        // TODO move this wrapping into GMLPropertyType
                         JAXBElement<T> wrapped = wrapInJAXBElement(resolvedElement.get());
                         PropertyUtils.setProperty(wrapped, "value", resolvedElement.get());
-                        PropertyUtils.setProperty(propertyType, elementName, wrapped);
+                        propertyType.setTargetElement(wrapped);
                     } else {
-                        PropertyUtils.setProperty(propertyType, elementName, resolvedElement.get());
+                        propertyType.setTargetElement(resolvedElement.get());
                     }
                 }
                 return resolvedElement;
             }
             return Optional.empty();
         } catch (IllegalAccessException | InvocationTargetException | NoSuchMethodException e) {
-            throw new IllegalArgumentException("Unusual PropertyType " + propertyType.getClass() + " lacks accesible property " + elementName);
+            throw new RuntimeException(e);
         }
     }
 
