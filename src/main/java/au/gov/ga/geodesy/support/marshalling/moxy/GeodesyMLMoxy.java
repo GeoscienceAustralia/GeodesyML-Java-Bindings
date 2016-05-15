@@ -14,6 +14,8 @@ import javax.xml.bind.Marshaller;
 import javax.xml.bind.PropertyException;
 import javax.xml.bind.Unmarshaller;
 
+import org.checkerframework.checker.nullness.qual.NonNull;
+import org.checkerframework.checker.nullness.qual.Nullable;
 import org.eclipse.persistence.jaxb.JAXBContextFactory;
 import org.eclipse.persistence.jaxb.JAXBContextProperties;
 import org.eclipse.persistence.oxm.NamespacePrefixMapper;
@@ -28,6 +30,15 @@ public class GeodesyMLMoxy implements GeodesyMLMarshaller {
 
     private JAXBContext jaxbContext;
 
+    private static Map<String, String> namespacePrefixMap = new HashMap<String, String>(); static {
+        namespacePrefixMap.put("http://www.opengis.net/gml/3.2", "gml");
+        namespacePrefixMap.put("http://www.isotc211.org/2005/gco", "gco");
+        namespacePrefixMap.put("http://www.isotc211.org/2005/gmd", "gmd");
+        namespacePrefixMap.put("http://www.isotc211.org/2005/gmx", "gmx");
+        namespacePrefixMap.put("http://www.opengis.net/om/2.0", "om");
+        namespacePrefixMap.put("urn:xml-gov-au:icsm:egeodesy:0.3", "geo");
+    };
+
     public GeodesyMLMoxy() {
         try {
             Properties properties = new Properties();
@@ -41,17 +52,6 @@ public class GeodesyMLMoxy implements GeodesyMLMarshaller {
 
     private void configureNamespacePrefixMapping(Marshaller marshaller) throws PropertyException {
         marshaller.setProperty("com.sun.xml.bind.namespacePrefixMapper", new NamespacePrefixMapper() {
-
-            @SuppressWarnings("serial")
-            private Map<String, String> namespacePrefixMap = new HashMap<String, String>() {{
-                put("http://www.opengis.net/gml/3.2", "gml");
-                put("http://www.isotc211.org/2005/gco", "gco");
-                put("http://www.isotc211.org/2005/gmd", "gmd");
-                put("http://www.isotc211.org/2005/gmx", "gmx");
-                put("http://www.opengis.net/om/2.0", "om");
-                put("urn:xml-gov-au:icsm:egeodesy:0.3", "geo");
-            }};
-
             public String getPreferredPrefix(String namespaceUri, String suggestion, boolean requirePrefix) {
                 return namespacePrefixMap.getOrDefault(namespaceUri, suggestion);
             }
@@ -116,7 +116,7 @@ public class GeodesyMLMoxy implements GeodesyMLMarshaller {
     }
 
     @SuppressWarnings("unchecked")
-    public <T> JAXBElement<T> unmarshal(Reader reader, Class<T> type) throws MarshallingException {
+    public <T extends Object> JAXBElement<T> unmarshal(Reader reader, Class<T> type) throws MarshallingException {
         try {
             JAXBElement<?> element = (JAXBElement<?>) createUnmarshaller().unmarshal(reader);
             GMLPropertyTypeResolver.resolveAllProperties(element.getValue());

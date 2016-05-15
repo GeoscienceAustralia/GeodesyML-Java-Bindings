@@ -186,7 +186,7 @@ public class GMLPropertyTypeResolver {
     }
 
     @SuppressWarnings("unchecked")
-    private <T> JAXBElement<T> wrapInJAXBElement(T x) {
+    private <T extends Object> JAXBElement<T> wrapInJAXBElement(T x) {
         String typeName = x.getClass().getSimpleName();
         String factoryName = x.getClass().getPackage().getName() + ".ObjectFactory";
         String factoryMethodName = "create" + typeName.substring(0, typeName.length() - "Type".length());

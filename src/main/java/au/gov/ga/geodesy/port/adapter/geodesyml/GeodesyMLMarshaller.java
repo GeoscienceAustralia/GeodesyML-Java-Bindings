@@ -4,6 +4,8 @@ import java.io.Writer;
 
 import javax.xml.bind.JAXBElement;
 
+import org.checkerframework.checker.nullness.qual.NonNull;
+
 import java.io.Reader;
 
 public interface GeodesyMLMarshaller {
@@ -14,6 +16,6 @@ public interface GeodesyMLMarshaller {
 
 
     // TODO: unmarshal to plain DTO instead, why not?
-    <T> JAXBElement<T> unmarshal(Reader reader, Class<T> type) throws MarshallingException;
+    <T extends Object> JAXBElement<T> unmarshal(Reader reader, Class<T> type) throws MarshallingException;
 
 }

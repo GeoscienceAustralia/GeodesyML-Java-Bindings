@@ -16,6 +16,8 @@
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <encoding>UTF-8</encoding>
+        <annotatedJdk>${org.checkerframework:jdk8:jar}</annotatedJdk>
+        <checker.version>2.0.0</checker.version>
     </properties>
     <repositories>
         <repository>
@@ -65,14 +67,43 @@
             <artifactId>slf4j-api</artifactId>
             <version>1.7.19</version>
         </dependency>
+        <dependency>
+            <groupId>org.checkerframework</groupId>
+            <artifactId>checker-qual</artifactId>
+            <version>${checker.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.checkerframework</groupId>
+            <artifactId>checker</artifactId>
+            <version>${checker.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.checkerframework</groupId>
+            <artifactId>jdk8</artifactId>
+            <version>${checker.version}</version>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
-    <profiles>
-        <profile>
-            <build>
-                <finalName>geodesyml-bindings</finalName>
-            </build>
-        </profile>
-    </profiles>
+    <build>
+        <finalName>geodesyml-bindings</finalName>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <compilerVersion>1.8</compilerVersion>
+                    <annotationProcessors>
+                        <annotationProcessor>org.checkerframework.checker.nullness.NullnessChecker</annotationProcessor>
+                    </annotationProcessors>
+                    <compilerArgs>
+                        <arg>-Xbootclasspath/p:${annotatedJdk}</arg>
+                    </compilerArgs>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 	<distributionManagement>
 		<snapshotRepository>
 			<id>nexus.gadevs</id>
