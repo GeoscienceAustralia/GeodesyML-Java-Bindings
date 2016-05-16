@@ -155,6 +155,7 @@ public class GMLPropertyTypeResolver {
      * The argument is modified and the result of resolution thus cached.
      */
     @SuppressWarnings("unchecked")
+    // TODO - is this used?
     public <T extends AbstractGMLType> Optional<T> getPropertyElement(GMLPropertyType propertyType) {
         String elementName = propertyTypeElementName(propertyType);
         try {
