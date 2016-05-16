@@ -58,7 +58,7 @@ import net.opengis.gml.v_3_2_1.AbstractGMLType;
  * elements under a given root, and resolves all hrefs by nesting their target
  * elements under their respective parents.
  *
- * For now (TODO), we only support resolution of local references. 
+ * For now (TODO), we only support resolution of local references.
  */
 public class GMLPropertyTypeResolver {
 
@@ -72,13 +72,20 @@ public class GMLPropertyTypeResolver {
     private ElementMap elementMap = new ElementMap();
 
     /**
-     * Resolve all GML property types under the given root element. The
-     * modifications to the argument are eager and destructive.
+     * All linked properties must be present under the given root element.
      */
     public GMLPropertyTypeResolver(Object rootElement) {
         this.rootElement = rootElement;
-        mapAllElements();
-        resolveAllProperties();
+    }
+
+    /**
+     * Resolve all GML property types under the given root element. The
+     * modifications to the argument are eager and destructive.
+     */
+    public static void resolveAllProperties(Object rootElement) {
+        GMLPropertyTypeResolver resolver = new GMLPropertyTypeResolver(rootElement);
+        resolver.mapAllElements();
+        resolver.resolveAllProperties();
     }
 
     /**
@@ -148,6 +155,7 @@ public class GMLPropertyTypeResolver {
      * The argument is modified and the result of resolution thus cached.
      */
     @SuppressWarnings("unchecked")
+    // TODO - is this used?
     public <T extends AbstractGMLType> Optional<T> getPropertyElement(GMLPropertyType propertyType) {
         String elementName = propertyTypeElementName(propertyType);
         try {
