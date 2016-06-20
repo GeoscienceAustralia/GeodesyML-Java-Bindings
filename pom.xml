@@ -16,7 +16,7 @@
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <encoding>UTF-8</encoding>
-        <SONAR_LOGIN>6f0c0170949c30e3f529a1456e02217ded1adfc2</SONAR_LOGIN>
+        <SONAR_LOGIN>Pass in with -D</SONAR_LOGIN>
     </properties>
     <repositories>
         <repository>
