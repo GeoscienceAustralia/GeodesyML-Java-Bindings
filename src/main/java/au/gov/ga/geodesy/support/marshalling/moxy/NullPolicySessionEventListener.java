@@ -41,7 +41,7 @@ public class NullPolicySessionEventListener extends SessionEventAdapter {
                 try {
                     Method getNullPolicy = mapping.getClass().getMethod("getNullPolicy");
                     AbstractNullPolicy nullPolicy = (AbstractNullPolicy) getNullPolicy.invoke(mapping);
-                    nullPolicy.setMarshalNullRepresentation(XMLNullRepresentationType.ABSENT_NODE);
+                    nullPolicy.setMarshalNullRepresentation(XMLNullRepresentationType.XSI_NIL);
                 }
                 catch (NoSuchMethodException ok) {
                 }
