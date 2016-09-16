@@ -124,7 +124,7 @@ public class GeodesyMLMoxy implements GeodesyMLMarshaller {
             if (type.isAssignableFrom(actualType)) {
                 return (JAXBElement<T>) element;
             } else {
-                throw new MarshallingException("Type mismatch: expected " + type.getClass() + ", but got " + actualType);
+                throw new MarshallingException("Type mismatch: expected " + type.getName() + ", but got " + actualType);
             }
         } catch (JAXBException e) {
             throw new MarshallingException("Failed to unmarshal a site log", e);
