@@ -44,6 +44,7 @@ public class GeodesyMLMoxy implements GeodesyMLMarshaller {
 
             @SuppressWarnings("serial")
             private Map<String, String> namespacePrefixMap = new HashMap<String, String>() {{
+                put("http://www.w3.org/1999/xlink", "xlink");
                 put("http://www.opengis.net/gml/3.2", "gml");
                 put("http://www.isotc211.org/2005/gco", "gco");
                 put("http://www.isotc211.org/2005/gmd", "gmd");
