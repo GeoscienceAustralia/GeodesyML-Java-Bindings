@@ -1,3 +1,6 @@
-language: java
-jdk:
-    - oraclejdk8
+language: nix
+script: "./maven-deploy.sh"
+env:
+  global:
+  - secure: QRuP8ERANjKtFKR2KX8/v3QgHn8plc6ICeyY4pNYk4OnZeDRH/1tP6CQRau2+FoJRmS+u62VRK0Wv8Zdt1QaCgLs3MoaQhAhLQk9HcH4rATL0xsoCFrkZM8sURkWTwQqR9XlP2M0aVWLCd6bxb0hdwXk96Q14+4l/gBw9lfJMQY=
+  - secure: HRWoQjw/DkSPZU5q4Clq3Uk5qffoRYLPbVuV7IdXpBuJOcF3PZV3j5Nydq55aPAu8befkS+bxj3XJA46mFAf/4WKI4xtyA/rVz6KLupZAHdSOkyvx4YNgyOE9YnTEbvNKSNvg+WMFXTfZIX/miKe1mbq/pCnSNU6S92xJpPXLBA=
