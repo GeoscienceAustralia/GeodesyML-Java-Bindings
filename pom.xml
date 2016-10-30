@@ -18,13 +18,6 @@
         <encoding>UTF-8</encoding>
         <SONAR_LOGIN>Pass in with -D</SONAR_LOGIN>
     </properties>
-    <repositories>
-        <repository>
-            <id>ga-maven-int</id>
-            <name>Geoscience Internal Maven Repo</name>
-            <url>http://maven-int.ga.gov.au/nexus/content/groups/public/</url>
-        </repository>
-    </repositories>
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
