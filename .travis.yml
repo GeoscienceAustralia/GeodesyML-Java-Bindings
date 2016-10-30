@@ -1,6 +1,15 @@
 language: nix
-script: "./maven-deploy.sh"
+script: "./travis/build.sh"
+after_success: "./travis/trigger-downstream.sh"
+cache:
+  timeout: 86400
+  directories:
+  - "${HOME}/.m2"
+branches:
+  only:
+  - master
 env:
   global:
   - secure: QRuP8ERANjKtFKR2KX8/v3QgHn8plc6ICeyY4pNYk4OnZeDRH/1tP6CQRau2+FoJRmS+u62VRK0Wv8Zdt1QaCgLs3MoaQhAhLQk9HcH4rATL0xsoCFrkZM8sURkWTwQqR9XlP2M0aVWLCd6bxb0hdwXk96Q14+4l/gBw9lfJMQY=
   - secure: HRWoQjw/DkSPZU5q4Clq3Uk5qffoRYLPbVuV7IdXpBuJOcF3PZV3j5Nydq55aPAu8befkS+bxj3XJA46mFAf/4WKI4xtyA/rVz6KLupZAHdSOkyvx4YNgyOE9YnTEbvNKSNvg+WMFXTfZIX/miKe1mbq/pCnSNU6S92xJpPXLBA=
+  - secure: BX6jb9V1OMrBBXFMYdL1mDnLDsR8A+nf4tepUZqSJUb6QPHbTEADHpkl35DSj8z8CCGn5foUGlo4+ki1fVqMjpB1/dQSbqjCLytqjuTlMr57jCWw/lgB8DOpuFfnGBwncgGrMM5LlR7q9a51RY35PnAgNRV7sNXs3CwQWrWhmMk=
