@@ -10,4 +10,12 @@
             <password>${env.TRAVIS_NEXUS_PASSWORD}</password>
         </server>
     </servers>
+    <mirrors>
+        <mirror>
+            <id>nexus.gadevs</id>
+            <name>GA Nexus</name>
+            <url>https://nexus.gadevs.ga/repository/maven-public/</url>
+            <mirrorOf>*</mirrorOf>
+        </mirror>
+    </mirrors>
 </settings>

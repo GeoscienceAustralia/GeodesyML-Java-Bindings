@@ -20,9 +20,8 @@
     </properties>
     <repositories>
         <repository>
-            <id>ga-maven-int</id>
-            <name>Geoscience Internal Maven Repo</name>
-            <url>http://maven-int.ga.gov.au/nexus/content/groups/public/</url>
+			<id>nexus.gadevs</id>
+			<url>https://nexus.gadevs.ga/repository/maven-snapshots/</url>
         </repository>
     </repositories>
     <dependencies>
@@ -97,7 +96,7 @@
 	<distributionManagement>
 		<snapshotRepository>
 			<id>nexus.gadevs</id>
-			<url>https://nexus.gadevs.ga./repository/maven-snapshots/</url>
+			<url>https://nexus.gadevs.ga/repository/maven-snapshots/</url>
 		</snapshotRepository>
     </distributionManagement>
     <build>
