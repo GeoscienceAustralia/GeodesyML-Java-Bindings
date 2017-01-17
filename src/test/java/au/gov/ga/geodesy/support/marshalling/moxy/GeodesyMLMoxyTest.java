@@ -12,6 +12,7 @@ import org.junit.Test;
 
 import au.gov.ga.geodesy.port.adapter.geodesyml.MarshallingException;
 import au.gov.xml.icsm.geodesyml.v_0_3.GeodesyMLType;
+import au.gov.xml.icsm.geodesyml.v_0_3.HumiditySensorType;
 
 public class GeodesyMLMoxyTest {
 
@@ -35,6 +36,32 @@ public class GeodesyMLMoxyTest {
         System.out.println("geodesyML elements:");
         geodesyML.getElements().forEach(x -> {
             System.out.println("  "+x.getName());
+        });
+    }
+
+    @Test
+    public void unmarshalWithNullNumericFields() throws Exception {
+        Reader input = new InputStreamReader(Thread.currentThread()
+                .getContextClassLoader()
+                .getResourceAsStream("MOBS-null-numerics.xml"));
+
+        GeodesyMLType geodesyML = marshaller.unmarshal(input, GeodesyMLType.class).getValue();
+        List<JAXBElement<?>> els = geodesyML.getElements();
+        Assert.assertNotNull(els);
+        Assert.assertNotEquals(0, els.size());
+
+        geodesyML.getElements().forEach(x -> {
+            if (x.getName().toString().indexOf("humiditySensor") != -1) {
+                HumiditySensorType humiditySensorType = (HumiditySensorType)x.getValue();
+
+                // verify that a non-null Double field has the correct value
+                Double heightDiffToAntenna = humiditySensorType.getHeightDiffToAntenna();
+                Assert.assertEquals((Double)2.5, (Double)heightDiffToAntenna);
+
+                // verify that a null Double field is null in the type (not zero)
+                Double accuracyPercentRelativeHumidity = humiditySensorType.getAccuracyPercentRelativeHumidity();
+                Assert.assertNull(accuracyPercentRelativeHumidity);
+            }
         });
     }
 
