@@ -18,6 +18,12 @@
         <encoding>UTF-8</encoding>
         <SONAR_LOGIN>Pass in with -D</SONAR_LOGIN>
     </properties>
+    <repositories>
+        <repository>
+			<id>nexus.gadevs</id>
+			<url>https://nexus.gadevs.ga/repository/maven-snapshots/</url>
+        </repository>
+    </repositories>
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
