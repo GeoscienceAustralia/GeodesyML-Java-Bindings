@@ -1,5 +1,135 @@
 <?xml version="1.0" encoding="utf-8"?>
 <geo:GeodesyML gml:id="MOBS00AUS" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.4" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <geo:HumiditySensor gml:id="HUMID_1">
+        <geo:type codeSpace="">HMP233</geo:type>
+        <geo:notes>10m Cable</geo:notes>
+        <geo:manufacturer>PAROSCIENTIFIC</geo:manufacturer>
+        <geo:serialNumber>107257</geo:serialNumber>
+        <geo:heightDiffToAntenna>0.1</geo:heightDiffToAntenna>
+        <geo:calibrationDate>2009-05-23Z</geo:calibrationDate>
+        <gml:validTime nilReason="">
+            <gml:TimePeriod gml:id="humiditySensorValidTime1">
+                <gml:beginPosition>2009-10-23Z</gml:beginPosition>
+                <gml:endPosition>2009-11-23Z</gml:endPosition>
+            </gml:TimePeriod>
+        </gml:validTime>
+        <geo:dataSamplingInterval>0.1</geo:dataSamplingInterval>
+        <geo:accuracy-percentRelativeHumidity>2.0</geo:accuracy-percentRelativeHumidity>
+        <geo:aspiration>NATURAL</geo:aspiration>
+    </geo:HumiditySensor>
+    <geo:HumiditySensor gml:id="HUMID_2">
+        <geo:type codeSpace="">HMP233</geo:type>
+        <geo:notes>10m Cable</geo:notes>
+        <geo:manufacturer>PAROSCIENTIFIC</geo:manufacturer>
+        <geo:serialNumber>107258</geo:serialNumber>
+        <geo:heightDiffToAntenna>0.1</geo:heightDiffToAntenna>
+        <geo:calibrationDate>2009-06-23Z</geo:calibrationDate>
+        <gml:validTime nilReason="">
+            <gml:TimePeriod gml:id="humiditySensorValidTime2">
+                <gml:beginPosition>2009-11-23Z</gml:beginPosition>
+                <gml:endPosition>2009-12-23Z</gml:endPosition>
+            </gml:TimePeriod>
+        </gml:validTime>
+        <geo:dataSamplingInterval>0.1</geo:dataSamplingInterval>
+        <geo:accuracy-percentRelativeHumidity>2.0</geo:accuracy-percentRelativeHumidity>
+        <geo:aspiration>NATURAL</geo:aspiration>
+    </geo:HumiditySensor>
+    <geo:PressureSensor gml:id="PRESSURE_1">
+        <geo:type codeSpace="">PAROSCIENTIFIC MET4</geo:type>
+        <geo:notes>10 m Cable</geo:notes>
+        <geo:manufacturer>PAROSCIENTIFIC</geo:manufacturer>
+        <geo:serialNumber>110730</geo:serialNumber>
+        <geo:heightDiffToAntenna>0.0</geo:heightDiffToAntenna>
+        <geo:calibrationDate>2010-10-28T11:00:00Z</geo:calibrationDate>
+        <gml:validTime nilReason="">
+            <gml:TimePeriod gml:id="TimePeriodType_412">
+                <gml:beginPosition>2010-10-29T00:00:00Z</gml:beginPosition>
+                <gml:endPosition>2010-11-29T00:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+        </gml:validTime>
+        <geo:dataSamplingInterval>30.0</geo:dataSamplingInterval>
+        <geo:accuracy-hPa>0.1</geo:accuracy-hPa>
+    </geo:PressureSensor>
+    <geo:PressureSensor gml:id="PRESSURE_2">
+        <geo:type codeSpace="">PAROSCIENTIFIC MET4</geo:type>
+        <geo:notes>10 m Cable</geo:notes>
+        <geo:manufacturer>PAROSCIENTIFIC</geo:manufacturer>
+        <geo:serialNumber>110731</geo:serialNumber>
+        <geo:heightDiffToAntenna>0.0</geo:heightDiffToAntenna>
+        <geo:calibrationDate>2010-11-28T11:00:00Z</geo:calibrationDate>
+        <gml:validTime nilReason="">
+            <gml:TimePeriod gml:id="TimePeriodType_412">
+                <gml:beginPosition>2010-11-29T00:00:00Z</gml:beginPosition>
+                <gml:endPosition></gml:endPosition>
+            </gml:TimePeriod>
+        </gml:validTime>
+        <geo:dataSamplingInterval>30.0</geo:dataSamplingInterval>
+        <geo:accuracy-hPa>0.1</geo:accuracy-hPa>
+    </geo:PressureSensor>
+    <geo:TemperatureSensor gml:id="TEMP_1">
+        <geo:type codeSpace="">PAROSCIENTIFIC MET4</geo:type>
+        <geo:notes>10 m Cable</geo:notes>
+        <geo:manufacturer>PAROSCIENTIFIC</geo:manufacturer>
+        <geo:serialNumber>107257</geo:serialNumber>
+        <geo:heightDiffToAntenna>0.0</geo:heightDiffToAntenna>
+        <geo:calibrationDate>2009-10-22T13:00:00Z</geo:calibrationDate>
+        <gml:validTime nilReason="">
+            <gml:TimePeriod gml:id="TimePeriodType_413">
+                <gml:beginPosition>2009-10-22T13:30:00Z</gml:beginPosition>
+                <gml:endPosition>2010-11-28T00:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+        </gml:validTime>
+        <geo:dataSamplingInterval>30.0</geo:dataSamplingInterval>
+        <geo:accuracy-degreesCelcius>0.5</geo:accuracy-degreesCelcius>
+        <geo:aspiration>UNASPIRATED</geo:aspiration>
+    </geo:TemperatureSensor>
+    
+    <geo:TemperatureSensor gml:id="TEMP_2">
+        <geo:type codeSpace="">PAROSCIENTIFIC MET4</geo:type>
+        <geo:manufacturer>PAROSCIENTIFIC</geo:manufacturer>
+        <geo:serialNumber>107257</geo:serialNumber>
+        <geo:heightDiffToAntenna>0.0</geo:heightDiffToAntenna>
+        <geo:calibrationDate>2009-11-22T13:00:00Z</geo:calibrationDate>
+        <gml:validTime nilReason="">
+            <gml:TimePeriod gml:id="TimePeriodType_413">
+                <gml:beginPosition>2010-11-28T00:00:00Z</gml:beginPosition>
+                <gml:endPosition></gml:endPosition>
+            </gml:TimePeriod>
+        </gml:validTime>
+        <geo:dataSamplingInterval>30.0</geo:dataSamplingInterval>
+        <geo:accuracy-degreesCelcius>0.5</geo:accuracy-degreesCelcius>
+        <geo:aspiration>UNASPIRATED</geo:aspiration>
+    </geo:TemperatureSensor>
+    <geo:WaterVaporSensor gml:id="WATERVAPORSENSOR_1">
+        <geo:type codeSpace="">UNK</geo:type>
+        <geo:manufacturer>STEAMPUNK</geo:manufacturer>
+        <geo:serialNumber>123</geo:serialNumber>
+        <geo:heightDiffToAntenna>0.0</geo:heightDiffToAntenna>
+        <geo:calibrationDate>2010-10-28T00:00:00Z</geo:calibrationDate>
+        <gml:validTime nilReason="">
+            <gml:TimePeriod gml:id="TimePeriodType_413">
+                <gml:beginPosition>2010-10-28T00:00:00Z</gml:beginPosition>
+                <gml:endPosition>2010-11-28T00:00:00Z</gml:endPosition>
+            </gml:TimePeriod>
+        </gml:validTime>
+        <geo:distanceToAntenna>0.1</geo:distanceToAntenna>
+    </geo:WaterVaporSensor>
+    <geo:WaterVaporSensor gml:id="WATERVAPORSENSOR_2">
+        <geo:type codeSpace="">UNK</geo:type>
+        <geo:manufacturer>STEAMPUNK</geo:manufacturer>
+        <geo:serialNumber>123</geo:serialNumber>
+        <geo:heightDiffToAntenna>0.0</geo:heightDiffToAntenna>
+        <geo:calibrationDate>2009-11-22T13:00:00Z</geo:calibrationDate>
+        <gml:validTime nilReason="">
+            <gml:TimePeriod gml:id="TimePeriodType_413">
+                <gml:beginPosition>2010-11-28T00:00:00Z</gml:beginPosition>
+                <gml:endPosition></gml:endPosition>
+            </gml:TimePeriod>
+        </gml:validTime>
+        <geo:distanceToAntenna>0.2</geo:distanceToAntenna>
+    </geo:WaterVaporSensor>
+        
     <geo:siteLog gml:id="mobs_20170105.log">
         <geo:formInformation>
             <geo:preparedBy>Ryan Ruddick</geo:preparedBy>
@@ -271,138 +401,6 @@ Tracking changed to all in view at
             </geo:GnssAntenna>
             <geo:dateInserted>2002-10-21T00:00:00Z</geo:dateInserted>
         </geo:gnssAntenna>
-        
-        
-     <geo:HumiditySensor gml:id="HUMID_1">
-            <geo:type codeSpace="">HMP233</geo:type>
-            <geo:notes>10m Cable</geo:notes>
-            <geo:manufacturer>PAROSCIENTIFIC</geo:manufacturer>
-            <geo:serialNumber>107257</geo:serialNumber>
-            <geo:heightDiffToAntenna>0.1</geo:heightDiffToAntenna>
-            <geo:calibrationDate>2009-05-23Z</geo:calibrationDate>
-            <gml:validTime nilReason="">
-                <gml:TimePeriod gml:id="humiditySensorValidTime1">
-                    <gml:beginPosition>2009-10-23Z</gml:beginPosition>
-                    <gml:endPosition>2009-11-23Z</gml:endPosition>
-                </gml:TimePeriod>
-            </gml:validTime>
-            <geo:dataSamplingInterval>0.1</geo:dataSamplingInterval>
-            <geo:accuracy-percentRelativeHumidity>2.0</geo:accuracy-percentRelativeHumidity>
-            <geo:aspiration>NATURAL</geo:aspiration>
-        </geo:HumiditySensor>
-        <geo:HumiditySensor gml:id="HUMID_2">
-            <geo:type codeSpace="">HMP233</geo:type>
-            <geo:notes>10m Cable</geo:notes>
-            <geo:manufacturer>PAROSCIENTIFIC</geo:manufacturer>
-            <geo:serialNumber>107258</geo:serialNumber>
-            <geo:heightDiffToAntenna>0.1</geo:heightDiffToAntenna>
-            <geo:calibrationDate>2009-06-23Z</geo:calibrationDate>
-            <gml:validTime nilReason="">
-                <gml:TimePeriod gml:id="humiditySensorValidTime2">
-                    <gml:beginPosition>2009-11-23Z</gml:beginPosition>
-                    <gml:endPosition>2009-12-23Z</gml:endPosition>
-                </gml:TimePeriod>
-            </gml:validTime>
-            <geo:dataSamplingInterval>0.1</geo:dataSamplingInterval>
-            <geo:accuracy-percentRelativeHumidity>2.0</geo:accuracy-percentRelativeHumidity>
-            <geo:aspiration>NATURAL</geo:aspiration>
-        </geo:HumiditySensor>
-        <geo:PressureSensor gml:id="PRESSURE_1">
-            <geo:type codeSpace="">PAROSCIENTIFIC MET4</geo:type>
-            <geo:notes>10 m Cable</geo:notes>
-            <geo:manufacturer>PAROSCIENTIFIC</geo:manufacturer>
-            <geo:serialNumber>110730</geo:serialNumber>
-            <geo:heightDiffToAntenna>0.0</geo:heightDiffToAntenna>
-            <geo:calibrationDate>2010-10-28T11:00:00Z</geo:calibrationDate>
-            <gml:validTime nilReason="">
-                <gml:TimePeriod gml:id="TimePeriodType_412">
-                    <gml:beginPosition>2010-10-29T00:00:00Z</gml:beginPosition>
-                    <gml:endPosition>2010-11-29T00:00:00Z</gml:endPosition>
-                </gml:TimePeriod>
-            </gml:validTime>
-            <geo:dataSamplingInterval>30.0</geo:dataSamplingInterval>
-            <geo:accuracy-hPa>0.1</geo:accuracy-hPa>
-        </geo:PressureSensor>
-        <geo:PressureSensor gml:id="PRESSURE_2">
-            <geo:type codeSpace="">PAROSCIENTIFIC MET4</geo:type>
-            <geo:notes>10 m Cable</geo:notes>
-            <geo:manufacturer>PAROSCIENTIFIC</geo:manufacturer>
-            <geo:serialNumber>110731</geo:serialNumber>
-            <geo:heightDiffToAntenna>0.0</geo:heightDiffToAntenna>
-            <geo:calibrationDate>2010-11-28T11:00:00Z</geo:calibrationDate>
-            <gml:validTime nilReason="">
-                <gml:TimePeriod gml:id="TimePeriodType_412">
-                    <gml:beginPosition>2010-11-29T00:00:00Z</gml:beginPosition>
-                    <gml:endPosition></gml:endPosition>
-                </gml:TimePeriod>
-            </gml:validTime>
-            <geo:dataSamplingInterval>30.0</geo:dataSamplingInterval>
-            <geo:accuracy-hPa>0.1</geo:accuracy-hPa>
-        </geo:PressureSensor>
-        <geo:TemperatureSensor gml:id="TEMP_1">
-            <geo:type codeSpace="">PAROSCIENTIFIC MET4</geo:type>
-            <geo:notes>10 m Cable</geo:notes>
-            <geo:manufacturer>PAROSCIENTIFIC</geo:manufacturer>
-            <geo:serialNumber>107257</geo:serialNumber>
-            <geo:heightDiffToAntenna>0.0</geo:heightDiffToAntenna>
-            <geo:calibrationDate>2009-10-22T13:00:00Z</geo:calibrationDate>
-            <gml:validTime nilReason="">
-                <gml:TimePeriod gml:id="TimePeriodType_413">
-                    <gml:beginPosition>2009-10-22T13:30:00Z</gml:beginPosition>
-                    <gml:endPosition>2010-11-28T00:00:00Z</gml:endPosition>
-                </gml:TimePeriod>
-            </gml:validTime>
-            <geo:dataSamplingInterval>30.0</geo:dataSamplingInterval>
-            <geo:accuracy-degreesCelcius>0.5</geo:accuracy-degreesCelcius>
-            <geo:aspiration>UNASPIRATED</geo:aspiration>
-        </geo:TemperatureSensor>
-        
-        <geo:TemperatureSensor gml:id="TEMP_2">
-            <geo:type codeSpace="">PAROSCIENTIFIC MET4</geo:type>
-            <geo:manufacturer>PAROSCIENTIFIC</geo:manufacturer>
-            <geo:serialNumber>107257</geo:serialNumber>
-            <geo:heightDiffToAntenna>0.0</geo:heightDiffToAntenna>
-            <geo:calibrationDate>2009-11-22T13:00:00Z</geo:calibrationDate>
-            <gml:validTime nilReason="">
-                <gml:TimePeriod gml:id="TimePeriodType_413">
-                    <gml:beginPosition>2010-11-28T00:00:00Z</gml:beginPosition>
-                    <gml:endPosition></gml:endPosition>
-                </gml:TimePeriod>
-            </gml:validTime>
-            <geo:dataSamplingInterval>30.0</geo:dataSamplingInterval>
-            <geo:accuracy-degreesCelcius>0.5</geo:accuracy-degreesCelcius>
-            <geo:aspiration>UNASPIRATED</geo:aspiration>
-        </geo:TemperatureSensor>
-        <geo:WaterVaporSensor gml:id="WATERVAPORSENSOR_1">
-            <geo:type codeSpace="">UNK</geo:type>
-            <geo:manufacturer>STEAMPUNK</geo:manufacturer>
-            <geo:serialNumber>123</geo:serialNumber>
-            <geo:heightDiffToAntenna>0.0</geo:heightDiffToAntenna>
-            <geo:calibrationDate>2010-10-28T00:00:00Z</geo:calibrationDate>
-            <gml:validTime nilReason="">
-                <gml:TimePeriod gml:id="TimePeriodType_413">
-                    <gml:beginPosition>2010-10-28T00:00:00Z</gml:beginPosition>
-                    <gml:endPosition>2010-11-28T00:00:00Z</gml:endPosition>
-                </gml:TimePeriod>
-            </gml:validTime>
-            <geo:distanceToAntenna>0.1</geo:distanceToAntenna>
-        </geo:WaterVaporSensor>
-        <geo:WaterVaporSensor gml:id="WATERVAPORSENSOR_2">
-            <geo:type codeSpace="">UNK</geo:type>
-            <geo:manufacturer>STEAMPUNK</geo:manufacturer>
-            <geo:serialNumber>123</geo:serialNumber>
-            <geo:heightDiffToAntenna>0.0</geo:heightDiffToAntenna>
-            <geo:calibrationDate>2009-11-22T13:00:00Z</geo:calibrationDate>
-            <gml:validTime nilReason="">
-                <gml:TimePeriod gml:id="TimePeriodType_413">
-                    <gml:beginPosition>2010-11-28T00:00:00Z</gml:beginPosition>
-                    <gml:endPosition></gml:endPosition>
-                </gml:TimePeriod>
-            </gml:validTime>
-            <geo:distanceToAntenna>0.2</geo:distanceToAntenna>
-        </geo:WaterVaporSensor>
-        
-        
         <geo:surveyedLocalTie>
             <geo:SurveyedLocalTie gml:id="local-tie-1">
                 <geo:tiedMarkerName>Melbourne South PM 436</geo:tiedMarkerName>
