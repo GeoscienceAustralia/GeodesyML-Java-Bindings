@@ -3,22 +3,31 @@ package au.gov.ga.geodesy.support.marshalling.moxy;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.io.Reader;
+import java.io.StringWriter;
 import java.util.List;
 
 import javax.xml.bind.JAXBElement;
+import javax.xml.namespace.NamespaceContext;
 
+import org.hamcrest.MatcherAssert;
 import org.junit.Assert;
 import org.junit.Test;
+
+import com.jcabi.matchers.XhtmlMatchers;
+import com.jcabi.xml.XPathContext;
 
 import au.gov.ga.geodesy.port.adapter.geodesyml.MarshallingException;
 import au.gov.xml.icsm.geodesyml.v_0_4.GeodesyMLType;
 import au.gov.xml.icsm.geodesyml.v_0_4.HumiditySensorType;
+import au.gov.xml.icsm.geodesyml.v_0_4.SiteType;
 
 public class GeodesyMLMoxyTest {
 
-    private GeodesyMLMoxy marshaller;
-
-    public GeodesyMLMoxyTest() throws MarshallingException {
+    private static final NamespaceContext namespaces = new XPathContext()
+        .add("geo", "urn:xml-gov-au:icsm:egeodesy:0.4")
+        .add("gml", "http://www.opengis.net/gml/3.2");
+    
+    private GeodesyMLMoxy marshaller; public GeodesyMLMoxyTest() throws MarshallingException {
         marshaller = new GeodesyMLMoxy();
     }
 
@@ -37,6 +46,21 @@ public class GeodesyMLMoxyTest {
         geodesyML.getElements().forEach(x -> {
             System.out.println("  "+x.getName());
         });
+    }
+
+    @Test
+    public void generateGmlId() throws Exception {
+        Reader input = new InputStreamReader(Thread.currentThread()
+            .getContextClassLoader()
+            .getResourceAsStream("MOBS.xml"));
+
+        GeodesyMLType geodesyML = marshaller.unmarshal(input, GeodesyMLType.class).getValue();
+        SiteType siteLogType = (SiteType) geodesyML.getElements().get(0).getValue();
+        siteLogType.setId(null);
+
+        StringWriter xml = new StringWriter();
+        marshaller.marshal(geodesyML, xml);
+        MatcherAssert.assertThat(xml.toString(), XhtmlMatchers.hasXPath("/geo:GeodesyML/geo:Site[@gml:id]", namespaces)); 
     }
 
     @Test

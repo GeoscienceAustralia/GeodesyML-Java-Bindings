@@ -3,9 +3,11 @@ package au.gov.ga.geodesy.support.marshalling.moxy;
 import java.io.Reader;
 import java.io.Writer;
 import java.lang.reflect.Method;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
+import java.util.UUID;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBElement;
@@ -14,6 +16,7 @@ import javax.xml.bind.Marshaller;
 import javax.xml.bind.PropertyException;
 import javax.xml.bind.Unmarshaller;
 
+import org.apache.commons.lang3.StringUtils;
 import org.eclipse.persistence.jaxb.JAXBContextFactory;
 import org.eclipse.persistence.jaxb.JAXBContextProperties;
 import org.eclipse.persistence.oxm.NamespacePrefixMapper;
@@ -23,6 +26,9 @@ import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLMarshaller;
 import au.gov.ga.geodesy.port.adapter.geodesyml.MarshallingException;
 import au.gov.ga.geodesy.support.gml.GMLPropertyTypeResolver;
 import au.gov.xml.icsm.geodesyml.v_0_4.GeodesyMLType;
+
+import net.bramp.objectgraph.ObjectGraph;
+import net.opengis.gml.v_3_2_1.AbstractGMLType;
 
 public class GeodesyMLMoxy implements GeodesyMLMarshaller {
 
@@ -85,8 +91,32 @@ public class GeodesyMLMoxy implements GeodesyMLMarshaller {
         marshalJAXBElement(site, writer);
     }
 
+    private void assignGmlIds(Object x) {
+        ObjectGraph
+            .visitor(new ObjectGraph.Visitor() {
+                @Override
+                public boolean visit(Object object, Class<?> clazz) {
+                    if (AbstractGMLType.class.isAssignableFrom(object.getClass())) {
+                        AbstractGMLType gmlType = (AbstractGMLType) object;
+                        if (StringUtils.isEmpty(gmlType.getId())) {
+                            String typeName = object.getClass().getSimpleName();
+                            String idPrefix = typeName.substring(0, typeName.length() - 4) + '.';
+                            gmlType.setId(idPrefix + UUID.randomUUID());
+                        }
+                    }
+                    if (object instanceof Collection) {
+                        ((Collection<?>) object).forEach(element -> assignGmlIds(element));
+                    }
+                    return false;
+                }
+            })
+            .excludeStatic()
+            .traverse(x);
+    }
+
     private void marshalJAXBElement(JAXBElement<?> x, Writer writer) throws MarshallingException {
         try {
+            assignGmlIds(x);
             createMarshaller().marshal(x, writer);
         } catch (JAXBException e) {
             throw new MarshallingException("Failed to marshal a site log", e);
