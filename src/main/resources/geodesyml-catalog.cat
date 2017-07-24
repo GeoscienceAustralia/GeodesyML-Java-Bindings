@@ -1,0 +1,6 @@
+--
+    If the <catalog/> parameter isn't working, this link to schema A is
+    not recognized and the test will fail because of a missing schema.
+--
+REWRITE_SYSTEM "http://xml.gov.au/icsm/geodesyml/0.4/" "../../../target/generated-sources/xsd/patched/geodesyml-1.0.0-SNAPSHOT/"
+

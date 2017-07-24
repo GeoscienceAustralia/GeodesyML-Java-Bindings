@@ -1,0 +1,93 @@
+<jaxb:bindings version="1.0" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
+    xmlns:wildcard="http://jaxb2-commons.dev.java.net/basic/wildcard"
+    xmlns:annox="http://annox.dev.java.net"
+    xmlns:inheritance="http://jaxb2-commons.dev.java.net/basic/inheritance"
+    jaxb:extensionBindingPrefixes="xjc wildcard annox inheritance">
+
+    <jaxb:bindings schemaLocation="http://xml.gov.au/icsm/geodesyml/0.4/geodesyML.xsd" node="/xs:schema">
+        <jaxb:schemaBindings>
+            <jaxb:package name="au.gov.xml.icsm.geodesyml.v_0_4"/>
+        </jaxb:schemaBindings>
+        <jaxb:bindings node="//xs:complexType[@name='GeodesyMLType']//xs:sequence/xs:choice">
+            <jaxb:property name="elements"/>
+        </jaxb:bindings>
+    </jaxb:bindings>
+	<jaxb:bindings schemaLocation="http://xml.gov.au/icsm/geodesyml/0.4/siteLog.xsd" node="/xs:schema">
+	    <jaxb:bindings node="//*[@name='gnssReceiver']">
+	        <jaxb:property name="gnssReceivers"/>
+	    </jaxb:bindings>
+	    <jaxb:bindings node="//*[@name='gnssAntenna']">
+            <jaxb:property name="gnssAntennas"/>
+        </jaxb:bindings>
+        <jaxb:bindings node="//*[@name='surveyedLocalTie']">
+            <jaxb:property name="surveyedLocalTies"/>
+        </jaxb:bindings>
+        <jaxb:bindings node="//*[@name='frequencyStandard']">
+            <jaxb:property name="frequencyStandards"/>
+        </jaxb:bindings>
+        <jaxb:bindings node="//*[@name='collocationInformation']">
+            <jaxb:property name="collocationInformations"/>
+        </jaxb:bindings>
+        <jaxb:bindings node="//*[@name='humiditySensor']">
+            <jaxb:property name="humiditySensors"/>
+        </jaxb:bindings>
+        <jaxb:bindings node="//*[@name='pressureSensor']">
+            <jaxb:property name="pressureSensors"/>
+        </jaxb:bindings>
+        <jaxb:bindings node="//*[@name='temperatureSensor']">
+            <jaxb:property name="temperatureSensors"/>
+        </jaxb:bindings>
+        <jaxb:bindings node="//*[@name='waterVaporSensor']">
+            <jaxb:property name="waterVaporSensors"/>
+        </jaxb:bindings>
+        <jaxb:bindings node="//*[@name='otherInstrumentation']">
+            <jaxb:property name="otherInstrumentations"/>
+        </jaxb:bindings>
+        <jaxb:bindings node="//*[@name='radioInterference']">
+            <jaxb:property name="radioInterferences"/>
+        </jaxb:bindings>
+        <jaxb:bindings node="//*[@name='multipathSource']">
+            <jaxb:property name="multipathSources"/>
+        </jaxb:bindings>
+        <jaxb:bindings node="//*[@name='signalObstruction']">
+            <jaxb:property name="signalObstructions"/>
+        </jaxb:bindings>
+        <jaxb:bindings node="//*[@name='localEpisodicEffect']">
+            <jaxb:property name="localEpisodicEffects"/>
+        </jaxb:bindings>
+        <jaxb:bindings node="//*[@name='siteContact']">
+            <jaxb:property name="siteContacts"/>
+        </jaxb:bindings>
+        <jaxb:bindings node="//*[@name='siteDataCenter']">
+            <jaxb:property name="siteDataCenters"/>
+        </jaxb:bindings>
+        <jaxb:bindings node="//*[@name='dataStream']">
+            <jaxb:property name="dataStreams"/>
+        </jaxb:bindings>
+    </jaxb:bindings>
+        
+    <jaxb:bindings schemaLocation="http://xml.gov.au/icsm/geodesyml/0.4/equipment.xsd" node="/xs:schema">
+        <jaxb:bindings multiple="true" node="//*[@type='double']">
+            <jaxb:property>
+                <jaxb:baseType name="java.lang.Double"/>
+            </jaxb:property>
+        </jaxb:bindings>
+        <jaxb:bindings multiple="true" node="//xs:complexType[substring(@name, string-length(@name) - string-length('PropertyType') + 1) = 'PropertyType']">
+            <inheritance:implements>au.gov.ga.geodesy.support.gml.LogItemPropertyType</inheritance:implements>
+        </jaxb:bindings>
+    </jaxb:bindings>
+
+    <jaxb:bindings schemaLocation="http://xml.gov.au/icsm/geodesyml/0.4/observationSystem.xsd" node="/xs:schema">
+        <jaxb:bindings multiple="true" node="//xs:complexType[substring(@name, string-length(@name) - string-length('PropertyType') + 1) = 'PropertyType']">
+            <inheritance:implements>au.gov.ga.geodesy.support.gml.GMLPropertyType</inheritance:implements>
+        </jaxb:bindings>
+    </jaxb:bindings>
+
+    <jaxb:bindings schemaLocation="http://xml.gov.au/icsm/geodesyml/0.4/localInterferences.xsd" node="/xs:schema">
+        <jaxb:bindings multiple="true" node="//xs:complexType[substring(@name, string-length(@name) - string-length('PropertyType') + 1) = 'PropertyType']">
+            <inheritance:implements>au.gov.ga.geodesy.support.gml.LogItemPropertyType</inheritance:implements>
+        </jaxb:bindings>
+    </jaxb:bindings>
+</jaxb:bindings>
