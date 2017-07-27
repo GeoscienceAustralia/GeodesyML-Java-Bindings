@@ -27,9 +27,6 @@
         <jaxb:bindings node="//*[@name='frequencyStandard']">
             <jaxb:property name="frequencyStandards"/>
         </jaxb:bindings>
-        <jaxb:bindings node="//*[@name='collocationInformation']">
-            <jaxb:property name="collocationInformations"/>
-        </jaxb:bindings>
         <jaxb:bindings node="//*[@name='humiditySensor']">
             <jaxb:property name="humiditySensors"/>
         </jaxb:bindings>
