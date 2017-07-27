@@ -39,9 +39,6 @@
         <jaxb:bindings node="//*[@name='waterVaporSensor']">
             <jaxb:property name="waterVaporSensors"/>
         </jaxb:bindings>
-        <jaxb:bindings node="//*[@name='otherInstrumentation']">
-            <jaxb:property name="otherInstrumentations"/>
-        </jaxb:bindings>
         <jaxb:bindings node="//*[@name='radioInterference']">
             <jaxb:property name="radioInterferences"/>
         </jaxb:bindings>
