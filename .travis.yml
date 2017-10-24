@@ -8,6 +8,7 @@ cache:
 branches:
   only:
   - master
+  - next
 env:
   global:
   - secure: QRuP8ERANjKtFKR2KX8/v3QgHn8plc6ICeyY4pNYk4OnZeDRH/1tP6CQRau2+FoJRmS+u62VRK0Wv8Zdt1QaCgLs3MoaQhAhLQk9HcH4rATL0xsoCFrkZM8sURkWTwQqR9XlP2M0aVWLCd6bxb0hdwXk96Q14+4l/gBw9lfJMQY=
