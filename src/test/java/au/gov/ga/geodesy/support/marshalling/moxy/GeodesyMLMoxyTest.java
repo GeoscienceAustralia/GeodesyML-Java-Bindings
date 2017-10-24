@@ -5,6 +5,7 @@ import java.io.PrintWriter;
 import java.io.Reader;
 import java.io.StringWriter;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import javax.xml.bind.JAXBElement;
 import javax.xml.namespace.NamespaceContext;
@@ -18,8 +19,10 @@ import com.jcabi.xml.XPathContext;
 
 import au.gov.ga.geodesy.port.adapter.geodesyml.MarshallingException;
 import au.gov.xml.icsm.geodesyml.v_0_4.GeodesyMLType;
-import au.gov.xml.icsm.geodesyml.v_0_4.HumiditySensorType;
+import au.gov.xml.icsm.geodesyml.v_0_4.GnssReceiverType;
 import au.gov.xml.icsm.geodesyml.v_0_4.SiteType;
+
+import net.opengis.gml.v_3_2_1.AbstractGMLType;
 
 public class GeodesyMLMoxyTest {
 
@@ -54,27 +57,30 @@ public class GeodesyMLMoxyTest {
         MatcherAssert.assertThat(xml.toString(), XhtmlMatchers.hasXPath("/geo:GeodesyML/geo:Site[@gml:id]", namespaces)); 
     }
 
+    @SuppressWarnings("unchecked")
+    private <T> T getElementById(GeodesyMLType document, Class<T> elementType, String id) {
+        List<AbstractGMLType> elements = document.getElements().stream()
+            .map(JAXBElement::getValue)
+            .filter(e -> e instanceof AbstractGMLType)
+            .map(e -> (AbstractGMLType) e)
+            .filter(e -> e.getId().equals(id))
+            .collect(Collectors.toList());
+
+        Assert.assertEquals(1, elements.size());
+        Assert.assertTrue(elementType.isAssignableFrom(elements.get(0).getClass()));
+        return (T) elements.get(0);
+    }
+
     @Test
     public void unmarshalWithNullNumericFields() throws Exception {
-        Reader input = getSiteLogFile("MOBS-null-numerics.xml");
+        Reader input = getSiteLogFile("MOBS.xml");
         GeodesyMLType geodesyML = marshaller.unmarshal(input, GeodesyMLType.class).getValue();
-        List<JAXBElement<?>> els = geodesyML.getElements();
-        Assert.assertNotNull(els);
-        Assert.assertNotEquals(0, els.size());
 
-        geodesyML.getElements().forEach(x -> {
-            if (x.getName().toString().indexOf("humiditySensor") != -1) {
-                HumiditySensorType humiditySensorType = (HumiditySensorType) x.getValue();
+        GnssReceiverType receiverOne = getElementById(geodesyML, GnssReceiverType.class, "GNSS_REC_1");
+        Assert.assertEquals((Double) 2.5, receiverOne.getTemperatureStabilization());
 
-                // verify that a non-null Double field has the correct value
-                Double heightDiffToAntenna = humiditySensorType.getHeightDiffToAntenna();
-                Assert.assertEquals((Double) 2.5, (Double) heightDiffToAntenna);
-
-                // verify that a null Double field is null in the type (not zero)
-                Double accuracyPercentRelativeHumidity = humiditySensorType.getAccuracyPercentRelativeHumidity();
-                Assert.assertNull(accuracyPercentRelativeHumidity);
-            }
-        });
+        GnssReceiverType receiverTwo = getElementById(geodesyML, GnssReceiverType.class, "GNSS_REC_2");
+        Assert.assertNull(receiverTwo.getTemperatureStabilization());
     }
 
     @Test

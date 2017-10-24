@@ -44,7 +44,7 @@
         <geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
         <geo:dateInstalled>2002-10-29T00:00:00Z</geo:dateInstalled>
         <geo:dateRemoved>2006-01-23T23:59:00Z</geo:dateRemoved>
-        <geo:temperatureStabilization xsi:nil="true"/>
+        <geo:temperatureStabilization>2.5</geo:temperatureStabilization>
     </geo:GnssReceiver>
     <geo:GnssReceiver gml:id="GNSS_REC_2">
         <geo:manufacturerSerialNumber>ZR220012001</geo:manufacturerSerialNumber>
