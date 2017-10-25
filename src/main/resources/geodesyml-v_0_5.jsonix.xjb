@@ -3,8 +3,8 @@
 	xmlns:jsonix="http://jsonix.highsource.org/customizations"
 	jaxb:extensionBindingPrefixes="jsonix">
 
-    <jaxb:bindings schemaLocation="http://xml.gov.au/icsm/geodesyml/0.4/geodesyML.xsd" node="/xs:schema">
-		<jsonix:packageMapping packageName="au.gov.xml.icsm.geodesyml.v_0_4" spaceName="GEODESYML_0_4"/>
+    <jaxb:bindings schemaLocation="http://xml.gov.au/icsm/geodesyml/0.5/geodesyML.xsd" node="/xs:schema">
+		<jsonix:packageMapping packageName="au.gov.xml.icsm.geodesyml.v_0_5" spaceName="GEODESYML_0_5"/>
 	</jaxb:bindings>
 
 </jaxb:bindings>
