@@ -10,9 +10,9 @@ import org.junit.Test;
 
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLMarshaller;
 import au.gov.ga.geodesy.support.marshalling.moxy.GeodesyMLMoxy;
-import au.gov.xml.icsm.geodesyml.v_0_4.GeodesyMLType;
-import au.gov.xml.icsm.geodesyml.v_0_4.SiteLogType;
-import au.gov.xml.icsm.geodesyml.v_0_4.SitePropertyType;
+import au.gov.xml.icsm.geodesyml.v_0_5.GeodesyMLType;
+import au.gov.xml.icsm.geodesyml.v_0_5.SiteLogType;
+import au.gov.xml.icsm.geodesyml.v_0_5.SitePropertyType;
 
 public class GMLPropertyTypeResolverTest {
 

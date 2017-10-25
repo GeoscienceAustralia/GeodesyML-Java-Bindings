@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>au.gov.ga.geodesy</groupId>
     <artifactId>geodesyml-bindings</artifactId>
-    <version>0.1.1-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>
     <scm>
         <connection>scm:git:git@github.com:GeoscienceAustralia/geodesyml-java-bindings.git</connection>
@@ -171,7 +171,7 @@
                                 <artifactItem>
                                     <groupId>au.gov.ga.geodesy</groupId>
                                     <artifactId>geodesyml</artifactId>
-                                    <version>0.1.0</version>
+                                    <version>0.2.0-SNAPSHOT</version>
                                     <classifier>xsd</classifier>
                                     <type>zip</type>
                                 </artifactItem>
@@ -304,7 +304,7 @@
                     <schemaIncludes/>
                     <schemas>
                         <schema>
-                            <url>http://xml.gov.au/icsm/geodesyml/0.4/geodesyML.xsd</url>
+                            <url>http://xml.gov.au/icsm/geodesyml/0.5/geodesyML.xsd</url>
                         </schema>
                         <!-- *** Needed because of the XJC problem -->
                         <schema>
