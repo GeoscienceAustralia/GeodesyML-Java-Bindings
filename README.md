@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/GeoscienceAustralia/geodesyml-java-bindings.svg?branch=master)](https://travis-ci.org/GeoscienceAustralia/geodesyml-java-bindings)
 
-#### Background
+## Background
 
 <!-- ##### eGeodesy-->
 
@@ -28,7 +28,7 @@ exchange of geodetic information.
 This library is part of GA's codebase, released as open-source. It is a
 work-in-progress; collaborators, users, and reviewers are more than welcome.
 
-#### Implementation
+## Implementation
 
 Since GeodesyML is in active development, currently in beta release,
 the implementation relies heavily on code generation to minimise manual
@@ -44,7 +44,7 @@ particularly suitable for any non-trivial amount of processing. Their job is to
 load XML data in and out of memory, where it can be manipulated into structures
 suitable to specific tasks.
 
-##### About JAXB
+## About JAXB
 Java Architecture for XML Bindings (JAXB) allows Java programs to specify a
 static, type-driven, mapping from Java classes to XML element definitions.
 JAXB's binding compiler (XJC) can be used to automatically generate Java
@@ -56,15 +56,15 @@ Java objects back into conformant XML documents.
 
 See unit tests for examples of usage.
 
-#### Contact Information
+## License
+This code is licensed under a BSD 3-clause license. See the [license deed](LICENSE) for details.
 
+## Contacts
 Contributions and bug reports are welcome!
 
 Please feel free to contact us through GitHub or at geodesy@ga.gov.au.
 
--Lazar Bodor (lazar.bodor@ga.gov.au)
-
-
-
-
-
+**Lazar Bodor**  
+*LEad Developer*  
+Geoscience Australia  
+<lazar.bodor@ga.gov.au>
