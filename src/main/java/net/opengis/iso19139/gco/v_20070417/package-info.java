@@ -6,6 +6,6 @@ package net.opengis.iso19139.gco.v_20070417;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapters;
 
-import au.gov.ga.geodesy.port.adapter.geodesyml.StringAdapter;
+import au.gov.ga.geodesy.support.marshalling.moxy.StringAdapter;
 
 

@@ -21,7 +21,7 @@
         <gml:name codeSpace="urn:ga-gov-au:monument-fourCharacterID"> MOBS</gml:name>
         <gml:name codeSpace="urn:ga-gov-au:monument-iersDOMESNumber"> 50182M001</gml:name>
         <gml:name codeSpace="urn:ga-gov-au:monument-cdpNumber">Not Available </gml:name>
-        <geo:type codeSpace="urn:ga-gov-au:monument-type">CORS</geo:type>
+        <geo:type codeSpace="urn:ga-gov-au:monument-type"></geo:type>
         <geo:installedDate>2002-09-15Z</geo:installedDate>
         <geo:notes>antenna mounting plate fixed to 1.5m stainless steel pole. Pole is fixed to 0.6m diameter bluestone pillar The GPS antenna is located on top of a stainless steel pillar, which has been secured into the top of a bluestone pillar set in bedrock</geo:notes>
         <geo:inscription/>

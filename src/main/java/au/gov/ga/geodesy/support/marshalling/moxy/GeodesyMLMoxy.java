@@ -35,7 +35,7 @@ import net.opengis.gml.v_3_2_1.AbstractGMLType;
 public class GeodesyMLMoxy implements GeodesyMLMarshaller {
 
     private JAXBContext jaxbContext;
-    
+
     public GeodesyMLMoxy() {
         try {
             Properties properties = new Properties();
@@ -44,9 +44,9 @@ public class GeodesyMLMoxy implements GeodesyMLMarshaller {
             ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
             
             String mappingFilename = "moxy.xml";
-            Source mapping_geodesyMl = new StreamSource(classLoader.getResourceAsStream(mappingFilename));
+            Source mappingGeodesyML = new StreamSource(classLoader.getResourceAsStream(mappingFilename));
             Map<String, Source> metadata = new HashMap<String, Source>();
-            metadata.put("au.gov.xml.icsm.geodesyml.v_0_4", mapping_geodesyMl);
+            metadata.put("au.gov.xml.icsm.geodesyml.v_0_4", mappingGeodesyML);
             properties.put(JAXBContextProperties.OXM_METADATA_SOURCE, metadata);
             
             jaxbContext = JAXBContextFactory.createContext(new Class[] {GeodesyMLType.class}, properties);
@@ -87,7 +87,7 @@ public class GeodesyMLMoxy implements GeodesyMLMarshaller {
             throw new MarshallingException("Failed to create marshaller", e);
         }
     }
-    
+
     private Unmarshaller createUnmarshaller() throws MarshallingException {
         try {
             Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
@@ -97,7 +97,7 @@ public class GeodesyMLMoxy implements GeodesyMLMarshaller {
             throw new MarshallingException("Failed to create unmarshaller", e);
         }
     }
-    
+
     public void marshal(JAXBElement<?> site, Writer writer) throws MarshallingException {
         marshalJAXBElement(site, writer);
     }

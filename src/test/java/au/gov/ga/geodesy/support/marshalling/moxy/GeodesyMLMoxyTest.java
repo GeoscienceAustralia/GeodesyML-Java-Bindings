@@ -102,7 +102,7 @@ public class GeodesyMLMoxyTest {
     public void marshalJAXBElementWithEmptySpaces() throws Exception {
         Reader input = new InputStreamReader(Thread.currentThread()
             .getContextClassLoader()
-            .getResourceAsStream("MOBS2-with-trailling-whitespace.xml"));
+            .getResourceAsStream("MOBS2-with-trailing-whitespace.xml"));
         GeodesyMLType geodesyML = marshaller.unmarshal(input, GeodesyMLType.class).getValue();
         List<JAXBElement<?>> els = geodesyML.getElements();
         Traverser.traverse(geodesyML, new Traverser.Visitor() {
