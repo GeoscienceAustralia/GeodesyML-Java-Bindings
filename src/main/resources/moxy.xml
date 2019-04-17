@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<xml-bindings xmlns="http://www.eclipse.org/eclipselink/xsds/persistence/oxm">
+    <xml-java-type-adapters>
+         <xml-java-type-adapter type="java.lang.String" value="au.gov.ga.geodesy.port.adapter.geodesyml.StringAdapter"/>
+    </xml-java-type-adapters>
+</xml-bindings>
+
+
+ 

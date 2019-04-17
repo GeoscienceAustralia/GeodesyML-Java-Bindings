@@ -15,10 +15,13 @@ import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.PropertyException;
 import javax.xml.bind.Unmarshaller;
+import javax.xml.transform.Source;
+import javax.xml.transform.stream.StreamSource;
 
 import org.apache.commons.lang3.StringUtils;
 import org.eclipse.persistence.jaxb.JAXBContextFactory;
 import org.eclipse.persistence.jaxb.JAXBContextProperties;
+import org.eclipse.persistence.jaxb.JAXBUnmarshaller;
 import org.eclipse.persistence.oxm.NamespacePrefixMapper;
 import org.eclipse.persistence.sessions.SessionEventListener;
 
@@ -26,19 +29,26 @@ import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLMarshaller;
 import au.gov.ga.geodesy.port.adapter.geodesyml.MarshallingException;
 import au.gov.ga.geodesy.support.gml.GMLPropertyTypeResolver;
 import au.gov.xml.icsm.geodesyml.v_0_4.GeodesyMLType;
-
 import net.bramp.objectgraph.ObjectGraph;
 import net.opengis.gml.v_3_2_1.AbstractGMLType;
 
 public class GeodesyMLMoxy implements GeodesyMLMarshaller {
 
     private JAXBContext jaxbContext;
-
+    
     public GeodesyMLMoxy() {
         try {
             Properties properties = new Properties();
             SessionEventListener sessionEventListener = new NullPolicySessionEventListener();
             properties.put(JAXBContextProperties.SESSION_EVENT_LISTENER, sessionEventListener);
+            ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+            
+            String mappingFilename = "moxy.xml";
+            Source mapping_geodesyMl = new StreamSource(classLoader.getResourceAsStream(mappingFilename));
+            Map<String, Source> metadata = new HashMap<String, Source>();
+            metadata.put("au.gov.xml.icsm.geodesyml.v_0_4", mapping_geodesyMl);
+            properties.put(JAXBContextProperties.OXM_METADATA_SOURCE, metadata);
+            
             jaxbContext = JAXBContextFactory.createContext(new Class[] {GeodesyMLType.class}, properties);
         } catch (JAXBException e) {
             throw new RuntimeException("Failed to initialise JAXBContext", e);
@@ -64,29 +74,30 @@ public class GeodesyMLMoxy implements GeodesyMLMarshaller {
             }
         });
     }
-
+    
     private Marshaller createMarshaller() throws MarshallingException {
         try {
             Marshaller marshaller = jaxbContext.createMarshaller();
             marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
             marshaller.setProperty(Marshaller.JAXB_ENCODING, "UTF-8");
             marshaller.setProperty(Marshaller.JAXB_SCHEMA_LOCATION, "urn:xml-gov-au:icsm:egeodesy:0.4");
-            configureNamespacePrefixMapping(marshaller);
+            this.configureNamespacePrefixMapping(marshaller);
             return marshaller;
         } catch (JAXBException e) {
             throw new MarshallingException("Failed to create marshaller", e);
         }
     }
-
+    
     private Unmarshaller createUnmarshaller() throws MarshallingException {
         try {
             Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
+            JAXBUnmarshaller f = (JAXBUnmarshaller) unmarshaller;
             return unmarshaller;
         } catch (JAXBException e) {
             throw new MarshallingException("Failed to create unmarshaller", e);
         }
     }
-
+    
     public void marshal(JAXBElement<?> site, Writer writer) throws MarshallingException {
         marshalJAXBElement(site, writer);
     }

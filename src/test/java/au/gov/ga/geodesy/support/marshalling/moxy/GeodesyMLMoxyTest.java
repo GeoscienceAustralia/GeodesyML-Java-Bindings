@@ -13,6 +13,7 @@ import org.hamcrest.MatcherAssert;
 import org.junit.Assert;
 import org.junit.Test;
 
+import com.cedarsoftware.util.Traverser;
 import com.jcabi.matchers.XhtmlMatchers;
 import com.jcabi.xml.XPathContext;
 
@@ -94,10 +95,25 @@ public class GeodesyMLMoxyTest {
         Reader input = new InputStreamReader(Thread.currentThread()
             .getContextClassLoader()
             .getResourceAsStream("MOBS.xml"));
-
         marshaller.marshal(marshaller.unmarshal(input, GeodesyMLType.class), new PrintWriter(System.out));
     }
-
+    
+    @Test
+    public void marshalJAXBElementWithEmptySpaces() throws Exception {
+        Reader input = new InputStreamReader(Thread.currentThread()
+            .getContextClassLoader()
+            .getResourceAsStream("MOBS2-with-trailling-whitespace.xml"));
+        GeodesyMLType geodesyML = marshaller.unmarshal(input, GeodesyMLType.class).getValue();
+        List<JAXBElement<?>> els = geodesyML.getElements();
+        Traverser.traverse(geodesyML, new Traverser.Visitor() {
+            public void process(Object x) {
+                if (x instanceof String) {
+                    Assert.assertEquals(x.toString(), x.toString().trim());
+                }
+            }
+        });
+    }
+    
     @Test
     public void marshal() throws Exception {
         Reader input = new InputStreamReader(Thread.currentThread()
