@@ -8,6 +8,9 @@ public class StringAdapter extends XmlAdapter<String, String> {
     public String marshal(String s) throws Exception {
         if (s != null) {
             String trimmed = s.trim();
+            if (!trimmed.equals("")) {
+                return trimmed;
+            }
         }
         return null;
     }
