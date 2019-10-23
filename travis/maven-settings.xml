@@ -12,9 +12,9 @@
     </servers>
     <mirrors>
         <mirror>
-            <id>nexus.gadevs</id>
-            <name>GA Nexus</name>
-            <url>https://nexus.gadevs.ga/repository/maven-public/</url>
+            <id>gnss-artifactory-release</id>
+            <name>GNSS Artifactory</name>
+            <url>s3://gnss-artifactory/maven-releases/</url>
             <mirrorOf>*</mirrorOf>
         </mirror>
     </mirrors>
