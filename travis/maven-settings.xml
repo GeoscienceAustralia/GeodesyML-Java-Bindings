@@ -4,18 +4,7 @@
       xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
 
     <servers>
-        <server>
-            <id>nexus.gadevs</id>
-            <username>${env.TRAVIS_NEXUS_USERNAME}</username>
-            <password>${env.TRAVIS_NEXUS_PASSWORD}</password>
-        </server>
     </servers>
     <mirrors>
-        <mirror>
-            <id>gnss-artifactory-release</id>
-            <name>GNSS Artifactory</name>
-            <url>s3://gnss-artifactory/maven-releases/</url>
-            <mirrorOf>*</mirrorOf>
-        </mirror>
     </mirrors>
 </settings>
