@@ -1,6 +1,6 @@
-diff -urN ./geodesyml-0.1.0/geodesyml/0.4/fieldMeasurement.xsd ./modified/geodesyml-0.1.0/fieldMeasurement.xsd
---- ./geodesyml-0.1.0/geodesyml/0.4/fieldMeasurement.xsd	2017-01-27 14:06:30.995000000 +1100
-+++ ./modified/geodesyml-0.1.0/fieldMeasurement.xsd	2017-01-27 14:08:02.486788013 +1100
+diff -urN ./geodesyml-0.2.0-SNAPSHOT/geodesyml/0.4/fieldMeasurement.xsd ./modified/geodesyml-0.2.0-SNAPSHOT/fieldMeasurement.xsd
+--- ./geodesyml-0.2.0-SNAPSHOT/geodesyml/0.4/fieldMeasurement.xsd	2017-01-27 14:06:30.995000000 +1100
++++ ./modified/geodesyml-0.2.0-SNAPSHOT/fieldMeasurement.xsd	2017-01-27 14:08:02.486788013 +1100
 @@ -28,6 +28,7 @@
              <extension base="geo:DynamicFeatureType">
                  <sequence>
@@ -33,9 +33,9 @@ diff -urN ./geodesyml-0.1.0/geodesyml/0.4/fieldMeasurement.xsd ./modified/geodes
      </complexType>
      <!--  -->
      <element name="GNSSObservationQualityInstance" substitutionGroup="geo:AbstractTimeSlice" type="geo:GNSSObservationQualityInstanceType"/>
-diff -urN ./geodesyml-0.1.0/geodesyml/0.4/observationSystem.xsd ./modified/geodesyml-0.1.0/observationSystem.xsd
---- ./geodesyml-0.1.0/geodesyml/0.4/observationSystem.xsd	2017-01-27 14:06:30.993000000 +1100
-+++ ./modified/geodesyml-0.1.0/observationSystem.xsd	2017-01-27 14:08:02.488787013 +1100
+diff -urN ./geodesyml-0.2.0-SNAPSHOT/geodesyml/0.4/observationSystem.xsd ./modified/geodesyml-0.2.0-SNAPSHOT/observationSystem.xsd
+--- ./geodesyml-0.2.0-SNAPSHOT/geodesyml/0.4/observationSystem.xsd	2017-01-27 14:06:30.993000000 +1100
++++ ./modified/geodesyml-0.2.0-SNAPSHOT/observationSystem.xsd	2017-01-27 14:08:02.488787013 +1100
 @@ -169,7 +169,9 @@
                              </restriction>
                          </simpleType>
@@ -62,9 +62,9 @@ diff -urN ./geodesyml-0.1.0/geodesyml/0.4/observationSystem.xsd ./modified/geode
                      <group ref="geo:RemarksGroup"/>
                  </sequence>
                  <attributeGroup ref="geo:RequiredSRSReferenceGroup"/>
-diff -urN ./geodesyml-0.1.0/geodesyml/0.4/referenceFrame.xsd ./modified/geodesyml-0.1.0/referenceFrame.xsd
---- ./geodesyml-0.1.0/geodesyml/0.4/referenceFrame.xsd	2017-01-27 14:06:30.994000000 +1100
-+++ ./modified/geodesyml-0.1.0/referenceFrame.xsd	2017-01-27 14:08:02.490786013 +1100
+diff -urN ./geodesyml-0.2.0-SNAPSHOT/geodesyml/0.4/referenceFrame.xsd ./modified/geodesyml-0.2.0-SNAPSHOT/referenceFrame.xsd
+--- ./geodesyml-0.2.0-SNAPSHOT/geodesyml/0.4/referenceFrame.xsd	2017-01-27 14:06:30.994000000 +1100
++++ ./modified/geodesyml-0.2.0-SNAPSHOT/referenceFrame.xsd	2017-01-27 14:08:02.490786013 +1100
 @@ -179,6 +179,7 @@
                  <sequence>
                      <element ref="geo:Status" minOccurs="0"/>

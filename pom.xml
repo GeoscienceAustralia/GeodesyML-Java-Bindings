@@ -26,8 +26,8 @@
     </properties>
     <repositories>
         <repository>
-            <id>gnss-artifactory-release</id>
-            <url>s3://gnss-artifactory/maven-releases/</url>
+            <id>gnss-artifactory-snapshot</id>
+            <url>s3://gnss-artifactory/maven-snapshots/</url>
         </repository>
     </repositories>
     <dependencies>
@@ -178,7 +178,7 @@
                                 <artifactItem>
                                     <groupId>au.gov.ga.geodesy</groupId>
                                     <artifactId>geodesyml</artifactId>
-                                    <version>0.1.0</version>
+                                    <version>0.2.0-SNAPSHOT</version>
                                     <classifier>xsd</classifier>
                                     <type>zip</type>
                                 </artifactItem>
