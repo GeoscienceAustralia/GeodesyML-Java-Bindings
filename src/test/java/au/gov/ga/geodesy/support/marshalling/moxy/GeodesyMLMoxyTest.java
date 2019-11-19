@@ -18,14 +18,14 @@ import com.jcabi.matchers.XhtmlMatchers;
 import com.jcabi.xml.XPathContext;
 
 import au.gov.ga.geodesy.port.adapter.geodesyml.MarshallingException;
-import au.gov.xml.icsm.geodesyml.v_0_4.GeodesyMLType;
-import au.gov.xml.icsm.geodesyml.v_0_4.HumiditySensorType;
-import au.gov.xml.icsm.geodesyml.v_0_4.SiteType;
+import au.gov.xml.icsm.geodesyml.v_0_5.GeodesyMLType;
+import au.gov.xml.icsm.geodesyml.v_0_5.HumiditySensorType;
+import au.gov.xml.icsm.geodesyml.v_0_5.SiteType;
 
 public class GeodesyMLMoxyTest {
 
     private static final NamespaceContext namespaces = new XPathContext()
-        .add("geo", "urn:xml-gov-au:icsm:egeodesy:0.4")
+        .add("geo", "urn:xml-gov-au:icsm:egeodesy:0.5")
         .add("gml", "http://www.opengis.net/gml/3.2");
     
     private GeodesyMLMoxy marshaller; public GeodesyMLMoxyTest() throws MarshallingException {

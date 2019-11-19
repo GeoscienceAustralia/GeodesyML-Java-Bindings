@@ -22,7 +22,7 @@ import net.opengis.gml.v_3_2_1.TimePositionType;
  * }
  * </pre>
 
- * @see resource geodesyml-v_0_4.xjb
+ * @see resource geodesyml-v_0_5.xjb
  */
 public interface LogItemPropertyType extends GMLPropertyType {
 
