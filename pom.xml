@@ -311,7 +311,7 @@
                     <schemaIncludes/>
                     <schemas>
                         <schema>
-                            <url>http://xml.gov.au/icsm/geodesyml/0.4/geodesyML.xsd</url>
+                            <url>http://xml.gov.au/icsm/geodesyml/0.5/geodesyML.xsd</url>
                         </schema>
                         <!-- *** Needed because of the XJC problem -->
                         <schema>

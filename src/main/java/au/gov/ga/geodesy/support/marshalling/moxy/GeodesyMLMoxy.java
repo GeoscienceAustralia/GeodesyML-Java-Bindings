@@ -28,7 +28,7 @@ import org.eclipse.persistence.sessions.SessionEventListener;
 import au.gov.ga.geodesy.port.adapter.geodesyml.GeodesyMLMarshaller;
 import au.gov.ga.geodesy.port.adapter.geodesyml.MarshallingException;
 import au.gov.ga.geodesy.support.gml.GMLPropertyTypeResolver;
-import au.gov.xml.icsm.geodesyml.v_0_4.GeodesyMLType;
+import au.gov.xml.icsm.geodesyml.v_0_5.GeodesyMLType;
 import net.bramp.objectgraph.ObjectGraph;
 import net.opengis.gml.v_3_2_1.AbstractGMLType;
 
@@ -46,7 +46,7 @@ public class GeodesyMLMoxy implements GeodesyMLMarshaller {
             String mappingFilename = "moxy.xml";
             Source mappingGeodesyML = new StreamSource(classLoader.getResourceAsStream(mappingFilename));
             Map<String, Source> metadata = new HashMap<String, Source>();
-            metadata.put("au.gov.xml.icsm.geodesyml.v_0_4", mappingGeodesyML);
+            metadata.put("au.gov.xml.icsm.geodesyml.v_0_5", mappingGeodesyML);
             properties.put(JAXBContextProperties.OXM_METADATA_SOURCE, metadata);
             
             jaxbContext = JAXBContextFactory.createContext(new Class[] {GeodesyMLType.class}, properties);
@@ -66,7 +66,7 @@ public class GeodesyMLMoxy implements GeodesyMLMarshaller {
                 put("http://www.isotc211.org/2005/gmd", "gmd");
                 put("http://www.isotc211.org/2005/gmx", "gmx");
                 put("http://www.opengis.net/om/2.0", "om");
-                put("urn:xml-gov-au:icsm:egeodesy:0.4", "geo");
+                put("urn:xml-gov-au:icsm:egeodesy:0.5", "geo");
             }};
 
             public String getPreferredPrefix(String namespaceUri, String suggestion, boolean requirePrefix) {
@@ -80,7 +80,7 @@ public class GeodesyMLMoxy implements GeodesyMLMarshaller {
             Marshaller marshaller = jaxbContext.createMarshaller();
             marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
             marshaller.setProperty(Marshaller.JAXB_ENCODING, "UTF-8");
-            marshaller.setProperty(Marshaller.JAXB_SCHEMA_LOCATION, "urn:xml-gov-au:icsm:egeodesy:0.4");
+            marshaller.setProperty(Marshaller.JAXB_SCHEMA_LOCATION, "urn:xml-gov-au:icsm:egeodesy:0.5");
             this.configureNamespacePrefixMapping(marshaller);
             return marshaller;
         } catch (JAXBException e) {
