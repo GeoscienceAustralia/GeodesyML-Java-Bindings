@@ -1,4 +1,4 @@
-# Java Bindings for GeodesyML v0.4
+# Java Bindings for GeodesyML v0.5
 
 [![Build Status](https://travis-ci.org/GeoscienceAustralia/geodesyml-java-bindings.svg?branch=master)](https://travis-ci.org/GeoscienceAustralia/geodesyml-java-bindings)
 
