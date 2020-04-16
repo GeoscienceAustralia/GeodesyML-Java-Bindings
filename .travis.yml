@@ -8,6 +8,7 @@ cache:
 branches:
   only:
   - master
+  - geodesyml-0.4
 env:
   global:
   - AWS_DEFAULT_REGION: ap-southeast-2
