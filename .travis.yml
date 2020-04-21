@@ -8,9 +8,11 @@ cache:
 branches:
   only:
   - master
+  - geodesyml-0.4
 env:
   global:
   - AWS_DEFAULT_REGION: ap-southeast-2
   - secure: Y7BAj6oYGbLU5jNswZrWLH5m5tPuitlsbKgW6luZ2FKBKTnkl77p0hyb+KHbg3Gzg7meQ971SKhnd5UgGecaz6Ych40GW16/gYPEUDxMIs12/bODYTlsdE3wgHk2IzjAa4SShO20kJgeFi4jhUzxSNo6oYV0o+EHMmtT2oHaEMA=
-  - secure: aYOX3zS8Eb0wWDvsiJPXrsAU31cwD74vYz/AAR3YW2rIYcxjq2hYVXliBv3qMnU6X4zjPjTdClyaF3S0mrS8kIiEYeMeVL761mGLxSjTHE9OglsCcrBtV5J5mE6PkGA0h2swFgOgaFB032MSeSl6b8DOTbYBfS8R+u0pJbLdmAk=
-  - secure: MYYR+Xj/TWmoPP1Ap5P+EBVXi9aiTlPu0QfhWjq/UN59ZHRCZsZzqXSYn7GCIbfHvjej6pVWYMFknCZ5NgnsuC/YQYrBX3IGvg0xjCguR0NZoYR6EG8p9V/objWFrr9ueMjMzku8WdjygD3kQavobmk1ggWKU/wDnt+XVXG3Lmg=
+  - secure: gMOlEqMgtwKnIpe9A9j2r/vp80iNl8X9ZPshB1h+6Ensu1QA1Rxtrlb4z8Sknss5bJcpNeLkBd/xPHABIgR84JUuIl8cWFn/zNJwTNdoHH70NLziBuLoN4efs/yk6+wh3NsJJuFuOMKvjNUTg6cCNR1CVuoXLm/1Y5s4WV09Zv0=
+  - secure: PFmRrND5Ss4YsCRdUVKXKPD/jver1ACnU5eedNbtfIjIjyBOLi/rHKnvU6tJNvHEPZLKFxOzVbGt8gEJmWHMYIsKh1uLLjn86u6dm2JnIo5KeU9Vdjx+XS3yJv4LAj+rNEfQ7mXSQJk0qw7sc3kyQhPQISZWRxn6Wg4yeZo51uA=
+
