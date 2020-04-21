@@ -2,5 +2,5 @@
     If the <catalog/> parameter isn't working, this link to schema A is
     not recognized and the test will fail because of a missing schema.
 --
-REWRITE_SYSTEM "http://xml.gov.au/icsm/" "../../../target/generated-sources/xsd/patched/geodesyml-0.2.0-SNAPSHOT/"
+REWRITE_SYSTEM "http://xml.gov.au/icsm/" "../../../target/generated-sources/xsd/patched/geodesyml-0.3.0/"
 
