@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>au.gov.ga.geodesy</groupId>
     <artifactId>geodesyml-bindings</artifactId>
-    <version>0.1.1</version>
+    <version>0.2.0</version>
     <packaging>jar</packaging>
     <scm>
         <connection>scm:git:git@github.com:GeoscienceAustralia/geodesyml-java-bindings.git</connection>
@@ -178,7 +178,7 @@
                                 <artifactItem>
                                     <groupId>au.gov.ga.geodesy</groupId>
                                     <artifactId>geodesyml</artifactId>
-                                    <version>0.2.0-SNAPSHOT</version>
+                                    <version>0.2.0</version>
                                     <classifier>xsd</classifier>
                                     <type>zip</type>
                                 </artifactItem>
