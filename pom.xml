@@ -26,8 +26,12 @@
     </properties>
     <repositories>
         <repository>
-            <id>gnss-artifactory-snapshot</id>
+            <id>gnss-artifactory-snapshots</id>
             <url>s3://gnss-artifactory/maven-snapshots/</url>
+        </repository>
+        <repository>
+            <id>gnss-artifactory-releases</id>
+            <url>s3://gnss-artifactory/maven-releases/</url>
         </repository>
     </repositories>
     <dependencies>
