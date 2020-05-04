@@ -11,7 +11,8 @@ branches:
 env:
   global:
   - AWS_DEFAULT_REGION: ap-southeast-2
+  # TRAVIS_TOKEN
   - secure: Y7BAj6oYGbLU5jNswZrWLH5m5tPuitlsbKgW6luZ2FKBKTnkl77p0hyb+KHbg3Gzg7meQ971SKhnd5UgGecaz6Ych40GW16/gYPEUDxMIs12/bODYTlsdE3wgHk2IzjAa4SShO20kJgeFi4jhUzxSNo6oYV0o+EHMmtT2oHaEMA=
-  - secure: gMOlEqMgtwKnIpe9A9j2r/vp80iNl8X9ZPshB1h+6Ensu1QA1Rxtrlb4z8Sknss5bJcpNeLkBd/xPHABIgR84JUuIl8cWFn/zNJwTNdoHH70NLziBuLoN4efs/yk6+wh3NsJJuFuOMKvjNUTg6cCNR1CVuoXLm/1Y5s4WV09Zv0=
-  - secure: PFmRrND5Ss4YsCRdUVKXKPD/jver1ACnU5eedNbtfIjIjyBOLi/rHKnvU6tJNvHEPZLKFxOzVbGt8gEJmWHMYIsKh1uLLjn86u6dm2JnIo5KeU9Vdjx+XS3yJv4LAj+rNEfQ7mXSQJk0qw7sc3kyQhPQISZWRxn6Wg4yeZo51uA=
-
+  - AWS_ACCESS_KEY_ID: AKIA2AV2YTL6SUSQP56W
+  # AWS_SECRET_ACCESS_KEY, /geodesy-operations/iam-user/travis-ci/access-key/AKIA2AV2YTL6SUSQP56W/secret-access-key
+  - secure: EV7W3lWDVU/KTvXYduNuXLk/ksDGORdotRQ7eyRVOnT2+G2mK07peJrIO9nE3A93JmlzmzRFrMJ4ckavK6LXCuca61opmjJwO6bVoZYEScxCqRkI+nHOOpbvjKWF6Q66NXYSzMJCF0oJIzwJZSI8icpyVhbYd32NfK8l4xaQhLQ=
